@@ -1,0 +1,64 @@
+---
+import NavBtn from "./NavBtn.astro";
+
+let menuItems = [
+        {title:"Home",link:"/", active:true},
+        {title:"Empresa",link:"/empresa"},
+        {title:"Serviços",link:"/servicos"},
+        {title:"Contato", link:"/contato"}
+    ];
+---
+
+<nav class="nav">
+    <ul
+    id="primary__navigation"
+    data-visible="false"
+    class="primary__navigation"
+    >
+        {menuItems.map((item,index) => <li key={index}><NavBtn title={item.title} link={item.link} active={item.active}/></li>)}
+    </ul>
+</nav>
+
+<style>
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        z-index: 10;
+    }
+    li {
+        margin-inline: 0.5rem;
+    }
+    @media (max-width: 600px){
+        .primary__navigation {
+            position: fixed;
+
+            inset: 0 0 0 0;
+    
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            padding: min(50%, 15rem) 2rem;
+
+            background-color: var(--menu-color);
+
+            transform: translateY(-100%);
+            transition: transform 0.55s ease-out;
+
+            overflow-y: hidden;
+        }
+        .primary__navigation[data-visible="true"] {
+            transform: translateX(0);
+            overflow-y: hidden;
+        }
+        li{
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+</style>

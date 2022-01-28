@@ -1,0 +1,73 @@
+---
+const {title, link, active=false} = Astro.props;
+console.log(active)
+---
+<div class="nav__item">
+    <a href={link} data-active={active ? "true" : "false"} class="nav__link ripple--bottom-top">{title}</a>
+</div>
+
+<style>
+    .nav__link {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+        cursor: pointer;
+        /* text-transform: uppercase; */
+        text-align: center;
+        
+        color: black;
+        
+        width: 100px;
+        padding: 1rem 0 1rem 0;
+        
+        border-bottom: 3px solid #fff;
+    }
+
+    .ripple--bottom-top {
+        background: linear-gradient(to top, var(--ripple-color) 50%, white 50%);
+        background-size: 100% 200%;
+        background-position: top;
+        transition: color 0.35s ease-out, background 0.35s ease-out, border 0.5s ease-out;
+    }
+
+    .ripple--bottom-top:hover,
+    .ripple--bottom-top:focus {
+        background-position: bottom;
+        color: #fff;
+        border-bottom-color: var(--ripple-color);
+    }
+
+    .nav__link[data-active="true"]{
+        border-bottom-color: var(--ripple-color);
+    }
+
+
+@media (max-width: 600px){
+    .nav__link {
+        border-bottom-color: var(--menu-color);
+        color: white;
+        text-align: start;
+
+        padding: 1rem 0 0.5rem 0;
+    }
+
+    .ripple--bottom-top {
+        background: var(--menu-color);
+    }
+
+    .nav__link[data-active="true"]{
+        border-bottom-color: white;
+    }
+    .ripple--bottom-top:hover,
+    .ripple--bottom-top:focus {
+        border-bottom-color: white;
+    }
+    .nav__link {
+        text-align: center;
+    }
+}
+    
+
+
+</style>
