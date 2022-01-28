@@ -1,0 +1,21 @@
+:root {
+  --first-color: #61c15f;
+  --second-color: #ffa100;
+  --third-color: #c93c00;
+  --fourth-color: #237ad6;
+  --fifth-color: #845b75;
+  --sixth-color: #f7c121;
+  --seventh-color: #a8dda7;
+
+  --logo-green: #a8dda7;
+  --logo-red: #75001d;
+
+  --ripple-color: var(--first-color);
+
+  --menu-color: var(--logo-green);
+  --menu-label--color: var(--logo-red);
+
+  --footer-color: white;
+
+  --card-color: var(--first-color);
+}
