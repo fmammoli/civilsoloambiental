@@ -7,6 +7,8 @@
   --sixth-color: #f7c121;
   --seventh-color: #a8dda7;
 
+  --nice-grey: #575757;
+
   --logo-green: #a8dda7;
   --logo-red: #75001d;
 
@@ -15,7 +17,11 @@
   --menu-color: var(--logo-green);
   --menu-label--color: var(--logo-red);
 
+  --divider-color: var(--logo-green);
+
   --footer-color: white;
+
+  --footer-nav-color: var(--logo-red);
 
   --card-color: var(--first-color);
 }

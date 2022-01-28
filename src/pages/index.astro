@@ -5,7 +5,8 @@ import Tour from '../components/Tour.astro';
 
 import Header from "../components/Header/Header.astro";
 import Services from "../components/Services/Services.astro"
-
+import Divider from "../components/Divider.astro";
+import Footer from "../components/Footer/Footer.astro";
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
@@ -38,6 +39,17 @@ let title = 'My Astro Site';
 		<Services></Services>
 		
 	</main>
-	<section>divider</section>
+	<section><Divider></Divider></section>
+	<footer>
+		<Footer></Footer>
+	</footer>
 </body>
 </html>
+
+<style>
+footer {
+	width: 90%;
+	margin: 1rem auto;
+	
+}
+</style>
