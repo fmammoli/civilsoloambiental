@@ -2,11 +2,21 @@
 import NavBtn from "./NavBtn.astro";
 
 let menuItems = [
-        {title:"Home",link:"/", active:true},
-        {title:"Empresa",link:"/empresa"},
-        {title:"Serviços",link:"/servicos"},
-        {title:"Contato", link:"/contato"}
+        {title:"Home",link:"/", active: false},
+        {title:"Empresa",link:"/empresa", active: false},
+        {title:"Serviços",link:"/servicos", active: false},
+        {title:"Contato", link:"/contato", active: false}
     ];
+
+const {activeNav} = Astro.props;
+
+console.log({activeNav})
+menuItems.forEach(function(item){
+    if(item.title === activeNav){
+        item.active = true;
+    }
+});
+console.log({menuItems});
 ---
 
 <nav class="nav">

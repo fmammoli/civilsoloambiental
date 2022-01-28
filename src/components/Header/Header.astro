@@ -3,16 +3,17 @@ import HeroLogo from "./HeroLogo.astro";
 import NavToggleBtn from "./NavToggleBtn.astro";
 import Nav from "./Nav.astro";
 
+const {activeNav} = Astro.props;
 ---
 
 <header class="header">
   <div class="on__top__container header">
     <div class="hero__logo on__top__container"><HeroLogo></HeroLogo></div>
     <div  class="nav-toggle-btn on__top__container">
-      <NavToggleBtn></NavToggleBtn>
+      <NavToggleBtn ></NavToggleBtn>
     </div>
   </div>
-  <div class="nav"><Nav></Nav></div>
+  <div class="nav"><Nav activeNav={activeNav}></Nav></div>
 </header>
 
 <script>

@@ -3,53 +3,29 @@
 import Tour from '../components/Tour.astro';
 // You can import components from any supported Framework here!
 
+import MainLayout from '../Layouts/MainLayout.astro';
+
 import Header from "../components/Header/Header.astro";
 import Services from "../components/Services/Services.astro"
 import Divider from "../components/Divider.astro";
+import Card from "../components/Card.astro";
 import Footer from "../components/Footer/Footer.astro";
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
-let title = 'My Astro Site';
+
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
+const activeNav = "Home";
 ---
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<title>{title}</title>
-
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<style global>
-		@import "../styles/global.css";
-		@import "../styles/colors.css";
-		@import "../styles/home.css";
-	</style>
-
-	
-</head>
-<body>
-	
-	<Header></Header>
+<MainLayout activeNav={activeNav}>
 	<main>
 		<Services></Services>
 		
 	</main>
 	<section><Divider></Divider></section>
-	<footer>
-		<Footer></Footer>
-	</footer>
-</body>
-</html>
-
-<style>
-footer {
-	width: 90%;
-	margin: 1rem auto;
-	
-}
-</style>
+	<section><Card></Card></section>
+</MainLayout>

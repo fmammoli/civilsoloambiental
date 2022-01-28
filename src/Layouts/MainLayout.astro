@@ -1,0 +1,45 @@
+---
+import Header from "../components/Header/Header.astro";
+import Services from "../components/Services/Services.astro"
+import Divider from "../components/Divider.astro";
+import Footer from "../components/Footer/Footer.astro";
+
+let title = 'My Astro Site';
+
+const {activeNav} = Astro.props;
+---
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{title}</title>
+
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<style global>
+		@import "../styles/global.css";
+		@import "../styles/colors.css";
+		@import "../styles/home.css";
+	</style>
+
+	
+</head>
+<body>
+	
+	<Header activeNav={activeNav}></Header>
+
+    <slot></slot>
+	
+    
+	<footer>
+		<Footer></Footer>
+	</footer>
+</body>
+</html>
+
+<style>
+footer {
+	width: 90%;
+	margin: 1rem auto;
+	
+}
+</style>
