@@ -3,6 +3,9 @@
 import Tour from '../components/Tour.astro';
 // You can import components from any supported Framework here!
 
+import Header from "../components/Header/Header.astro";
+import Services from "../components/Services/Services.astro"
+
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
@@ -22,40 +25,19 @@ let title = 'My Astro Site';
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	<style global>
 		@import "../styles/global.css";
+		@import "../styles/colors.css";
 		@import "../styles/home.css";
 	</style>
 
-	<style>
-		header {
-			display: flex;
-			flex-direction: column;
-			gap: 1em;
-			max-width: min(100%, 68ch);
-		}
-	</style>
+	
 </head>
 <body>
+	
+	<Header></Header>
 	<main>
-		<header>
-			<div>
-				<img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
-				<h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
-			</div>
-		</header>
-
-		<Tour />
-
-		<!--
-
-		You can also use imported framework components directly in your markup!
+		<Services></Services>
 		
-		Note: by default, these components are NOT interactive on the client.
-		The `:visible` directive tells Astro to make it interactive.
-		
-		See https://docs.astro.build/core-concepts/component-hydration/ 
-
-		-->
-
 	</main>
+	<section>divider</section>
 </body>
 </html>
