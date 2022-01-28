@@ -8,19 +8,16 @@ const {link, title} = Astro.props;
 
 <style>
 
-.menu__item--link {
+.menu__item--link h2{
   color: white;
   text-decoration: underline;
   text-decoration-color: transparent;
   transition: 0.4s;
 }
 
-.menu__item--link:hover {
+.menu__item--link h2:hover,
+.menu__item--link h2:focus {
   text-decoration-color: white;
-}
-
-.menu__item a:focus h2 {
-  color: var(--first-color);
 }
 
 .menu__item h2 {
