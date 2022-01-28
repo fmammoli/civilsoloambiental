@@ -1,0 +1,58 @@
+---
+const {img, color, arrowSide="left"} = Astro.props
+---
+
+<div class={`arrow__${arrowSide} img__container`} style={`color: var(${color})`}>
+    <img
+        class="menu__item--img"
+        src={img}
+        alt=""
+    />
+</div>
+
+<style>
+
+.img__container {
+    display: flex;
+    align-items: center;
+    color: var(--first-color);
+}
+img {
+    width: 100%;
+}
+
+/* arrow-left */
+.arrow__left::after {
+  content: " ";
+  
+  width: 0;
+  height: 0;
+  border-top: 3rem solid transparent;
+  border-bottom: 3rem solid transparent;
+
+  border-right: 3rem solid;
+
+  margin-left: -3rem;
+  z-index: 100;
+}
+
+/* arrow-right */
+.arrow__right::before {
+  content: " ";
+
+  width: 0;
+  height: 0;
+  border-top: 3rem solid transparent;
+  border-bottom: 3rem solid transparent;
+
+  border-left: 3rem solid;
+
+  margin-right: -3rem;
+  z-index: 100;
+}
+@media (max-width: 600px) {
+    .arrow__left::after, .arrow__right::before {
+        content: none
+    }
+}
+</style>

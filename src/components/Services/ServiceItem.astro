@@ -1,0 +1,55 @@
+
+---
+import ArrowImg from "./ArrowImg.astro";
+import TextItem from "./TextItem.astro";
+const {title, link, img, color, reversed = false} = Astro.props;
+let arrowSide = "";
+reversed ? arrowSide = "right" : arrowSide = "left";
+
+console.log({reversed})
+---
+
+<div class={`menu__item ${reversed ? "reversed" : ""}`} style={`background-color:var(${color});`} >
+    <div class="item arrow__img">
+        <ArrowImg img={img} color={color} arrowSide={arrowSide}></ArrowImg>
+    </div>
+    <div class="item text__item">
+        <TextItem link={link} title={title}></TextItem>
+    </div>
+    
+</div>
+
+<style>
+.menu__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item {
+    text-align: center;
+}
+.reversed {
+    flex-direction: row-reverse;
+}
+.arrow__img {
+    width: 40%;
+}
+.text__item {
+    width: 40%;
+    padding: 1rem;
+}
+
+
+@media (max-width: 600px){
+    .menu__item {
+        flex-direction: column;
+    }
+    .arrow__img {
+        width: 100%;
+    }
+    .text__item {
+        width: 80%;
+    }
+    
+}
+</style>

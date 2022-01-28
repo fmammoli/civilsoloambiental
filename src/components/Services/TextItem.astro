@@ -1,0 +1,33 @@
+
+---
+const {link, title} = Astro.props;
+---
+<a href={link} class="menu__item--link">
+    <h2>{title}</h2>
+</a>
+
+<style>
+
+.menu__item--link {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 0.4s;
+}
+
+.menu__item--link:hover {
+  text-decoration-color: white;
+}
+
+.menu__item a:focus h2 {
+  color: var(--first-color);
+}
+
+.menu__item h2 {
+  padding: 1em;
+  max-width: 350px;
+  text-align: center;
+  color: white;
+}
+
+</style>
