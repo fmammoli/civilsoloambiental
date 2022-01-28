@@ -1,0 +1,76 @@
+---
+
+---
+<div class="card__container">
+    <div class="card">
+        <h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        </h2>
+        <a href="" class="card__btn"
+            ><span>Peça já o seu orçamento!</span></a
+        >
+    </div>
+</div>
+
+<style>
+.card__container {
+  padding: 1rem;
+  max-width: 850px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.card {
+  display: flex;
+  padding: 2.5em;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 6px;
+}
+h2 {
+  font-weight: 500;
+  font-size: clamp(1.1rem, 1rem + 1.25vw, 1.25rem);
+}
+.card h2 {
+  width: 60%;
+  color: gray;
+  text-align: start;
+}
+
+.card__btn {
+  width: 30%;
+  margin: 0 auto;
+  padding: 2rem 0;
+
+  text-align: center;
+
+  border-radius: 6px;
+  background-color: white;
+  color: var(--card-color);
+  text-decoration: none;
+  border: 4px solid var(--card-color);
+
+  font-size: 1.3rem;
+}
+
+.card__btn:hover,
+.card__button:focus {
+  background-color: var(--card-color);
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .card{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card h2 {
+    width: 100%;
+  }
+  .card__btn {
+    width: 100%;
+    margin-top: 1rem
+  }
+}
+</style>

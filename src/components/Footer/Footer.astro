@@ -1,0 +1,131 @@
+---
+import Card from "./Card.astro"
+import FooterNav from "./FooterNav.astro"
+import FooterContact from "./FooterContact.astro";
+import FooterLogo from "./FooterLogo.astro";
+
+const text = ""
+
+const nav = {
+    title: "Navegação", 
+    items: [
+        {
+            link:"/",
+            title:"Home"
+        },
+        {
+            link:"/empresa",
+            title:"Empresa"
+        },
+        {
+            link:"/servicos",
+            title:"Serviços"
+        },
+        {
+            link:"/contato",
+            title:"Contato"
+        },
+
+        ]
+    }
+
+const services = {
+    title: "Serviços",
+    items: [
+        {id:1, title:"Investigação de Áreas Contaminadas",link:"/investigacao-de-areas-contaminadas",img:"https://via.placeholder.com/585x300", color: "--first-color"}, 
+        {id:2, title:"Laudo de Cobertura Vegetal",link:"/laudo-de-cobertura-vegetal",img:"https://via.placeholder.com/585x300", color: "--second-color", reversed: true},
+        {id:3, title:"Autorização de Supressão de Vegetação Nativa",link:"",img:"https://via.placeholder.com/585x300", color: "--third-color"},
+        {id:4, title:"Compensação Ambiental e Plantio de Mudas Nativas",link:"",img:"https://via.placeholder.com/585x300", color: "--fourth-color", reversed: true},
+        {id:5, title:"Adequação Ambiental de Propriedades Rurais",link:"",img:"https://via.placeholder.com/585x300", color: "--fifth-color"},
+        {id:6, title:"Projetos Socioambientais",link:"",img:"https://via.placeholder.com/585x300", color: "--sixth-color", reversed: true},
+    ]
+}
+---
+    
+    <div class="footer">
+      <div class="container">
+      
+        <Card></Card>
+      
+        
+        <ul class="footer__grid">
+          <li class="footer__item footer__item--one">
+            <FooterLogo></FooterLogo>
+          </li>
+          <li class="footer__item footer__item--two">
+            <FooterNav title={nav.title} items={nav.items}></FooterNav>
+          </li>
+          <li class="footer__item footer__item--three">
+            <FooterNav title={services.title} items={services.items}></FooterNav>
+          </li>
+          <li class="footer__item footer__item--four">
+            <FooterContact></FooterContact>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <style>
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+.footer__grid {
+    margin-top: 1rem;
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Dont know why commenting this solves the isso */
+  /* grid-template-rows: repeat(4, 1fr); */
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+.footer__item {
+  margin: 0 auto;
+}
+.footer__item--one {
+  grid-area: 1 / 1 / 5 / 2;
+}
+.footer__item--two {
+  grid-area: 1 / 2 / 5 / 3;
+}
+.footer__item--three {
+  grid-area: 1 / 3 / 5 / 4;
+}
+.footer__item--four {
+  grid-area: 1 / 4 / 5 / 5;
+}
+@media (max-width: 600px) {
+  .footer__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Dont know why commenting this solves the isso */
+    /* grid-template-rows: repeat(4, 1fr); */
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+  }
+
+  .footer__item--one {
+    grid-area: 1 / 1 / 2 / 5;
+  }
+  .footer__item--two {
+    grid-area: 2 / 1 / 4 / 3;
+  }
+  .footer__item--three {
+    grid-area: 2 / 3 / 4 / 5;
+  }
+  .footer__item--four {
+    grid-area: 4 / 1 / 5 / 5;
+  }
+  .footer__logo--text {
+    text-align: center;
+  }
+
+}
+@media (max-width: 320px) {
+    .footer__grid{
+        display: block;
+    }
+}
+</style>

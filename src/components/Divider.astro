@@ -1,0 +1,97 @@
+---
+
+---
+<section id="divider" class="divider">
+    <h2 class="section__title">Soluções ambientais para você ficar de bem com a natureza</h2>
+    <svg  class="logo__line" width="110" height="239" viewBox="0 0 110 239" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="logo_line_path" class="line"  stroke="black" stroke-width="4" pathLength="1" d="M22.5001 239V106M22.5001 106C71.6193 104.863 93.4113 88.5719 108.5 45.4999C75.812 44.0681 54.955 51.5073 39.8313 71.5M22.5001 106C-5.80671 64.6806 -6.27331 41.6855 22.5001 1C46.9099 34.3278 47.1509 48.5963 39.8313 71.5M22.5001 106C27.4993 91.7941 33.0969 80.4025 39.8313 71.5"/>
+    </svg>
+</section>
+
+<style>
+.divider {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    
+    background: var(--divider-color);
+    padding: 2em 0.6em;
+}
+
+.section__title {
+    font-weight: 300;
+    font-size: clamp(1.5rem, 1rem + 1.25vw, 1.5rem);
+    margin-left: 50px
+}
+.logo__line {
+    height: 80px;
+    padding: 5px;
+    margin-left: -2rem;
+}
+.logo__line .line{
+    stroke: white;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+}
+
+.animate__line{
+    animation: dash 5s linear forwards;
+}
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1;
+    }
+    to {
+        stroke-dashoffset: 0;
+
+    }
+}
+@media (max-width: 600px) {
+    .divider {
+        flex-direction: column;
+        align-items: center !important;
+    }
+    
+    .section__title {
+        margin: 0px !important;
+    }
+    
+    .logo__line {
+        margin-left: 0 !important;
+        margin-top: 0.5rem;
+        
+    }
+    .logo__line .line {
+        stroke-dashoffset: 0 !important;
+        
+    }
+}
+
+
+</style>
+
+<script>
+const divider = document.querySelector('#divider');
+const path = document.querySelector('#logo_line_path');
+const options = {
+    root: null,
+    rootMargin: '-150px',
+    threshold: 0.6
+
+};
+
+const observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+        
+        console.log({entry})
+        if(entry.isIntersecting)
+            path.classList.add("animate__line")
+    })
+    
+}, options);
+
+observer.observe(divider);
+
+</script>
