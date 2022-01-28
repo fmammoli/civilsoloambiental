@@ -1,14 +1,19 @@
 
 ---
-const {link, title} = Astro.props;
+const {link, title, icon} = Astro.props;
 ---
 <a href={link} class="menu__item--link">
+    <img src={icon} alt="">
     <h2>{title}</h2>
 </a>
 
 <style>
 a {
   text-decoration: none;
+}
+img {
+  max-width: 4rem;
+  filter: invert(100%);
 }
 .menu__item--link h2{
   color: white;

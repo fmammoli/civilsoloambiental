@@ -2,17 +2,17 @@
 import ServiceItem from "./ServiceItem.astro";
 
 const serviceItems = [
-    {id:1, title:"Investigação de Áreas Contaminadas",link:"/investigacao-de-areas-contaminadas",img:"https://via.placeholder.com/585x300", color: "--first-color"}, 
-    {id:2, title:"Laudo de Cobertura Vegetal",link:"/laudo-de-cobertura-vegetal",img:"https://via.placeholder.com/585x300", color: "--second-color", reversed: true},
-    {id:3, title:"Autorização de Supressão de Vegetação Nativa",link:"",img:"https://via.placeholder.com/585x300", color: "--third-color"},
-    {id:4, title:"Compensação Ambiental e Plantio de Mudas Nativas",link:"",img:"https://via.placeholder.com/585x300", color: "--fourth-color", reversed: true},
-    {id:5, title:"Adequação Ambiental de Propriedades Rurais",link:"",img:"https://via.placeholder.com/585x300", color: "--fifth-color"},
-    {id:6, title:"Projetos Socioambientais",link:"",img:"https://via.placeholder.com/585x300", color: "--sixth-color", reversed: true},
+    {id:1, title:"Investigação de Áreas Contaminadas",link:"/investigacao-de-areas-contaminadas",img:"https://via.placeholder.com/585x300", icon: "/assets/flask.png", color: "--first-color"}, 
+    {id:2, title:"Laudo de Cobertura Vegetal",link:"/laudo-de-cobertura-vegetal",img:"https://via.placeholder.com/585x300", icon: "/assets/forest.png", color: "--second-color", reversed: true},
+    {id:3, title:"Autorização de Supressão de Vegetação Nativa",link:"",img:"https://via.placeholder.com/585x300", icon: "/assets/tractor.png", color: "--third-color"},
+    {id:4, title:"Compensação Ambiental e Plantio de Mudas Nativas",link:"",img:"https://via.placeholder.com/585x300", icon:"/assets/sprout.png", color: "--fourth-color", reversed: true},
+    {id:5, title:"Adequação Ambiental de Propriedades Rurais",link:"",img:"https://via.placeholder.com/585x300", icon:"/assets/rural-space.png", color: "--fifth-color"},
+    {id:6, title:"Projetos Socioambientais",link:"",img:"https://via.placeholder.com/585x300", icon: "/assets/save-the-planet.png", color: "--sixth-color", reversed: true},
 ]
 ---
 <ul class="menu__list">
     {serviceItems.map((item, index) => (
-        <li><ServiceItem key={index}  title={item.title} link={item.link} img={item.img} color={item.color} reversed={item.reversed}/></li>
+        <li><ServiceItem key={index}  title={item.title} link={item.link} img={item.img} icon={item.icon} color={item.color} reversed={item.reversed}/></li>
     ))}
 </ul>
 

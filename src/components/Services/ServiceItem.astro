@@ -2,7 +2,7 @@
 ---
 import ArrowImg from "./ArrowImg.astro";
 import TextItem from "./TextItem.astro";
-const {title, link, img, color, reversed = false} = Astro.props;
+const {title, link, img, color, icon, reversed = false} = Astro.props;
 let arrowSide = "";
 reversed ? arrowSide = "right" : arrowSide = "left";
 
@@ -14,7 +14,7 @@ console.log({reversed})
         <ArrowImg img={img} color={color} arrowSide={arrowSide}></ArrowImg>
     </div>
     <div class="item text__item">
-        <TextItem link={link} title={title}></TextItem>
+        <TextItem link={link} title={title} icon={icon}></TextItem>
     </div>
     
 </div>
