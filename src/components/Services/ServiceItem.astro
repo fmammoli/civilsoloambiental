@@ -14,7 +14,7 @@ console.log({reversed})
         <ArrowImg img={img} color={color} arrowSide={arrowSide}></ArrowImg>
     </div>
     <div class="item text__item">
-        <TextItem link={link} title={title} icon={icon}></TextItem>
+        <TextItem link={link} title={title} icon={icon} backgroundColor={color}></TextItem>
     </div>
     
 </div>
@@ -27,20 +27,24 @@ console.log({reversed})
 }
 .item {
     text-align: center;
+    margin-inline: 3vw;
 }
 .reversed {
     flex-direction: row-reverse;
 }
 .arrow__img {
-    width: 40%;
+    width: 100%;
 }
 .text__item {
-    width: 40%;
+    width: 50%;
     padding: 1rem;
 }
 
 
 @media (max-width: 600px){
+    .item {
+        margin-inline: 0px;
+    }
     .menu__item {
         flex-direction: column;
     }
@@ -50,7 +54,8 @@ console.log({reversed})
     .text__item {
         width: 100%;
         
+        
     }
-    
+
 }
 </style>
