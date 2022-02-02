@@ -1,0 +1,199 @@
+---
+
+// TODO This click to opne modal is very Bad, need to do something better!!!!!!
+// Make this dinamic list of images;
+
+import a1 from "../content/AreasContaminadas/areas_contaminadas_1.png";
+import a2 from "../content/AreasContaminadas/areas_contaminadas_2.png";
+import a3 from "../content/AreasContaminadas/areas_contaminadas_3.png";
+import a4 from "../content/AreasContaminadas/areas_contaminadas_4.jpg";
+import a5 from "../content/AreasContaminadas/areas_contaminadas_5.png";
+import a6 from "../content/AreasContaminadas/areas_contaminadas_6.png";
+
+let imgs = []
+
+for (let i = 0; i <= 10; i++) {
+    imgs.push(`https://picsum.photos/500/500?random=${i}`);
+    
+}
+
+imgs = [a1, a2, a3, a4, a5, a6]
+---
+
+<div class="container">
+    <div class="gallery__wrapper">
+        {imgs.map(img => (
+
+            <a href="javascript:void(0)" onClick="openModal(this)" id="gallery__item" class="gallery__item" data-img={img} style={`background-image: url(${img});`}>
+                
+            </a>
+        ))}
+    </div>
+</div>
+
+<div class="modal" id="modal">
+    <span class="close">X</span>
+    <img src="" alt="" class="modal__content" id="img01">
+    <div class="" id="caption"></div>
+</div>
+<script>
+// Get the modal
+// var modal = document.getElementById("modal");
+
+// // Get the image and insert it inside the modal - use its "alt" text as a caption
+// var img = document.getElementById("gallery__item");
+// var modalImg = document.getElementById("img01");
+// var captionText = document.getElementById("caption");
+
+
+
+function openModal(galleryItem){  
+    body.style.overflow = 'hidden';
+    console.log({galleryItem})
+    let modal = document.getElementById("modal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    let img = document.getElementById("gallery__item");
+    let modalImg = document.getElementById("img01");
+    let captionText = document.getElementById("caption");
+
+    console.log(this)
+    console.log("aaaa")
+    modal.style.display = "block";
+//   modalImg.src = gallery__item.dataset.img;
+
+    modalImg.src = galleryItem.dataset.img;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  body.style.overflow = 'auto';
+  modal.style.display = "none";
+}
+</script>
+<style>
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.gallery__wrapper {
+  display: grid;
+  gap: 0.5em;
+  grid-auto-rows: 10em;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  grid-auto-flow: dense;
+}
+
+.gallery__item {
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.3s
+}
+
+.gallery__item:hover {
+  transform: scale(1.05);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+/* 
+div:nth-child(6n) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+div:nth-child(7n) {
+  grid-column: span 2;
+}
+
+div:nth-child(8n) {
+  grid-row: span 2;
+} */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  text-align: center;
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#img01 {
+    max-width: 700px;
+    height: auto;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+</style>

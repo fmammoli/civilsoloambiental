@@ -9,6 +9,18 @@
 
   --nice-grey: #575757;
 
+  --content-h1-color: var(--first-color);
+  --content-h2-color: var(--first-color);
+  --content-h3-color: var(--first-color);
+  --content-accent-color: var(--first-color);
+
+  --content-text-weight: 300;
+  --content-h1-weight: 500;
+  --content-h2-weight: 300;
+  --content-h3-weight: 200;
+
+  --content-text-color: #666666;
+
   --logo-green: #a8dda7;
   --logo-red: #75001d;
 

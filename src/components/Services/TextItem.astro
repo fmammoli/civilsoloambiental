@@ -3,7 +3,7 @@
 const {link, title, icon, backgroundColor} = Astro.props;
 ---
 <a href={link} class="menu__item--link">
-    <div class="icon__container" style={`background-color:var(${backgroundColor})`}><img src={icon} alt=""></div>
+    <div class="icon__container" style={`background-color:var(${backgroundColor})`}><img src={icon} alt="" width="52" height="52"></div>
     
     <h2>{title}</h2>
 </a>
