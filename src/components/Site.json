@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Investigação de Áreas Contaminadas",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "link": "/areas-contaminadas",
+      "img": "/assets/home/areas_contaminadas_home.jpg",
+      "bannerImg": "https://picsum.photos/1000/1000?random=1",
+      "icon": "/assets/flask.png",
+      "color": "--first-color",
+      "content": "../content/AreasContaminadas/AreasContaminadasContent.astro",
+      "imgs": [{ "path": "../../public/assets/areasContaminadas/" }]
+    },
+    {
+      "id": 2,
+      "title": "Laudo de Cobertura Vegetal",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "link": "/laudo-de-cobertura-vegetal",
+      "img": "/assets/home/laudo_home.jpg",
+      "bannerImg": "https://picsum.photos/1000/1000?random=1",
+      "icon": "/assets/forest.png",
+      "color": "--second-color",
+      "content": "../content/AreasContaminadas/AreasContaminadasContent.astro",
+      "reversed": true,
+      "imgs": [{ "path": "../../public/assets/laudo/" }]
+    },
+    {
+      "id": 3,
+      "title": "Autorização de Supressão de Vegetação Nativa",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "link": "",
+      "img": "/assets/home/supressao_home.png",
+      "icon": "/assets/tractor.png",
+      "color": "--third-color"
+    },
+    {
+      "id": 4,
+      "title": "Compensação Ambiental e Plantio de Mudas Nativas",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "link": "",
+      "img": "/assets/home/compensacao_home.png",
+      "icon": "/assets/sprout.png",
+      "color": "--fourth-color",
+      "reversed": true
+    },
+    {
+      "id": 5,
+      "title": "Adequação Ambiental de Propriedades Rurais",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "link": "",
+      "img": "/assets/home/adequacao_home.png",
+      "icon": "/assets/rural-space.png",
+      "color": "--fifth-color"
+    },
+    {
+      "id": 6,
+      "title": "Projetos Socioambientais",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "link": "",
+      "img": "/assets/home/projetos_home.jpg",
+      "icon": "/assets/save-the-planet.png",
+      "color": "--sixth-color",
+      "reversed": true
+    }
+  ]
+}

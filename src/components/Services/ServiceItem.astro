@@ -1,62 +1,60 @@
 ---
 import ArrowImg from "./ArrowImg.astro";
 import TextItem from "./TextItem.astro";
-const {title, link, img, color, icon, reversed = false} = Astro.props;
+const { title, link, img, color, icon, reversed = false } = Astro.props;
 let arrowSide = "";
-reversed ? arrowSide = "right" : arrowSide = "left";
+reversed ? (arrowSide = "right") : (arrowSide = "left");
 
-console.log({reversed})
+console.log({ reversed });
 ---
 
-<div class={`menu__item ${reversed ? "reversed" : ""}`} style={`background-color:var(${color});`} >
-    <div class="item arrow__img">
-        <ArrowImg img={img} color={color} arrowSide={arrowSide}></ArrowImg>
-    </div>
-    <div class="item text__item">
-        <TextItem link={link} title={title} icon={icon} backgroundColor={color}></TextItem>
-    </div>
-    
+<div
+  class={`menu__item ${reversed ? "reversed" : ""}`}
+  style={`background-color:var(${color});`}
+>
+  <div class="item arrow__img">
+    <ArrowImg {img} {color} {arrowSide} />
+  </div>
+  <div class="item text__item">
+    <TextItem {link} {title} {icon} backgroundColor={color} />
+  </div>
 </div>
 
 <style>
-.menu__item {
+  .menu__item {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.item {
+  }
+  .item {
     text-align: center;
     margin-inline: 3vw;
-}
-.reversed {
+  }
+  .reversed {
     flex-direction: row-reverse;
-}
-.arrow__img {
+  }
+  .arrow__img {
     width: 100%;
     max-width: 600px;
-}
-.text__item {
+  }
+  .text__item {
     width: 50%;
     padding: 1rem;
     max-width: 600px;
-}
+  }
 
-
-@media (max-width: 600px){
+  @media (max-width: 600px) {
     .item {
-        margin-inline: 0px;
+      margin-inline: 0px;
     }
     .menu__item {
-        flex-direction: column;
+      flex-direction: column;
     }
     .arrow__img {
-        width: 100%;
+      width: 100%;
     }
     .text__item {
-        width: 100%;
-        
-        
+      width: 100%;
     }
-
-}
+  }
 </style>
