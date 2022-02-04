@@ -4,6 +4,7 @@
 import MainLayout from "../Layouts/MainLayout.astro";
 import Site from "../components/Site.json";
 import DividerTitle from "../components/DividerTitle.astro";
+import Divider from "../components/Divider.astro";
 
 const data = Site.items;
 console.log(data);
@@ -37,12 +38,16 @@ const activeNav = "Serviços";
       ))}
     </ul>
   </main>
+  <Divider />
 </MainLayout>
 
 <style>
   .main {
     margin-top: 1rem;
     margin-bottom: 2rem;
+  }
+  ul {
+    padding-inline-start: 0px;
   }
   .row {
     width: 80%;
@@ -72,6 +77,7 @@ const activeNav = "Serviços";
     color: var(--logo-red);
   }
   .img__container {
+    align-self: center;
   }
   .round__link {
     display: flex;
@@ -105,5 +111,23 @@ const activeNav = "Serviços";
   }
   .row:nth-child(odd) .text {
     text-align: end;
+  }
+  @media (max-width: 600px) {
+    .main {
+      margin-top: 0px;
+    }
+    .row {
+      flex-direction: column-reverse;
+      text-align: start;
+    }
+    .row:nth-child(even) {
+      flex-direction: column-reverse;
+    }
+    .row:nth-child(odd) .text {
+      text-align: start;
+    }
+    .text {
+      width: 100%;
+    }
   }
 </style>
