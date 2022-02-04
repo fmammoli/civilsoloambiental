@@ -38,7 +38,7 @@ const { imgs, clickable } = Astro.props;
   <img src="" alt="" class="modal__content" id="img01" />
   <!-- <div class="" id="caption"></div> -->
 </div>
-<script hoist>
+<script>
   // Get the modal
   // var modal = document.getElementById("modal");
 
@@ -61,7 +61,7 @@ const { imgs, clickable } = Astro.props;
     //   modalImg.src = gallery__item.dataset.img;
 
     modalImg.src = galleryItem.dataset.img;
-    captionText.innerHTML = this.alt;
+    // captionText.innerHTML = this.alt;
   }
 
   // Get the <span> element that closes the modal
