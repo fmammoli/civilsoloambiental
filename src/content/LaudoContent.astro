@@ -31,10 +31,9 @@ import img3 from "/assets/laudo/3.png";
       campo da vegeta&ccedil;&atilde;o.</span
     >
   </p><p class="c8">
-    <span
-      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 277.94px; height: 419.43px;"
-      ><img alt="" src={img3} title="" /></span
-    >
+    <figure class="c3 img__container">
+      <img alt="" src={img3} title="" />
+    </figure>
   </p><p class="c9">
     <span class="c1">A </span><span class="c14 c1"
       >Civilsolo Ambiental
@@ -160,15 +159,18 @@ import img3 from "/assets/laudo/3.png";
       servi&ccedil;o.
     </span>
   </p><p class="c8">
-    <span
-      style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 557.50px; height: 374.14px;"
-      ><img alt="" src={img1} title="" /></span
-    >
+    <figure class="c3 img__container">
+      <img alt="" src={img1} title="" />
+    </figure>
   </p>
 </div>
 
 <style>
-  .content .img {
-    text-align: center;
+  .img__container img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    max-height: 400px;
+    width: fit-content;
   }
 </style>
