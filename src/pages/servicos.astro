@@ -1,21 +1,109 @@
 ---
 // Component Imports
 
-import MainLayout from '../Layouts/MainLayout.astro';
+import MainLayout from "../Layouts/MainLayout.astro";
+import Site from "../components/Site.json";
+import DividerTitle from "../components/DividerTitle.astro";
 
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
-
-const activeNav = "Serviços"
+const data = Site.items;
+console.log(data);
+const item = data[0];
+const index = 0;
+const activeNav = "Serviços";
 ---
-<MainLayout activeNav={activeNav}>
-	<main>
-		<h1>Serviços</h1>
-	</main>
+
+<MainLayout {activeNav}>
+  <main class="main">
+    <DividerTitle title="Nossos serviços" color={"--servicos-color"} />
+    <ul key={index} class="container">
+      {data.map((item, index) => (
+        <li class="row">
+          <div class="text">
+            <p class="desc">{item.desc}</p>
+            <a class="text__link" href={item.link}>
+              Saiba mais ...
+            </a>
+          </div>
+          <div class="img__container">
+            <a
+              class="round__link"
+              href={item.link}
+              style={`background-image: linear-gradient(90deg, rgba(151,151,151,0.6) 0%, rgba(151,151,151,0.6) 100%) ,url(${item.img});`}
+            >
+              <h2 class="title">{item.title}</h2>
+            </a>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </main>
 </MainLayout>
+
+<style>
+  .main {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .row {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding-block: 1rem;
+  }
+  .text {
+    width: 60%;
+    align-self: center;
+    padding: 1rem;
+    line-height: 1.4rem;
+
+    max-width: 600px;
+  }
+  .desc {
+    color: var(--content-text-color);
+  }
+
+  .text__link {
+    color: var(--first-color);
+    margin-block: 2em;
+  }
+  .text__link:hover,
+  .text__link:focus {
+    color: var(--logo-red);
+  }
+  .img__container {
+  }
+  .round__link {
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #fff;
+    aspect-ratio: 1;
+    width: 250px;
+    border-radius: 100%;
+    text-decoration-color: transparent;
+
+    color: white;
+
+    text-align: center;
+    transition: 0.4s ease-out;
+  }
+
+  .round__link:hover,
+  .round__link:focus {
+    text-decoration-color: white;
+    transform: scale(1.1);
+  }
+
+  .round__link .title {
+    font-size: clamp(1rem, 1.6rem, 2rem);
+  }
+  .row:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .row:nth-child(odd) .text {
+    text-align: end;
+  }
+</style>

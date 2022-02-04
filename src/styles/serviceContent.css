@@ -1,0 +1,39 @@
+.content {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 900px;
+}
+.content h1 {
+  margin-block: 1em;
+  color: var(--content-h1-color);
+  font-weight: var(--content-h1-weight);
+}
+.content h2 {
+  color: var(--content-h2-color);
+  margin-top: 1.5em;
+  font-weight: var(--content-h2-weight);
+}
+.content h3 {
+  font-style: italic;
+  color: var(--content-h2-color);
+  font-weight: 500;
+  margin-top: 1.5em;
+  font-weight: var(--content-h3-weight);
+}
+.content p {
+  margin-block: 1rem;
+  line-height: 1.5em;
+  color: var(--content-text-color);
+  font-weight: var(--content-text-weight);
+}
+.c4 {
+  color: var(--content-accent-color);
+}
+.content ol {
+  color: var(--content-text-color);
+}
+.content li {
+  margin-bottom: 1em;
+  line-height: 1.5em;
+  font-weight: var(--content-text-weight);
+}

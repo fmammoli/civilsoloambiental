@@ -1,66 +1,65 @@
 ---
-const {img, color, arrowSide="left"} = Astro.props
+const { img, color, arrowSide = "left" } = Astro.props;
 ---
 
-<div class={`arrow__${arrowSide} img__container`} style={`color: var(${color});`}>
-    <img
-        class="menu__item--img"
-        src={img}
-        alt=""
-        width="600"
-        height="307"
-    />
+<div
+  class={`arrow__${arrowSide} img__container`}
+  style={`color: var(${color});`}
+>
+  <img class="menu__item--img" src={img} alt="" width="600" height="307" />
 </div>
 
 <style>
-
-.img__container {
+  .img__container {
     display: flex;
     align-items: center;
     color: var(--first-color);
-}
-img {
+  }
+  img {
     width: 100%;
-}
+    object-fit: cover;
+    object-position: center;
+  }
 
-/* arrow-left */
-.arrow__left::after {
-  content: " ";
-  
-  width: 0;
-  height: 0;
-  border-top: 3rem solid transparent;
-  border-bottom: 3rem solid transparent;
+  /* arrow-left */
+  .arrow__left::after {
+    content: " ";
 
-  border-right: 3rem solid;
+    width: 0;
+    height: 0;
+    border-top: 3rem solid transparent;
+    border-bottom: 3rem solid transparent;
 
-  margin-left: -3rem;
-  z-index: 100;
-}
+    border-right: 3rem solid;
 
-/* arrow-right */
-.arrow__right::before {
-  content: " ";
+    margin-left: -3rem;
+    z-index: 100;
+  }
 
-  width: 0;
-  height: 0;
-  border-top: 3rem solid transparent;
-  border-bottom: 3rem solid transparent;
+  /* arrow-right */
+  .arrow__right::before {
+    content: " ";
 
-  border-left: 3rem solid;
+    width: 0;
+    height: 0;
+    border-top: 3rem solid transparent;
+    border-bottom: 3rem solid transparent;
 
-  margin-right: -3rem;
-  z-index: 100;
-}
-@media (max-width: 600px) {
+    border-left: 3rem solid;
+
+    margin-right: -3rem;
+    z-index: 100;
+  }
+  @media (max-width: 600px) {
     .img__container {
-        position: relative;
-        display: flex;
-        justify-content: center;
+      position: relative;
+      display: flex;
+      justify-content: center;
     }
     /* without up arrow */
-    .arrow__left::after, .arrow__right::before {
-        display: none;
+    .arrow__left::after,
+    .arrow__right::before {
+      display: none;
     }
     /* whit up arrow */
     /* .arrow__left::after, .arrow__right::before {
@@ -76,5 +75,5 @@ img {
         
         margin: 0px;
     } */
-}
+  }
 </style>

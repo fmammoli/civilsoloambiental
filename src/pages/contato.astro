@@ -1,21 +1,91 @@
 ---
 // Component Imports
 
-import MainLayout from '../Layouts/MainLayout.astro';
+import MainLayout from "../Layouts/MainLayout.astro";
+import DividerTitle from "../components/DividerTitle.astro";
+import Divider from "../components/Divider.astro";
 
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
-
-const activeNav = "Contato"
+const activeNav = "Contato";
 ---
-<MainLayout activeNav={activeNav}>
-	<main>
-		<h1>Contato</h1>
-	</main>
+
+<MainLayout {activeNav}>
+  <main class="main">
+    <DividerTitle title={"Contato"} color={"--sixth-color"} />
+
+    <section class="full__background">
+      <div class="container">
+        <div class="panel contact__form__container">
+          <form action="" class="contact__form">
+            <h2 class="panel__title">Contact Form</h2>
+            <div class="input__container">
+              <label for="name">Nome:</label>
+              <input type="text" id="name" required />
+            </div>
+            <div class="input__container">
+              <label for="email">Email:</label>
+              <input type="email" id="email" required />
+            </div>
+            <div class="input__container">
+              <label for="phone">Telefone:</label>
+              <input type="tel" id="phone" />
+            </div>
+            <div class="input__container">
+              <label for="message">Mensagem:</label>
+              <textarea id="message" required></textarea>
+            </div>
+            <div class="input__container">
+              <button class="submit" type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+        <div class="panel contact__info">Contact Info</div>
+      </div>
+    </section>
+    <Divider />
+  </main>
 </MainLayout>
+
+<style>
+  .main {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .full__background {
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/contact/1.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+  }
+  .panel {
+    padding: 4rem;
+    margin-block: 4rem;
+    background-color: var(--nice-grey);
+    backdrop-filter: blur(5px);
+    border-radius: 6px;
+  }
+  .panel__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--sixth-color);
+    margin-block: 0.5em;
+  }
+  .input__container {
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 600px) {
+    .container {
+      width: 100%;
+      flex-direction: column;
+      padding: 1rem;
+    }
+  }
+</style>

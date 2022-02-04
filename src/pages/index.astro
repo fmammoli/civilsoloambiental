@@ -1,12 +1,12 @@
 ---
 // Component Imports
-import Tour from '../components/Tour.astro';
+import Tour from "../components/Tour.astro";
 // You can import components from any supported Framework here!
 
-import MainLayout from '../Layouts/MainLayout.astro';
+import MainLayout from "../Layouts/MainLayout.astro";
 
 import Header from "../components/Header/Header.astro";
-import Services from "../components/Services/Services.astro"
+import Services from "../components/Services/Services.astro";
 import Divider from "../components/Divider.astro";
 import Card from "../components/Card.astro";
 import Footer from "../components/Footer/Footer.astro";
@@ -16,26 +16,26 @@ import Footer from "../components/Footer/Footer.astro";
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
 
-
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 const activeNav = "Home";
 ---
-<MainLayout activeNav={activeNav}>
-	<main>
-		<Services></Services>
-		
-	</main>
-	<section><Divider></Divider></section>
-	<section><Card></Card></section>
+
+<MainLayout {activeNav}>
+  <main>
+    <Services />
+  </main>
+  <section><Divider /></section>
+  <section><Card /></section>
 </MainLayout>
+
 <style>
-main{
-	margin-top: 1rem;
-}
-@media (max-width: 600px) {
-	main{
-		margin-top: 0;
-	}
-}
+  main {
+    margin-top: 1rem;
+  }
+  @media (max-width: 600px) {
+    main {
+      margin-top: 0;
+    }
+  }
 </style>

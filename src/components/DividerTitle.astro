@@ -1,0 +1,26 @@
+---
+const { title, color } = Astro.props;
+---
+
+<div class="full__container" style={`background-color: var(${color});`}>
+  <section class="divider">
+    <h1 class="section__title">{title}</h1>
+  </section>
+</div>
+
+<style>
+  .full__container {
+    background: var(--divider-color);
+  }
+  .divider {
+    width: 80%;
+    color: white;
+    margin: 0 auto;
+  }
+
+  .section__title {
+    font-weight: 300;
+    font-size: clamp(1.5rem, 1rem + 1.25vw, 1.5rem);
+    padding-block: 1em;
+  }
+</style>
