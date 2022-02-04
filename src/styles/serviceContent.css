@@ -20,7 +20,8 @@
   margin-top: 1.5em;
   font-weight: var(--content-h3-weight);
 }
-.content p {
+.content p,
+.content ul {
   margin-block: 1rem;
   line-height: 1.5em;
   color: var(--content-text-color);
@@ -36,4 +37,12 @@
   margin-bottom: 1em;
   line-height: 1.5em;
   font-weight: var(--content-text-weight);
+}
+.signature--right {
+  text-align: right;
+}
+.content .img__container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }

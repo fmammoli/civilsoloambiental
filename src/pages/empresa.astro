@@ -4,6 +4,7 @@
 import MainLayout from "../Layouts/MainLayout.astro";
 import EmpresaContent from "../content/EmpresaContent.astro";
 import DividerTitle from "../components/DividerTitle.astro";
+import Divider from "../components/Divider.astro";
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
@@ -19,11 +20,19 @@ const activeNav = "Empresa";
   <main class="main">
     <DividerTitle title={"Quem somos?"} color={"--empresa-color"} />
     <EmpresaContent />
+    <Divider />
   </main>
 </MainLayout>
 
 <style>
-  main {
+  .main {
     margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 600px) {
+    .main {
+      margin-top: 0px;
+    }
   }
 </style>

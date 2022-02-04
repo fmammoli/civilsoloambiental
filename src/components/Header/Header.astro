@@ -3,74 +3,76 @@ import HeroLogo from "./HeroLogo.astro";
 import NavToggleBtn from "./NavToggleBtn.astro";
 import Nav from "./Nav.astro";
 
-const {activeNav} = Astro.props;
+const { activeNav } = Astro.props;
 ---
 
 <header class="header">
   <div class="on__top__container header">
-    <div class="hero__logo on__top__container"><HeroLogo></HeroLogo></div>
-    <div  class="nav-toggle-btn on__top__container">
-      <NavToggleBtn ></NavToggleBtn>
+    <div class="hero__logo on__top__container"><HeroLogo /></div>
+    <div class="nav-toggle-btn on__top__container">
+      <NavToggleBtn />
     </div>
   </div>
-  <div class="nav"><Nav activeNav={activeNav}></Nav></div>
+  <div class="nav"><Nav {activeNav} /></div>
 </header>
 
 <script>
-let primaryNav = document.querySelector(".primary__navigation");
-let navToggle = document.querySelector(".mobile__nav--toggle");
-let body = document.querySelector("body");
-navToggle.addEventListener("click", () => {
-  const visibility = primaryNav.getAttribute("data-visible");
+  let primaryNav = document.querySelector(".primary__navigation");
+  let navToggle = document.querySelector(".mobile__nav--toggle");
+  let body = document.querySelector("body");
+  navToggle.addEventListener("click", () => {
+    const visibility = primaryNav.getAttribute("data-visible");
 
-  if (visibility == "false") {
-    navToggle.classList.toggle("opened");
-    primaryNav.setAttribute("data-visible", "true");
-    navToggle.setAttribute("aria-expanded", true);
-    body.style.overflowY = "hidden";
-  } else if (visibility == "true") {
-    navToggle.classList.toggle("opened");
-    primaryNav.setAttribute("data-visible", "false");
-    navToggle.setAttribute("aria-expanded", false);
-    body.style.overflowY = '';
-  }
-});
+    if (visibility == "false") {
+      navToggle.classList.toggle("opened");
+      primaryNav.setAttribute("data-visible", "true");
+      navToggle.setAttribute("aria-expanded", true);
+      body.style.overflowY = "hidden";
+    } else if (visibility == "true") {
+      navToggle.classList.toggle("opened");
+      primaryNav.setAttribute("data-visible", "false");
+      navToggle.setAttribute("aria-expanded", false);
+      body.style.overflowY = "";
+    }
+  });
 </script>
 
 <style>
-.header {
-  display: flex;
-  justify-content: center;
-}
+  .header {
+    display: flex;
+    justify-content: center;
+  }
 
-.hero__logo{
-  max-width: 400px;
-  /* height: 2.667em; */
-}
-.nav-toggle-btn {
-  display: none;
-}
-.nav, .hero__logo{
-  align-self: flex-end;
-}
-@media (max-width: 600px){
-    .nav-toggle-btn{
-        display: block;
+  .hero__logo {
+    max-width: 400px;
+    /* height: 2.667em; */
+  }
+  .nav-toggle-btn {
+    display: none;
+  }
+  .nav,
+  .hero__logo {
+    align-self: flex-end;
+  }
+
+  @media (max-width: 600px) {
+    .nav-toggle-btn {
+      display: block;
     }
-    .header{
-        flex-direction: column;
-        justify-content: center;
+    .header {
+      flex-direction: column;
+      justify-content: center;
     }
     .on__top__container {
       position: relative;
       width: 100%;
       background-color: white;
       z-index: 9999;
-      
+
       padding-bottom: 0.4rem;
     }
     .hero__logo {
       align-self: center;
     }
-}
+  }
 </style>
