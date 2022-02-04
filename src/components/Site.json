@@ -27,12 +27,15 @@
     },
     {
       "id": 3,
-      "title": "Autorização de Supressão de Vegetação Nativa",
+      "title": "Autorização para Supressão de Vegetação Nativa",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "link": "",
+      "link": "/autorizacao-para-supressao",
       "img": "/assets/home/supressao_home.png",
+      "bannerImg": "https://picsum.photos/1000/1000?random=1",
       "icon": "/assets/tractor.png",
-      "color": "--third-color"
+      "color": "--third-color",
+      "content": "../content/AreasContaminadas/AreasContaminadasContent.astro",
+      "imgs": [{ "path": "../../public/assets/supressao/" }]
     },
     {
       "id": 4,
