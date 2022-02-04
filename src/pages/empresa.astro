@@ -1,21 +1,29 @@
 ---
 // Component Imports
 
-import MainLayout from '../Layouts/MainLayout.astro';
-
+import MainLayout from "../Layouts/MainLayout.astro";
+import EmpresaContent from "../content/EmpresaContent.astro";
+import DividerTitle from "../components/DividerTitle.astro";
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
 
-
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 
-const activeNav = "Empresa"
+const activeNav = "Empresa";
 ---
-<MainLayout activeNav={activeNav}>
-	<main>
-		<h1>Empresa</h1>
-	</main>
+
+<MainLayout {activeNav}>
+  <main class="main">
+    <DividerTitle title={"Quem somos?"} color={"--empresa-color"} />
+    <EmpresaContent />
+  </main>
 </MainLayout>
+
+<style>
+  main {
+    margin-top: 1rem;
+  }
+</style>
