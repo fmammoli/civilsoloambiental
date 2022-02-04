@@ -66,11 +66,14 @@
       "id": 6,
       "title": "Projetos Socioambientais",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "link": "",
+      "link": "/projetos-socioambientais",
       "img": "/assets/home/projetos_home.jpg",
+      "bannerImg": "https://picsum.photos/1000/1000?random=1",
       "icon": "/assets/save-the-planet.png",
       "color": "--sixth-color",
-      "reversed": true
+      "reversed": true,
+      "content": "../content/ProjetosSocioambientaisContent.astro",
+      "imgs": [{ "path": "../../public/assets/socioambiental/" }]
     }
   ]
 }

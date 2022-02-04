@@ -1,0 +1,43 @@
+---
+import ServiceLayout from "../Layouts/ServiceLayout.astro";
+import Site from "../components/Site.json";
+
+import img1 from "/assets/socioambiental/1.jpg";
+import img2 from "/assets/socioambiental/2.jpg";
+import img3 from "/assets/socioambiental/3.jpg";
+import img4 from "/assets/socioambiental/4.png";
+import img5 from "/assets/socioambiental/5.jpg";
+import img6 from "/assets/socioambiental/6.jpg";
+import img7 from "/assets/socioambiental/7.jpg";
+import img8 from "/assets/socioambiental/8.jpg";
+import img9 from "/assets/socioambiental/9.png";
+import img10 from "/assets/socioambiental/10.jpg";
+import img11 from "/assets/socioambiental/11.jpg";
+
+import ProjetosSocioAmbientaisContent from "../content/ProjetosSocioAmbientaisContent.astro";
+
+const data = Site.items.find((item) => item.id === 5);
+const imgGallery = [
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  img10,
+  img11,
+];
+---
+
+<ServiceLayout
+  title={data.title}
+  desc={data.desc}
+  bannerImg={data.bannerImg}
+  color={data.color}
+  {imgGallery}
+>
+  <ProjetosSocioAmbientaisContent />
+</ServiceLayout>
