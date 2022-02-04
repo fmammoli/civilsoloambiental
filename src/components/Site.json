@@ -9,7 +9,7 @@
       "bannerImg": "https://picsum.photos/1000/1000?random=1",
       "icon": "/assets/flask.png",
       "color": "--first-color",
-      "content": "../content/AreasContaminadas/AreasContaminadasContent.astro",
+      "content": "../content/AreasContaminadasContent.astro",
       "imgs": [{ "path": "../../public/assets/areasContaminadas/" }]
     },
     {
@@ -21,7 +21,7 @@
       "bannerImg": "https://picsum.photos/1000/1000?random=1",
       "icon": "/assets/forest.png",
       "color": "--second-color",
-      "content": "../content/AreasContaminadas/AreasContaminadasContent.astro",
+      "content": "../content/LaudoContent.astro",
       "reversed": true,
       "imgs": [{ "path": "../../public/assets/laudo/" }]
     },
@@ -34,7 +34,7 @@
       "bannerImg": "https://picsum.photos/1000/1000?random=1",
       "icon": "/assets/tractor.png",
       "color": "--third-color",
-      "content": "../content/AreasContaminadas/AreasContaminadasContent.astro",
+      "content": "../content/SupressaoContent.astro",
       "imgs": [{ "path": "../../public/assets/supressao/" }]
     },
     {
@@ -47,17 +47,20 @@
       "icon": "/assets/sprout.png",
       "color": "--fourth-color",
       "reversed": true,
-      "content": "../content/AreasContaminadas/CompensacaoAmbientalContent.astro",
+      "content": "../content/Compensacao.astro",
       "imgs": [{ "path": "../../public/assets/compensacao/" }]
     },
     {
       "id": 5,
       "title": "Adequação Ambiental de Propriedades Rurais",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "link": "",
+      "link": "/adequacao-ambiental-de-propriedades-rurais",
       "img": "/assets/home/adequacao_home.png",
+      "bannerImg": "https://picsum.photos/1000/1000?random=1",
       "icon": "/assets/rural-space.png",
-      "color": "--fifth-color"
+      "color": "--fifth-color",
+      "content": "../content/AdequacaoRuralContent.astro",
+      "imgs": [{ "path": "../../public/assets/adequacao/" }]
     },
     {
       "id": 6,

@@ -28,7 +28,7 @@
   font-weight: var(--content-text-weight);
 }
 .c4 {
-  color: var(--content-accent-color);
+  /* color: var(--content-accent-color); */
 }
 .content ol {
   color: var(--content-text-color);
@@ -54,4 +54,7 @@
   object-fit: fill;
   max-height: 400px;
   width: fit-content;
+}
+.bold {
+  font-weight: bold;
 }

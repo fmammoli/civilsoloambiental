@@ -1,0 +1,47 @@
+---
+import ServiceLayout from "../Layouts/ServiceLayout.astro";
+import Site from "../components/Site.json";
+
+import img1 from "/assets/adequacao/1.jpg";
+import img2 from "/assets/adequacao/2.png";
+import img3 from "/assets/adequacao/3.jpg";
+import img4 from "/assets/adequacao/4.png";
+import img5 from "/assets/adequacao/5.png";
+import img6 from "/assets/adequacao/6.jpg";
+import img7 from "/assets/adequacao/7.jpg";
+import img8 from "/assets/adequacao/8.jpg";
+import img9 from "/assets/adequacao/9.jpg";
+import img10 from "/assets/adequacao/10.jpg";
+import img11 from "/assets/adequacao/11.jpg";
+import img12 from "/assets/adequacao/12.jpg";
+import img13 from "/assets/adequacao/13.jpg";
+
+import AdequacaoRuralContent from "../content/AdequacaoRuralContent.astro";
+
+const data = Site.items.find((item) => item.id === 5);
+const imgGallery = [
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  img10,
+  img11,
+  img12,
+  img13,
+];
+---
+
+<ServiceLayout
+  title={data.title}
+  desc={data.desc}
+  bannerImg={data.bannerImg}
+  color={data.color}
+  {imgGallery}
+>
+  <AdequacaoRuralContent />
+</ServiceLayout>
