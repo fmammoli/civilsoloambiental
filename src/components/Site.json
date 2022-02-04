@@ -41,11 +41,14 @@
       "id": 4,
       "title": "Compensação Ambiental e Plantio de Mudas Nativas",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "link": "",
+      "link": "/compensacao-ambiental-e-plantio-de-mudas-nativas",
       "img": "/assets/home/compensacao_home.png",
+      "bannerImg": "https://picsum.photos/1000/1000?random=1",
       "icon": "/assets/sprout.png",
       "color": "--fourth-color",
-      "reversed": true
+      "reversed": true,
+      "content": "../content/AreasContaminadas/CompensacaoAmbientalContent.astro",
+      "imgs": [{ "path": "../../public/assets/compensacao/" }]
     },
     {
       "id": 5,
