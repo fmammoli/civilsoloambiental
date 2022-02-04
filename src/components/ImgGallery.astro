@@ -38,7 +38,7 @@ const { imgs, clickable } = Astro.props;
   <img src="" alt="" class="modal__content" id="img01" />
   <!-- <div class="" id="caption"></div> -->
 </div>
-<script>
+<script hoist>
   // Get the modal
   // var modal = document.getElementById("modal");
 
@@ -49,7 +49,7 @@ const { imgs, clickable } = Astro.props;
 
   function openModal(galleryItem) {
     body.style.overflow = "hidden";
-    console.log({ galleryItem });
+
     let modal = document.getElementById("modal");
 
     // Get the image and insert it inside the modal - use its "alt" text as a caption
@@ -57,8 +57,6 @@ const { imgs, clickable } = Astro.props;
     let modalImg = document.getElementById("img01");
     let captionText = document.getElementById("caption");
 
-    console.log(this);
-    console.log("aaaa");
     modal.style.display = "block";
     //   modalImg.src = gallery__item.dataset.img;
 

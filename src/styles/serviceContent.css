@@ -27,9 +27,7 @@
   color: var(--content-text-color);
   font-weight: var(--content-text-weight);
 }
-.c4 {
-  /* color: var(--content-accent-color); */
-}
+
 .content ol {
   color: var(--content-text-color);
 }

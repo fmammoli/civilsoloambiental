@@ -4,8 +4,6 @@ import TextItem from "./TextItem.astro";
 const { title, link, img, color, icon, reversed = false } = Astro.props;
 let arrowSide = "";
 reversed ? (arrowSide = "right") : (arrowSide = "left");
-
-console.log({ reversed });
 ---
 
 <div

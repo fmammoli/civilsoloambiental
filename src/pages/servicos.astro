@@ -7,16 +7,14 @@ import DividerTitle from "../components/DividerTitle.astro";
 import Divider from "../components/Divider.astro";
 
 const data = Site.items;
-console.log(data);
-const item = data[0];
-const index = 0;
+
 const activeNav = "Serviços";
 ---
 
 <MainLayout {activeNav}>
   <main class="main">
     <DividerTitle title="Nossos serviços" color={"--servicos-color"} />
-    <ul key={index} class="container">
+    <ul class="container">
       {data.map((item, index) => (
         <li class="row">
           <div class="text">
