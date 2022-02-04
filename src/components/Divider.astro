@@ -24,18 +24,26 @@
   </svg>
 </section>
 
-<script hoist>
+<script>
+  console.log("aaa");
   const divider = document.querySelector("#divider");
+
+  console.log({ divider });
   const path = document.querySelector("#logo_line_path");
   const options = {
     root: null,
-    rootMargin: "-150px",
-    threshold: 0.7,
+    rootMargin: "0px",
+    threshold: 0.2,
   };
 
   const observer = new IntersectionObserver(function (entries, observer) {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) path.classList.add("animate__line");
+      if (entry.isIntersecting) {
+        console.log("intersectin");
+        path.classList.add("animate__line");
+      } else {
+        path.classList.remove("animate__line");
+      }
     });
   }, options);
 
