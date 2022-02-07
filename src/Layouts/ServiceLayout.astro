@@ -15,7 +15,7 @@ const activeNavOption = "Serviços";
         style={`background-image: url(${bannerImg})`}
       >
       </div>
-      <div class="grid__item-2 title__container">
+      <div class="grid__item-2 title__container with__overlay">
         <h1 class="title">{title}</h1>
         <p>
           {desc}
@@ -71,6 +71,10 @@ const activeNavOption = "Serviços";
     align-self: center;
     color: white;
   }
+  .with__overlay {
+    background-color: var(--content-overlay-color);
+    border-radius: 10px;
+  }
   .title__container h1 {
     padding-block: 1rem;
     line-height: 1.4em;
@@ -118,6 +122,10 @@ const activeNavOption = "Serviços";
     }
     .title__container {
       width: 100%;
+    }
+    .with__overlay {
+      width: 90%;
+      margin: 0 auto;
     }
   }
 </style>

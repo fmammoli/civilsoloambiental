@@ -6,15 +6,7 @@ const { img, color, arrowSide = "left" } = Astro.props;
   class={`arrow__${arrowSide} img__container`}
   style={`color: var(${color});`}
 >
-  <img
-    class="menu__item--img"
-    src={img}
-    alt=""
-    width="600"
-    height="307"
-    loading="lazy"
-    decoding="async"
-  />
+  <img class="menu__item--img" src={img} alt="" width="600" height="307" />
 </div>
 
 <style>
@@ -25,6 +17,7 @@ const { img, color, arrowSide = "left" } = Astro.props;
   }
   img {
     width: 100%;
+    height: auto;
     object-fit: cover;
     object-position: center;
   }
