@@ -8,10 +8,10 @@ import Divider from "../components/Divider.astro";
 
 const data = Site.items;
 
-const activeNav = "Serviços";
+const activeNavOption = "Serviços";
 ---
 
-<MainLayout {activeNav}>
+<MainLayout actioveNav={activeNavOption}>
   <main class="main">
     <DividerTitle title="Nossos serviços" color={"--servicos-color"} />
     <ul class="container">

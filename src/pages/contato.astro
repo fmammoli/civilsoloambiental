@@ -5,10 +5,10 @@ import MainLayout from "../Layouts/MainLayout.astro";
 import DividerTitle from "../components/DividerTitle.astro";
 import Divider from "../components/Divider.astro";
 import FooterContactData from "../components/Footer/FooterContactData.astro";
-const activeNav = "Contato";
+const activeNavOption = "Contato";
 ---
 
-<MainLayout {activeNav}>
+<MainLayout actioveNav={activeNavOption}>
   <main class="main">
     <DividerTitle title={"Contato"} color={"--sixth-color"} />
 

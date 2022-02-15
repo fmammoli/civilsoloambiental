@@ -13,10 +13,10 @@ import Divider from "../components/Divider.astro";
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 
-const activeNav = "Empresa";
+const activeNavOption = "Empresa";
 ---
 
-<MainLayout {activeNav}>
+<MainLayout actioveNav={activeNavOption}>
   <main class="main">
     <DividerTitle title={"Quem somos?"} color={"--empresa-color"} />
     <EmpresaContent />
