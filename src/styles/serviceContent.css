@@ -3,6 +3,9 @@
   margin: 0 auto;
   max-width: 900px;
 }
+.accent {
+  color: var(--first-color);
+}
 .content h1 {
   margin-block: 1em;
   color: var(--content-h1-color);
