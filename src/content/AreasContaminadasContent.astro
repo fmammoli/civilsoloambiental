@@ -5,6 +5,13 @@ import AccentPanel from "../components/AccentPanel/AccentPanel.astro";
 import AccentPanelTitle from "../components/AccentPanel/AccentPanelTitle.astro";
 import AccentPanelContent from "../components/AccentPanel/AccentPanelContent.astro";
 
+import ImgBox from "../components/ImgBox/ImgBox.astro";
+import ImgBoxText from "../components/ImgBox/ImgBoxText.astro";
+
+import CollapsableSection from "../components/CollapsableSection/CollapsableSection.astro";
+import CollapsableItem from "../components/CollapsableSection/CollapsableItem.astro";
+import SummaryItem from "../components/CollapsableSection/SummaryItem.astro";
+
 const { imgText } = Astro.props;
 ---
 
@@ -41,31 +48,27 @@ const { imgText } = Astro.props;
     </div>
 
     <div class="card__container">
-      <div class="card">
-        <img src={imgText[0]} alt="" class="card__img img__offset--left-1" />
-        <div class="card__divider"></div>
-        <p class="card__text">
+      <ImgBox img={imgText[0]} offset="2">
+        <ImgBoxText>
           A <span class="accent">Civilsolo Ambiental</span> possui um equipamento
           importado que executa ensaios de CPTu também conhecido como piezocone,
           que determina em tempo real com excelente precisão a estratigrafia do solo
           e a condutividade hidráulica do solo a cada 2 cm.
-        </p>
-      </div>
+        </ImgBoxText>
+      </ImgBox>
     </div>
 
     <div class="card__container">
-      <div class="card flex__reverse">
-        <img src={imgText[3]} alt="" class="card__img img__offset--right-2" />
-        <div class="card__divider"></div>
-        <p class="card__text">
+      <ImgBox img={imgText[3]} reverse offset="2">
+        <ImgBoxText>
           A definição do perfil hidroestratigráfico é um dos componentes mais
           importantes na fase de investigação ambiental, uma vez que permite
           determinar direção e velocidade da migração dos contaminantes na água
           subterrânea. Para determinar as concentrações dos contaminantes é
           necessário fazer coletas de amostras de solo e de água subterrânea que
           são analisadas posteriormente em laboratório.
-        </p>
-      </div>
+        </ImgBoxText>
+      </ImgBox>
     </div>
 
     <div>
@@ -93,16 +96,14 @@ const { imgText } = Astro.props;
     </p>
 
     <div class="card__container">
-      <div class="card">
-        <img src={imgText[2]} alt="" class="card__img img__offset--left-2" />
-        <div class="card__divider"></div>
-        <p class="card__text">
+      <ImgBox img={imgText[2]} offset="2">
+        <ImgBoxText>
           Os postos de combustíveis respondem por mais de 80% das áreas
           contaminadas no Estado de São Paulo. Desde o ano de 2000 são passíveis
           de licenciamento ambiental, cujos procedimentos incluem medidas de
           investigação de áreas suspeitas ou confirmadas de contaminação.
-        </p>
-      </div>
+        </ImgBoxText>
+      </ImgBox>
     </div>
   </article>
   <article class="full__background">
@@ -142,279 +143,121 @@ const { imgText } = Astro.props;
       </div>
 
       <div class="card__container">
-        <div class="card flex__reverse">
-          <img src={imgText[1]} alt="" class="card__img img__offset--right-2" />
-          <div class="card__divider"></div>
-          <p class="card__text">
+        <ImgBox img={imgText[1]} offset="2" reverse>
+          <ImgBoxText>
             Em cada fase da Investigação Ambiental são realizados laudos
             ambientais que são submetidos à análise da CETESB para orientações e
             exigências técnicas e processuais, cujas determinações são
             informadas ao cliente ou representante legal da área para decisões e
             encaminhamentos, sempre apoiados tecnicamente pela empresa de
             consultoria.
-          </p>
-        </div>
+          </ImgBoxText>
+        </ImgBox>
       </div>
 
-      <div class="collapse__container">
-        <div class="section">
-          <p class="section__summary">
+      <div>
+        <CollapsableSection>
+          <SummaryItem>
             Entenda os problemas ambientais relacionados às contaminações e as
-            possibilidades de ocupação de seu terreno com a <span class="accent"
+            possibilidades de ocupação de seu terreno com a <span class="bold"
               >Civilsolo Ambiental</span
             >! Entre em contato para esclarecer suas dúvidas!
-          </p>
-        </div>
-        <div class="section collapsible">
-          <h3>Como funciona o Gerenciamento de Áreas Contaminadas?</h3>
-          <p>
-            O Gerenciamento de Áreas Contaminadas é regido legalmente pela
-            CETESB (no Estado de São Paulo), por meio de sua Decisão de
-            Diretoria DD-038 de 2017, e pela Resolução CONAMA nº 420 de 2009 no
-            nível federal. É composto por dois grandes conjuntos de ações:
-          </p>
-          <ul>
-            <li>
-              INVESTIGAÇÃO: Ações de identificação, caracterização e
-              investigação da contaminação e do meio físico do local de
-              interesse;
-            </li>
-            <li>
-              REMEDIAÇÃO: Ações para reduzir ou eliminar a contaminação com o
-              objetivo de viabilizar o uso seguro da área de interesse.
-            </li>
-          </ul>
-          <p>
-            O Gerenciamento de Áreas Contaminadas baseia-se em etapas
-            sequenciais, em que a informação obtida em cada etapa fornece as
-            informações necessárias para a execução da etapa posterior.
-          </p>
-          <p>
-            A Civilsolo Ambiental executa as quatro etapas do processo de
-            Investigação Ambiental de Áreas Contaminadas, sendo elas:
-          </p>
+          </SummaryItem>
+          <CollapsableItem>
+            <h3>Como funciona o Gerenciamento de Áreas Contaminadas?</h3>
+            <p>
+              O Gerenciamento de Áreas Contaminadas é regido legalmente pela
+              CETESB (no Estado de São Paulo), por meio de sua Decisão de
+              Diretoria DD-038 de 2017, e pela Resolução CONAMA nº 420 de 2009
+              no nível federal. É composto por dois grandes conjuntos de ações:
+            </p>
+            <ul>
+              <li>
+                INVESTIGAÇÃO: Ações de identificação, caracterização e
+                investigação da contaminação e do meio físico do local de
+                interesse;
+              </li>
+              <li>
+                REMEDIAÇÃO: Ações para reduzir ou eliminar a contaminação com o
+                objetivo de viabilizar o uso seguro da área de interesse.
+              </li>
+            </ul>
+            <p>
+              O Gerenciamento de Áreas Contaminadas baseia-se em etapas
+              sequenciais, em que a informação obtida em cada etapa fornece as
+              informações necessárias para a execução da etapa posterior.
+            </p>
+            <p>
+              A Civilsolo Ambiental executa as quatro etapas do processo de
+              Investigação Ambiental de Áreas Contaminadas, sendo elas:
+            </p>
 
-          <h3>Avaliação Preliminar</h3>
-          <p>
-            A Avaliação Preliminar é uma avaliação inicial da área com objetivo
-            de identificar e definir as Áreas com Potencial de Contaminação (AP)
-            e as Áreas Suspeitas de Contaminação (AS), que serão investigadas
-            nas etapas posteriores. É realizada por meio de levantamentos de
-            dados e informações disponíveis, incluindo documentação existente;
-            histórico de ocupação da área e tipos de atividades desenvolvidas;
-            levantamento aerofotogramétrico atual e pretérito; entrevistas com
-            funcionários e moradores do entorno; identificação de substâncias
-            químicas de interesse e levantamento da geologia e hidrogeologia
-            regional e local. É imprescindível que a Avaliação Preliminar seja
-            muito bem feita, pois ela é a base do Gerenciamento de Áreas
-            Contaminadas. Se as áreas potenciais e suspeitas de contaminação não
-            forem bem definidas, todo o restante do processo de investigação
-            será duvidoso e poderá gerar retrabalho e maior investimento de
-            recursos financeiros.
-          </p>
-          <h3>Investigação Confirmatória</h3>
-          <p>
-            Na Investigação Confirmatória todas as áreas potenciais e suspeitas
-            levantadas na Avaliação Preliminar serão investigadas. O objetivo
-            desta etapa é confirmar ou não a existência de contaminação na área
-            em estudo, além de identificar a área fonte da contaminação. Nesta
-            etapa são feitas algumas análises de água subterrânea, solo e vapor,
-            bem como sondagens para caracterização inicial do meio físico, a fim
-            de investigar a presença de contaminantes. Se a investigação não for
-            feita adequadamente, o órgão ambiental pode exigir mais análises e
-            nova mobilização de equipe em campo antes de aceitar os resultados.
-            Por isso, é muito importante que o trabalho seja realizado por uma
-            equipe de qualidade, como a da Civilsolo Ambiental, para que não
-            haja dúvidas e retrabalho ao fim desta etapa. Se confirmada a
-            contaminação, o processo segue para a etapa seguinte. Se não for
-            encontrado nenhum contaminante, a investigação se encerra, desde que
-            seja aprovada pelo órgão ambiental.
-          </p>
-          <h3>Investigação Detalhada</h3>
-          <p>
-            Na Investigação Detalhada é necessário definir a extensão e a
-            profundidade da contaminação, de todos os contaminantes presentes na
-            área em estudo. É preciso detalhar as características do meio
-            físico; quantificar a massa dos contaminantes e a forma como cada
-            contaminante se desloca no ambiente; definir as fontes primárias e
-            secundárias de contaminação; identificar os receptores futuros da
-            contaminação e delimitar tridimensionalmente a pluma de
-            contaminação. No final desta etapa, o grau de incerteza sobre a
-            contaminação e seu comportamento no meio em que se encontra (água
-            e/ou solo) deve ser mínimo. Todo o trabalho feito até esta etapa
-            precisa ser de alta qualidade e precisão, pois o órgão ambiental
-            pode não autorizar o avanço para a etapa seguinte e exigir que ações
-            complementares sejam feitas, onerando o processo e aumentando o
-            tempo de trabalho.
-          </p>
-        </div>
-        <button id="btn__toggle--collapse" class="btn__toggle--collapse"
-          >Ver mais</button
-        >
+            <h3>Avaliação Preliminar</h3>
+            <p>
+              A Avaliação Preliminar é uma avaliação inicial da área com
+              objetivo de identificar e definir as Áreas com Potencial de
+              Contaminação (AP) e as Áreas Suspeitas de Contaminação (AS), que
+              serão investigadas nas etapas posteriores. É realizada por meio de
+              levantamentos de dados e informações disponíveis, incluindo
+              documentação existente; histórico de ocupação da área e tipos de
+              atividades desenvolvidas; levantamento aerofotogramétrico atual e
+              pretérito; entrevistas com funcionários e moradores do entorno;
+              identificação de substâncias químicas de interesse e levantamento
+              da geologia e hidrogeologia regional e local. É imprescindível que
+              a Avaliação Preliminar seja muito bem feita, pois ela é a base do
+              Gerenciamento de Áreas Contaminadas. Se as áreas potenciais e
+              suspeitas de contaminação não forem bem definidas, todo o restante
+              do processo de investigação será duvidoso e poderá gerar
+              retrabalho e maior investimento de recursos financeiros.
+            </p>
+            <h3>Investigação Confirmatória</h3>
+            <p>
+              Na Investigação Confirmatória todas as áreas potenciais e
+              suspeitas levantadas na Avaliação Preliminar serão investigadas. O
+              objetivo desta etapa é confirmar ou não a existência de
+              contaminação na área em estudo, além de identificar a área fonte
+              da contaminação. Nesta etapa são feitas algumas análises de água
+              subterrânea, solo e vapor, bem como sondagens para caracterização
+              inicial do meio físico, a fim de investigar a presença de
+              contaminantes. Se a investigação não for feita adequadamente, o
+              órgão ambiental pode exigir mais análises e nova mobilização de
+              equipe em campo antes de aceitar os resultados. Por isso, é muito
+              importante que o trabalho seja realizado por uma equipe de
+              qualidade, como a da Civilsolo Ambiental, para que não haja
+              dúvidas e retrabalho ao fim desta etapa. Se confirmada a
+              contaminação, o processo segue para a etapa seguinte. Se não for
+              encontrado nenhum contaminante, a investigação se encerra, desde
+              que seja aprovada pelo órgão ambiental.
+            </p>
+            <h3>Investigação Detalhada</h3>
+            <p>
+              Na Investigação Detalhada é necessário definir a extensão e a
+              profundidade da contaminação, de todos os contaminantes presentes
+              na área em estudo. É preciso detalhar as características do meio
+              físico; quantificar a massa dos contaminantes e a forma como cada
+              contaminante se desloca no ambiente; definir as fontes primárias e
+              secundárias de contaminação; identificar os receptores futuros da
+              contaminação e delimitar tridimensionalmente a pluma de
+              contaminação. No final desta etapa, o grau de incerteza sobre a
+              contaminação e seu comportamento no meio em que se encontra (água
+              e/ou solo) deve ser mínimo. Todo o trabalho feito até esta etapa
+              precisa ser de alta qualidade e precisão, pois o órgão ambiental
+              pode não autorizar o avanço para a etapa seguinte e exigir que
+              ações complementares sejam feitas, onerando o processo e
+              aumentando o tempo de trabalho.
+            </p>
+          </CollapsableItem>
+        </CollapsableSection>
       </div>
     </div>
   </article>
 </section>
-<script>
-  // This is the important part!
-
-  function collapseSection(element) {
-    // get the height of the element's inner content, regardless of its actual size
-    let sectionHeight = element.scrollHeight;
-
-    // temporarily disable all css transitions
-    var elementTransition = element.style.transition;
-    element.style.transition = "";
-
-    // on the next frame (as soon as the previous style change has taken effect),
-    // explicitly set the element's height to its current pixel height, so we
-    // aren't transitioning out of 'auto'
-    requestAnimationFrame(function () {
-      element.style.height = sectionHeight + "px";
-      element.style.transition = elementTransition;
-
-      // on the next frame (as soon as the previous style change has taken effect),
-      // have the element transition to height: 0
-      requestAnimationFrame(function () {
-        element.style.height = 0 + "px";
-      });
-    });
-
-    // mark the section as "currently collapsed"
-    element.setAttribute("data-collapsed", "true");
-  }
-
-  function expandSection(element) {
-    // get the height of the element's inner content, regardless of its actual size
-    let sectionHeight = element.scrollHeight;
-
-    // have the element transition to the height of its inner content
-    element.style.height = sectionHeight + "px";
-
-    // when the next css transition finishes (which should be the one we just triggered)
-    element.addEventListener("transitionend", function (e) {
-      // remove this event listener so it only gets triggered once
-      element.removeEventListener("transitionend", arguments.callee);
-
-      // remove "height" from the element's inline styles, so it can return to its initial value
-      element.style.height = null;
-    });
-
-    // mark the section as "currently not collapsed"
-    element.setAttribute("data-collapsed", "false");
-  }
-
-  document
-    .querySelector("#btn__toggle--collapse")
-    .addEventListener("click", function (e) {
-      let section = document.querySelector(".section.collapsible");
-      let isCollapsed = section.getAttribute("data-collapsed") === "true";
-
-      if (isCollapsed) {
-        expandSection(section);
-        section.setAttribute("data-collapsed", "false");
-        e.target.innerText = "Ver menos";
-      } else {
-        collapseSection(section);
-        e.target.innerText = "Ver mais";
-      }
-    });
-  collapseSection(document.querySelector(".section.collapsible"));
-</script>
 
 <style>
-  .collapse__container {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ccc;
-    border-radius: 0px 0px 8px 8px;
-  }
-  .section {
-    overflow: hidden;
-    transition: height 0.6s ease-in;
-    height: auto;
-    background-color: rgb(138, 163, 222);
-    padding: 1rem;
-    border-bottom: 1px solid rgb(117 140 192);
-  }
-  .section__summary {
-    color: white;
-  }
-  .section.collapsible {
-    border: 0px;
-    padding-block: 0px;
-    background-color: white;
-  }
-  .btn__toggle--collapse {
-    position: relative;
-    justify-self: center;
-    background-color: rgb(138, 163, 222);
-    color: white;
-    width: 100%;
-    font-size: 1rem;
-    padding-block: 1rem;
-    margin: 0 auto;
-    border-radius: 0px 0px 10px 10px;
-    border: 0px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in;
-  }
-  .btn__toggle--collapse:hover {
-    background-color: rgb(117, 140, 192);
-  }
-
   .card__container {
     margin-block: 4rem 3rem;
   }
-  .card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 
-    position: relative;
-
-    background-color: #656565;
-  }
-  .card__img {
-    justify-self: flex-start;
-    width: 50%;
-  }
-  .img__offset--right-1 {
-    transform: translate3d(1rem, -1rem, 0);
-  }
-  .img__offset--right-2 {
-    transform: translate3d(1rem, -2rem, 0);
-  }
-  .img__offset--left-1 {
-    transform: translate3d(-1rem, -1rem, 0);
-  }
-  .img__offset--left-2 {
-    transform: translate3d(-1rem, -2rem, 0);
-  }
-  .card__text {
-    width: 50%;
-    padding: 1rem;
-    color: white;
-    margin-block: 1rem;
-  }
-  .card__divider {
-    width: 2px;
-    height: 100px;
-    border-radius: 10px;
-    background-color: var(--first-color);
-  }
-  .card__text::before {
-    position: absolute;
-    width: 2px;
-    height: 40%;
-    border-radius: 10px;
-    background-color: var(--first-color);
-    top: 30%;
-    right: 50%;
-  }
-  .flex__reverse {
-    flex-direction: row-reverse;
-  }
   .full__background {
     background-color: #e5edd1;
     padding-block: 1rem;
@@ -422,33 +265,6 @@ const { imgText } = Astro.props;
   @media (max-width: 600px) {
     .card__container {
       margin-block: 2rem;
-    }
-    .card {
-      flex-direction: column;
-    }
-    .card__img {
-      width: 100%;
-    }
-    .card__text {
-      width: 100%;
-      margin: 0;
-    }
-    .card__divider {
-      width: 100px;
-      height: 2px;
-      margin-top: 1rem;
-    }
-    .img__offset--right-1 {
-      transform: translate3d(0rem, 0rem, 0);
-    }
-    .img__offset--right-2 {
-      transform: translate3d(0rem, 0rem, 0);
-    }
-    .img__offset--left-1 {
-      transform: translate3d(0rem, 0rem, 0);
-    }
-    .img__offset--left-2 {
-      transform: translate3d(0rem, 0rem, 0);
     }
   }
 </style>

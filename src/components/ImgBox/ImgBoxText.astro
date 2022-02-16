@@ -1,0 +1,21 @@
+---
+---
+
+<p class="card__text">
+  <slot />
+</p>
+
+<style>
+  .card__text {
+    width: 50%;
+    padding: 1rem;
+    color: white;
+    margin-block: 1rem;
+  }
+  @media (max-width: 600px) {
+    .card__text {
+      width: 100%;
+      margin: 0;
+    }
+  }
+</style>

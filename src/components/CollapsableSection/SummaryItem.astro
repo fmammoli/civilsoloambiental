@@ -1,0 +1,22 @@
+---
+---
+
+<div class="section">
+  <p class="section__summary">
+    <slot />
+  </p>
+</div>
+
+<style>
+  .section {
+    overflow: hidden;
+    transition: height 0.6s ease-in;
+    height: auto;
+    background-color: rgb(138, 163, 222);
+    padding: 1rem;
+    border-bottom: 1px solid rgb(117 140 192);
+  }
+  .section__summary {
+    color: white;
+  }
+</style>

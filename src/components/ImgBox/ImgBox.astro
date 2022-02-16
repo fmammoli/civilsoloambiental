@@ -1,0 +1,100 @@
+---
+const { img, offset = 1, reverse } = Astro.props;
+---
+
+<div class={`card ${reverse ? "flex__reverse" : ""}`}>
+  <img
+    src={img}
+    alt=""
+    class={`card__img ${
+      reverse ? "img__offset--right-" + offset : "img__offset--left-" + offset
+    } `}
+  />
+  <div class="card__divider"></div>
+  <slot />
+</div>
+
+<style>
+  .card__container {
+    margin-block: 4rem 3rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    position: relative;
+
+    background-color: #656565;
+  }
+  .card__img {
+    justify-self: flex-start;
+    width: 50%;
+    height: auto;
+  }
+  .img__offset--right-1 {
+    transform: translate3d(1rem, -1rem, 0);
+  }
+  .img__offset--right-2 {
+    transform: translate3d(1rem, -2rem, 0);
+  }
+  .img__offset--left-1 {
+    transform: translate3d(-1rem, -1rem, 0);
+  }
+  .img__offset--left-2 {
+    transform: translate3d(-1rem, -2rem, 0);
+  }
+  .card__text {
+    width: 50%;
+    padding: 1rem;
+    color: white;
+    margin-block: 1rem;
+  }
+  .card__divider {
+    width: 2px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: var(--first-color);
+  }
+  .card__text::before {
+    position: absolute;
+    width: 2px;
+    height: 40%;
+    border-radius: 10px;
+    background-color: var(--first-color);
+    top: 30%;
+    right: 50%;
+  }
+  .flex__reverse {
+    flex-direction: row-reverse;
+  }
+  @media (max-width: 600px) {
+    .card__container {
+      margin-block: 2rem;
+    }
+    .card {
+      flex-direction: column;
+    }
+    .card__img {
+      width: 100%;
+    }
+
+    .card__divider {
+      width: 100px;
+      height: 2px;
+      margin-top: 1rem;
+    }
+    .img__offset--right-1 {
+      transform: translate3d(0rem, 0rem, 0);
+    }
+    .img__offset--right-2 {
+      transform: translate3d(0rem, 0rem, 0);
+    }
+    .img__offset--left-1 {
+      transform: translate3d(0rem, 0rem, 0);
+    }
+    .img__offset--left-2 {
+      transform: translate3d(0rem, 0rem, 0);
+    }
+  }
+</style>

@@ -1,0 +1,117 @@
+---
+---
+
+<div class="collapse__container">
+  <slot />
+  <button id="btn__toggle--collapse" class="btn__toggle--collapse"
+    >Ver mais</button
+  >
+</div>
+<script>
+  // This is the important part!
+
+  function collapseSection(element) {
+    // get the height of the element's inner content, regardless of its actual size
+    let sectionHeight = element.scrollHeight;
+
+    // temporarily disable all css transitions
+    var elementTransition = element.style.transition;
+    element.style.transition = "";
+
+    // on the next frame (as soon as the previous style change has taken effect),
+    // explicitly set the element's height to its current pixel height, so we
+    // aren't transitioning out of 'auto'
+    requestAnimationFrame(function () {
+      element.style.height = sectionHeight + "px";
+      element.style.transition = elementTransition;
+
+      // on the next frame (as soon as the previous style change has taken effect),
+      // have the element transition to height: 0
+      requestAnimationFrame(function () {
+        element.style.height = 0 + "px";
+      });
+    });
+
+    // mark the section as "currently collapsed"
+    element.setAttribute("data-collapsed", "true");
+  }
+
+  function expandSection(element) {
+    // get the height of the element's inner content, regardless of its actual size
+    let sectionHeight = element.scrollHeight;
+
+    // have the element transition to the height of its inner content
+    element.style.height = sectionHeight + "px";
+
+    // when the next css transition finishes (which should be the one we just triggered)
+    element.addEventListener("transitionend", function (e) {
+      // remove this event listener so it only gets triggered once
+      element.removeEventListener("transitionend", arguments.callee);
+
+      // remove "height" from the element's inline styles, so it can return to its initial value
+      element.style.height = null;
+    });
+
+    // mark the section as "currently not collapsed"
+    element.setAttribute("data-collapsed", "false");
+  }
+
+  document
+    .querySelector("#btn__toggle--collapse")
+    .addEventListener("click", function (e) {
+      let section = document.querySelector(".section.collapsible");
+      let isCollapsed = section.getAttribute("data-collapsed") === "true";
+
+      if (isCollapsed) {
+        expandSection(section);
+        section.setAttribute("data-collapsed", "false");
+        e.target.innerText = "Ver menos";
+      } else {
+        collapseSection(section);
+        e.target.innerText = "Ver mais";
+      }
+    });
+  collapseSection(document.querySelector(".section.collapsible"));
+</script>
+
+<style>
+  .collapse__container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 0px 0px 8px 8px;
+  }
+  .section {
+    overflow: hidden;
+    transition: height 0.6s ease-in;
+    height: auto;
+    background-color: rgb(138, 163, 222);
+    padding: 1rem;
+    border-bottom: 1px solid rgb(117 140 192);
+  }
+  .section__summary {
+    color: white;
+  }
+  .section.collapsible {
+    border: 0px;
+    padding-block: 0px;
+    background-color: white;
+  }
+  .btn__toggle--collapse {
+    position: relative;
+    justify-self: center;
+    background-color: rgb(138, 163, 222);
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+    padding-block: 1rem;
+    margin: 0 auto;
+    border-radius: 0px 0px 10px 10px;
+    border: 0px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+  }
+  .btn__toggle--collapse:hover {
+    background-color: rgb(117, 140, 192);
+  }
+</style>
