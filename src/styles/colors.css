@@ -16,10 +16,10 @@
   --content-accent-color: var(--first-color);
   --content-overlay-color: rgba(153, 153, 153, 0.5);
 
-  --content-text-weight: 300;
-  --content-h1-weight: 500;
-  --content-h2-weight: 300;
-  --content-h3-weight: 200;
+  --content-text-weight: 400;
+  --content-h1-weight: 600;
+  --content-h2-weight: 500;
+  --content-h3-weight: 400;
 
   --content-text-color: #666666;
 
