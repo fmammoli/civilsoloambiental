@@ -18,9 +18,9 @@ const { imgText } = Astro.props;
     </p>
 
     <div class="accent__panel">
-      <h3 class="accent__panel--title">
+      <p class="accent__panel--title">
         Para uma efetiva Investigação Ambiental é necessário identificar:
-      </h3>
+      </p>
       <ul class="accent__panel--content">
         <li>As características do meio físico subterrâneo (água e solo);</li>
         <li>
@@ -59,8 +59,8 @@ const { imgText } = Astro.props;
     </div>
 
     <div class="accent__panel">
-      <h3 class="accent__panel--title">Você sabia?</h3>
-      <p class="accent__panel--text">
+      <p class="accent__panel--title">Você sabia?</p>
+      <p class="accent__panel--content">
         Estudos apontam que para cada 1 dólar investido na investigação, são
         economizados 10 dólares na remediação, pois uma boa caracterização do
         meio físico permite a localização e concentração da massa dos
@@ -108,8 +108,8 @@ const { imgText } = Astro.props;
       </p>
 
       <div class="accent__panel">
-        <h3 class="accent__panel--title">O papel da empresa de consultoria:</h3>
-        <p class="accent__panel--text">
+        <p class="accent__panel--title">O papel da empresa de consultoria:</p>
+        <p class="accent__panel--content">
           A empresa de consultoria representa o cliente perante o órgão
           ambiental e o poder público, como prefeitura, ministério público e
           outros, conforme cada caso. É a consultoria, a exemplo da Civilsolo
@@ -163,6 +163,10 @@ const { imgText } = Astro.props;
       0.4s box-shadow,
       0.4s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
   }
+  .accent__panel--content {
+    color: white;
+  }
+
   .accent__panel:hover {
     transform: translate3d(0px, -4px, 0px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
@@ -176,10 +180,7 @@ const { imgText } = Astro.props;
     border-bottom: 1px solid #03572f;
     padding-bottom: 0.5rem;
   }
-  .accent__panel p,
-  .accent__panel ul {
-    color: white;
-  }
+
   .accent__panel ul {
     padding-inline-start: 20px;
   }
