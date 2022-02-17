@@ -28,7 +28,7 @@ const { imgText } = Astro.props;
       de árvores isoladas e/ou às intervenções em Áreas de Preservação
       Permanente, em áreas rurais e urbanas.
     </p>
-    <div class="container">
+    <div class="wrapper">
       <AccentPanel>
         <AccentPanelTitle>O cálculo da compensação</AccentPanelTitle>
         <AccentPanelContent>
@@ -60,40 +60,44 @@ const { imgText } = Astro.props;
     </div>
   </article>
   <article class="content">
-    <p>
-      A definição do tipo de compensação a ser realizada é parte do trabalho de
-      consultoria ambiental e para que isso ocorra de forma adequada e com
-      qualidade a <span class="accent">Civilsolo Ambiental</span> fornece:
-    </p>
-    <ul>
-      <li>
-        Análise técnica para mensurar e o tipo de compensação ambiental, de
-        acordo com o impacto e aplicação da legislação ambiental pertinente;
-      </li>
-      <li>
-        Assessoria técnica para elaborar Termos de Compensação Ambiental (TCAs),
-        quando firmados com Ministério Público e/ou Termos de Compromisso de
-        Recuperação Ambiental (TCRAs) quando firmados com a CETESB;
-      </li>
-      <li>
-        Elaboração de projetos de reflorestamento e de recomposição de Áreas de
-        Preservação Permanente (APPs);
-      </li>
-      <li>
-        Execução dos plantios compensatórios com espécies florestais nativas e
-        condução da regeneração natural;
-      </li>
-      <li>
-        Acompanhamento técnico dos plantios e ações exigidas nos TCAs e TCRAs
-        com relatórios técnicos mensais sobre os plantios compensatórios e ações
-        em desenvolvimento.
-      </li>
-    </ul>
-    <div class="container">
+    <div class="wrapper">
+      <p>
+        A definição do tipo de compensação a ser realizada é parte do trabalho
+        de consultoria ambiental e para que isso ocorra de forma adequada e com
+        qualidade a <span class="accent">Civilsolo Ambiental</span> fornece:
+      </p>
+
+      <ul>
+        <li>
+          Análise técnica para mensurar e o tipo de compensação ambiental, de
+          acordo com o impacto e aplicação da legislação ambiental pertinente;
+        </li>
+        <li>
+          Assessoria técnica para elaborar Termos de Compensação Ambiental
+          (TCAs), quando firmados com Ministério Público e/ou Termos de
+          Compromisso de Recuperação Ambiental (TCRAs) quando firmados com a
+          CETESB;
+        </li>
+        <li>
+          Elaboração de projetos de reflorestamento e de recomposição de Áreas
+          de Preservação Permanente (APPs);
+        </li>
+        <li>
+          Execução dos plantios compensatórios com espécies florestais nativas e
+          condução da regeneração natural;
+        </li>
+        <li>
+          Acompanhamento técnico dos plantios e ações exigidas nos TCAs e TCRAs
+          com relatórios técnicos mensais sobre os plantios compensatórios e
+          ações em desenvolvimento.
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
       <CollapsableSection>
         <SummaryItem
           >Entenda as possibilidades de compensar os danos ocorridos ou
-          previstos em seu terreno com a <span class="bold"
+          previstos em seu terreno com a <span class="accent"
             >Civilsolo Ambiental</span
           >! Entre em contato para esclarecer suas dúvidas e fazer um orçamento
           sem compromisso!
@@ -130,8 +134,5 @@ const { imgText } = Astro.props;
   .full__background {
     padding-block: 2rem;
     background-color: #237ad687;
-  }
-  .container {
-    margin-block: 2rem;
   }
 </style>
