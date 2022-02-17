@@ -13,12 +13,16 @@ const activeNavOption = "Home";
     <Services />
   </main>
   <section><Divider /></section>
-  <section><Card /></section>
+  <section class="full__background"><Card /></section>
 </MainLayout>
 
 <style>
   main {
     margin-top: 1rem;
+  }
+  .full__background {
+    padding-block: 2rem 0;
+    box-shadow: inset 0 -6rem 0 0 var(--footer-background-color);
   }
   @media (max-width: 600px) {
     main {

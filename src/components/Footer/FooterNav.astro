@@ -1,56 +1,57 @@
 ---
-const {title, items} = Astro.props;
+const { title, items } = Astro.props;
 ---
+
 <div>
-    <h3>{title}</h3>
-    <ul class="navigation__list">
-        {items.map(item => (
-            <li class="navigation__item">
-                <a href={item.link} class="navigation__item--link">{item.title}</a>
-            </li>
-        ))}
-    </ul>
+  <h3>{title}</h3>
+  <ul class="navigation__list">
+    {items.map((item) => (
+      <li class="navigation__item">
+        <a href={item.link} class="navigation__item--link">
+          {item.title}
+        </a>
+      </li>
+    ))}
+  </ul>
 </div>
 
 <style>
-ul {
-  padding-inline-start: 20px;
-}
-h3 {
-    color: var(--footer-nav-color);
-    margin-bottom: 0.4rem;
-}
-.navigation__item {
-  padding: 0.4rem 0;
-}
-
-.navigation__item a {
-  
-}
-
-.navigation__item--link {
-
-  font-size:  clamp(
-    0.875rem,
-    0.4626rem + 1.0309vw + var(--user-font-scale),
-    1.125rem
-  )
-  
-
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  transition: text-decoration-color 0.4s;
-
-  color: var(--nice-grey);
-}
-
-.navigation__item--link:hover,
-.navigation__item--link:focus {
-  text-decoration-color: var(--nice-grey);
-}
-@media (max-width: 600px) {
   ul {
-    padding-inline-start: 20px;
+    padding-inline-start: 30px;
+    list-style: url(/assets/logo_leaf_icon.svg);
   }
-}
+
+  h3 {
+    color: var(--footer-nav-color);
+    margin-bottom: 0.6rem;
+  }
+
+  .navigation__item {
+    padding: 0.4rem 0;
+    padding-left: 0.4rem;
+  }
+
+  .navigation__item--link {
+    /* font-size: clamp(
+      0.875rem,
+      0.4626rem + 1.0309vw + var(--user-font-scale),
+      1.125rem
+    ); */
+
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.4s;
+
+    color: var(--footer-text-color);
+  }
+
+  .navigation__item--link:hover,
+  .navigation__item--link:focus {
+    text-decoration-color: var(--sixth-color);
+  }
+  @media (max-width: 600px) {
+    ul {
+      padding-inline-start: 20px;
+    }
+  }
 </style>

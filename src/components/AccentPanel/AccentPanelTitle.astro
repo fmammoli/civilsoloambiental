@@ -1,18 +1,22 @@
 ---
+const { color = "--accent-panel-title", dividerColor = color } = Astro.props;
 ---
 
-<div class="accent__panel--title">
+<div
+  class="accent__panel--title"
+  style={`color:var(${color});border-color:var(${dividerColor});`}
+>
   <slot />
 </div>
 
 <style>
   .accent__panel--title {
-    color: #03572f;
+    color: var(--accent-panel-title);
     font-size: 1.2rem;
     font-style: normal;
     font-weight: bold;
     margin-top: 0;
-    border-bottom: 1px solid #03572f;
+    border-bottom: 1px solid var(--accent-panel-divider);
     padding-bottom: 0.5rem;
   }
 </style>

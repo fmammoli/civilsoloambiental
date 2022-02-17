@@ -25,8 +25,41 @@
 
   --content-text-color: #505050;
 
-  --logo-green: #a8dda7;
+  --accent-panel-background: #85c46b;
+  --accent-panel-title: #03572f;
+  --accent-panel-divider: #03572f;
+  --accent-panel-text: #white;
+
+  --accent-panel-background-1: var(--logo-red);
+  --accent-panel-title-1: white;
+  --accent-panel-divider-1: #03572f;
+  --accent-panel-text-1: #white;
+
+  --accent-panel-background-2: #f99984;
+  --accent-panel-title-2: var(--logo-red);
+  --accent-panel-divider-2: #03572f;
+  --accent-panel-text-2: #white;
+
+  --accent-panel-background-3: var(--logo-olivegreen);
+  --accent-panel-title-3: var(--logo-green);
+  --accent-panel-divider-3: var(--logo-olivegreen);
+  --accent-panel-text-3: #white;
+
+  --collapsable-section-background: #c45959;
+  --collapsable-section-summary: white;
+  --collapsable-section-divider: #b04343;
+  --collapsable-section-button-background: #c45959;
+  --collapsable-section-button-text: white;
+
+  --collapsable-section-background-1: var(--logo-red);
+  --collapsable-section-summary-1: white;
+  --collapsable-section-divider-1: var(--logo-red);
+  --collapsable-section-button-background-1: var(--logo-red);
+  --collapsable-section-button-text-1: #white;
+
+  --logo-green: #93bc8a;
   --logo-red: #75001d;
+  --logo-olivegreen: #4b5c0e;
 
   --empresa-color: var(--seventh-color);
   --servicos-color: var(--third-color);
@@ -36,9 +69,13 @@
   --menu-color: var(--logo-green);
   --menu-label--color: var(--logo-red);
 
-  --divider-color: var(--logo-green);
+  --divider-color: var(--seventh-color);
+
+  --footer-background-color: #737373;
 
   --footer-color: white;
+  --footer-text-color: white;
+  --footer-logo-text-color: var(--footer-text-color);
 
   --footer-nav-color: var(--logo-red);
 

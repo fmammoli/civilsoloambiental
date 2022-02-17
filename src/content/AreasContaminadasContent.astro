@@ -17,34 +17,26 @@ const { imgText } = Astro.props;
 
 <section>
   <article class="content">
-    <h1>Investigação de Áreas Contaminadas</h1>
-    <p>
-      A <span class="accent">Civilsolo Ambiental</span> é uma empresa especializada
-      nas etapas de investigação ambiental do solo e de águas subterrâneas em áreas
-      suspeitas de contaminação e/ou contaminadas. Uma boa investigação do meio físico
-      é essencial. Permite compreender as heterogeneidades hidrogeológicas do subsolo
-      ao longo da profundidade, e com isso, o entendimento detalhado sobre o transporte
-      dos contaminantes, as zonas preferenciais de fluxo, as zonas de armazenamento
-      e a condutividade hidráulica do solo.
-    </p>
+    <div class="wrapper wrapper--first">
+      <h1>Investigação de Áreas Contaminadas</h1>
+      <p>
+        A <span class="accent">Civilsolo Ambiental</span> é uma empresa especializada
+        nas etapas de investigação ambiental do solo e de águas subterrâneas em áreas
+        suspeitas de contaminação e/ou contaminadas. Uma boa investigação do meio
+        físico é essencial. Permite compreender as heterogeneidades hidrogeológicas
+        do subsolo ao longo da profundidade, e com isso, o entendimento detalhado
+        sobre o transporte dos contaminantes, as zonas preferenciais de fluxo, as
+        zonas de armazenamento e a condutividade hidráulica do solo.
+      </p>
 
-    <div>
-      <AccentPanel>
-        <AccentPanelTitle>
-          Para uma efetiva Investigação Ambiental é necessário identificar:
-        </AccentPanelTitle>
-        <AccentPanelContent>
-          <ul class="white">
-            <li>
-              As características do meio físico subterrâneo (água e solo);
-            </li>
-            <li>
-              As concentrações de compostos químicos de interesse, que são os
-              contaminantes.
-            </li>
-          </ul></AccentPanelContent
-        >
-      </AccentPanel>
+      <p>Para uma efetiva Investigação Ambiental é necessário identificar:</p>
+      <ul>
+        <li>As características do meio físico subterrâneo (água e solo);</li>
+        <li>
+          As concentrações de compostos químicos de interesse, que são os
+          contaminantes.
+        </li>
+      </ul>
     </div>
 
     <div class="card__container">
@@ -71,7 +63,7 @@ const { imgText } = Astro.props;
       </ImgBox>
     </div>
 
-    <div>
+    <div class="wrapper">
       <AccentPanel>
         <AccentPanelTitle>Você sabia?</AccentPanelTitle>
         <AccentPanelContent>
@@ -86,14 +78,67 @@ const { imgText } = Astro.props;
       </AccentPanel>
     </div>
 
-    <p>
-      A <span class="accent">Civilsolo Ambiental</span> também oferece apoio técnico
-      e especializado aos empreendedores imobiliários, empresas e construtoras na
-      aquisição de terrenos ou no início da implantação de um empreendimento. A investigação
-      ambiental desses terrenos evita problemas ambientais, financeiros e legais
-      quando há indícios de contaminação do solo e da água subterrânea, notadamente
-      em áreas que foram aterradas e ocupadas por indústrias.
-    </p>
+    <div class="wrapper">
+      <AccentPanel background="--accent-panel-background-1">
+        <AccentPanelTitle color="--accent-panel-title-1"
+          >Você sabia?</AccentPanelTitle
+        >
+        <AccentPanelContent color="--accent-panel-text-1">
+          <p class="white">
+            Estudos apontam que para cada 1 dólar investido na investigação, são
+            economizados 10 dólares na remediação, pois uma boa caracterização
+            do meio físico permite a localização e concentração da massa dos
+            contaminantes e, consequentemente, permite a escolha mais adequada
+            das técnicas e procedimentos de remediação.
+          </p>
+        </AccentPanelContent>
+      </AccentPanel>
+    </div>
+
+    <div class="wrapper">
+      <AccentPanel background="--accent-panel-background-2">
+        <AccentPanelTitle color="--accent-panel-title-2"
+          >Você sabia?</AccentPanelTitle
+        >
+        <AccentPanelContent color="--accent-panel-text-2">
+          <p class="white">
+            Estudos apontam que para cada 1 dólar investido na investigação, são
+            economizados 10 dólares na remediação, pois uma boa caracterização
+            do meio físico permite a localização e concentração da massa dos
+            contaminantes e, consequentemente, permite a escolha mais adequada
+            das técnicas e procedimentos de remediação.
+          </p>
+        </AccentPanelContent>
+      </AccentPanel>
+    </div>
+
+    <div class="wrapper">
+      <AccentPanel background="--accent-panel-background-3">
+        <AccentPanelTitle color="--accent-panel-title-3"
+          >Você sabia?</AccentPanelTitle
+        >
+        <AccentPanelContent color="--accent-panel-text-3">
+          <p class="white">
+            Estudos apontam que para cada 1 dólar investido na investigação, são
+            economizados 10 dólares na remediação, pois uma boa caracterização
+            do meio físico permite a localização e concentração da massa dos
+            contaminantes e, consequentemente, permite a escolha mais adequada
+            das técnicas e procedimentos de remediação.
+          </p>
+        </AccentPanelContent>
+      </AccentPanel>
+    </div>
+
+    <div class="wrapper">
+      <p>
+        A <span class="accent">Civilsolo Ambiental</span> também oferece apoio técnico
+        e especializado aos empreendedores imobiliários, empresas e construtoras
+        na aquisição de terrenos ou no início da implantação de um empreendimento.
+        A investigação ambiental desses terrenos evita problemas ambientais, financeiros
+        e legais quando há indícios de contaminação do solo e da água subterrânea,
+        notadamente em áreas que foram aterradas e ocupadas por indústrias.
+      </p>
+    </div>
 
     <div class="card__container">
       <ImgBox img={imgText[2]} offset="2">
@@ -121,9 +166,69 @@ const { imgText } = Astro.props;
         distintas que devem ser independentes entre si para não haver conflitos de
         interesse.
       </p>
-      <div>
+      <div class="wrapper">
         <AccentPanel
           ><AccentPanelTitle>
+            O papel da empresa de consultoria:
+          </AccentPanelTitle>
+          <AccentPanelContent>
+            <p class="white">
+              A empresa de consultoria representa o cliente perante o órgão
+              ambiental e o poder público, como prefeitura, ministério público e
+              outros, conforme cada caso. É a consultoria, a exemplo da
+              Civilsolo Ambiental, que realiza todas as ações necessárias, como:
+              Levantamento do histórico de ocupação e uso; Análise de documentos
+              e fotografias aéreas; Caracterização hidrogeológica da área
+              Sondagens para amostragem de solo e instalação de poços de
+              monitoramento para coleta de água subterrânea; Análise e
+              interpretação dos resultados obtidos.
+            </p>
+          </AccentPanelContent>
+        </AccentPanel>
+      </div>
+      <div class="wrapper">
+        <AccentPanel background="--accent-panel-background-1">
+          <AccentPanelTitle color="--accent-panel-title-1">
+            O papel da empresa de consultoria:
+          </AccentPanelTitle>
+          <AccentPanelContent>
+            <p class="white">
+              A empresa de consultoria representa o cliente perante o órgão
+              ambiental e o poder público, como prefeitura, ministério público e
+              outros, conforme cada caso. É a consultoria, a exemplo da
+              Civilsolo Ambiental, que realiza todas as ações necessárias, como:
+              Levantamento do histórico de ocupação e uso; Análise de documentos
+              e fotografias aéreas; Caracterização hidrogeológica da área
+              Sondagens para amostragem de solo e instalação de poços de
+              monitoramento para coleta de água subterrânea; Análise e
+              interpretação dos resultados obtidos.
+            </p>
+          </AccentPanelContent>
+        </AccentPanel>
+      </div>
+      <div class="wrapper">
+        <AccentPanel background="--accent-panel-background-2">
+          <AccentPanelTitle color="--accent-panel-title-2">
+            O papel da empresa de consultoria:
+          </AccentPanelTitle>
+          <AccentPanelContent>
+            <p class="white">
+              A empresa de consultoria representa o cliente perante o órgão
+              ambiental e o poder público, como prefeitura, ministério público e
+              outros, conforme cada caso. É a consultoria, a exemplo da
+              Civilsolo Ambiental, que realiza todas as ações necessárias, como:
+              Levantamento do histórico de ocupação e uso; Análise de documentos
+              e fotografias aéreas; Caracterização hidrogeológica da área
+              Sondagens para amostragem de solo e instalação de poços de
+              monitoramento para coleta de água subterrânea; Análise e
+              interpretação dos resultados obtidos.
+            </p>
+          </AccentPanelContent>
+        </AccentPanel>
+      </div>
+      <div class="wrapper">
+        <AccentPanel background="--accent-panel-background-3">
+          <AccentPanelTitle color="--accent-panel-title-3">
             O papel da empresa de consultoria:
           </AccentPanelTitle>
           <AccentPanelContent>
@@ -155,7 +260,7 @@ const { imgText } = Astro.props;
         </ImgBox>
       </div>
 
-      <div>
+      <div class="wrapper wrapper--last">
         <CollapsableSection>
           <SummaryItem>
             Entenda os problemas ambientais relacionados às contaminações e as
@@ -164,7 +269,9 @@ const { imgText } = Astro.props;
             >! Entre em contato para esclarecer suas dúvidas!
           </SummaryItem>
           <CollapsableItem>
-            <h3>Como funciona o Gerenciamento de Áreas Contaminadas?</h3>
+            <h3 class="accent--red">
+              Como funciona o Gerenciamento de Áreas Contaminadas?
+            </h3>
             <p>
               O Gerenciamento de Áreas Contaminadas é regido legalmente pela
               CETESB (no Estado de São Paulo), por meio de sua Decisão de
@@ -192,7 +299,7 @@ const { imgText } = Astro.props;
               Investigação Ambiental de Áreas Contaminadas, sendo elas:
             </p>
 
-            <h3>Avaliação Preliminar</h3>
+            <h3 class="accent--red">Avaliação Preliminar</h3>
             <p>
               A Avaliação Preliminar é uma avaliação inicial da área com
               objetivo de identificar e definir as Áreas com Potencial de
@@ -210,7 +317,7 @@ const { imgText } = Astro.props;
               do processo de investigação será duvidoso e poderá gerar
               retrabalho e maior investimento de recursos financeiros.
             </p>
-            <h3>Investigação Confirmatória</h3>
+            <h3 class="accent--red">Investigação Confirmatória</h3>
             <p>
               Na Investigação Confirmatória todas as áreas potenciais e
               suspeitas levantadas na Avaliação Preliminar serão investigadas. O
@@ -229,7 +336,7 @@ const { imgText } = Astro.props;
               encontrado nenhum contaminante, a investigação se encerra, desde
               que seja aprovada pelo órgão ambiental.
             </p>
-            <h3>Investigação Detalhada</h3>
+            <h3 class="accent--red">Investigação Detalhada</h3>
             <p>
               Na Investigação Detalhada é necessário definir a extensão e a
               profundidade da contaminação, de todos os contaminantes presentes
@@ -255,7 +362,7 @@ const { imgText } = Astro.props;
 
 <style>
   .card__container {
-    margin-block: 4rem 3rem;
+    margin-block: 7rem 4rem;
   }
 
   .full__background {

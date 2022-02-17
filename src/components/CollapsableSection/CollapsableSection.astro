@@ -1,4 +1,8 @@
 ---
+const {
+  background = "--collapsable-section-background",
+  divider = "--collapsable-section-divider",
+} = Astro.props;
 ---
 
 <div class="collapse__container">
@@ -69,6 +73,7 @@
       } else {
         collapseSection(section);
         e.target.innerText = "Ver mais";
+        e.target.blur();
       }
     });
   collapseSection(document.querySelector(".section.collapsible"));
@@ -79,19 +84,17 @@
     display: flex;
     flex-direction: column;
     border: 1px solid #ccc;
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 8px 8px;
   }
   .section {
     overflow: hidden;
     transition: height 0.6s ease-in;
     height: auto;
-    background-color: rgb(138, 163, 222);
+    background-color: var(--collapsable-section-background);
     padding: 1rem;
-    border-bottom: 1px solid rgb(117 140 192);
+    border-bottom: 1px solid var(--collapsable-section-divider);
   }
-  .section__summary {
-    color: white;
-  }
+
   .section.collapsible {
     border: 0px;
     padding-block: 0px;
@@ -100,8 +103,8 @@
   .btn__toggle--collapse {
     position: relative;
     justify-self: center;
-    background-color: rgb(138, 163, 222);
-    color: white;
+    background-color: var(--collapsable-section-background);
+    color: var(--collapsable-section-button-text);
     width: 100%;
     font-size: 1rem;
     padding-block: 1rem;
@@ -109,9 +112,12 @@
     border-radius: 0px 0px 10px 10px;
     border: 0px;
     cursor: pointer;
-    transition: background-color 0.2s ease-in;
+    transition: all 0.25s ease-in;
   }
-  .btn__toggle--collapse:hover {
-    background-color: rgb(117, 140, 192);
+  .btn__toggle--collapse:hover,
+  .btn__toggle--collapse:focus {
+    color: white;
+    background-color: var(--logo-red);
+    /* box-shadow: inset 0 0 0 2em var(--logo-red); */
   }
 </style>

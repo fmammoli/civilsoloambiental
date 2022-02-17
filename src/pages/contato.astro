@@ -5,6 +5,9 @@ import MainLayout from "../Layouts/MainLayout.astro";
 import DividerTitle from "../components/DividerTitle.astro";
 import Divider from "../components/Divider.astro";
 import FooterContactData from "../components/Footer/FooterContactData.astro";
+
+import Site from "../components/Site.json";
+
 const activeNavOption = "Contato";
 ---
 
@@ -58,6 +61,7 @@ const activeNavOption = "Contato";
             </div>
           </form>
         </div>
+
         <div class="panel contact__info">
           <h2 class="panel__title">Nossos Dados:</h2>
           <ul class="navigation__list contact__list">
@@ -80,7 +84,7 @@ const activeNavOption = "Contato";
               </div>
               <div class="contact__text__container">
                 <p>Horário Comercial</p>
-                <p>Segunda à Sexta das 9h até 17h</p>
+                <p>Segunda à Sexta das 8h até 17h</p>
               </div>
             </li>
             <li class="contact__item row">
@@ -102,7 +106,15 @@ const activeNavOption = "Contato";
               </div>
               <div class="contact__text__container">
                 <p>Email</p>
-                <p><a href="mailto:">email@ambiental.com.br</a></p>
+                <p>
+                  <a
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    href={`mailto:${Site.contact.emails[0]}`}
+                  >
+                    {Site.contact.emails[0]}
+                  </a>
+                </p>
                 <p><a href="mailto:">email2@ambiental.com.br</a></p>
               </div>
             </li>
@@ -125,7 +137,14 @@ const activeNavOption = "Contato";
               </div>
               <div class="contact__text__container">
                 <p>Telefone</p>
-                <p><a href="tel:+551145213500">(11)4521-3500</a></p>
+                <p>
+                  <a
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    href={`tel:${Site.contact.phones[0].link}`}
+                    >{Site.contact.phones[0].text}</a
+                  >
+                </p>
               </div>
             </li>
 
@@ -148,7 +167,14 @@ const activeNavOption = "Contato";
               </div>
               <div class="contact__text__container">
                 <p>Whatsapp</p>
-                <p><a href="">(11)4521-3500</a></p>
+                <p>
+                  <a
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    href={`https://wa.me/${Site.contact.whatsapp[0].link}`}
+                    >{Site.contact.whatsapp[0].text}</a
+                  >
+                </p>
               </div>
             </li>
             <li class="contact__item row">
@@ -170,9 +196,9 @@ const activeNavOption = "Contato";
               </div>
               <div class="contact__text__container address">
                 <p>Enderço</p>
-                <p>Avenida nome, número 2</p>
-                <p>Bairro, Jundiaí</p>
-                <p>CEP: 00000-000</p>
+                <p>{Site.contact.address[0].street}</p>
+                <p>{Site.contact.address[0].place}</p>
+                <p>{Site.contact.address[0].cep}</p>
               </div>
             </li>
           </ul>

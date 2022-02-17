@@ -1,7 +1,8 @@
 ---
+const { color = "--accent-panel-text" } = Astro.props;
 ---
 
-<div class="accent__panel--content">
+<div class="accent__panel--content" style={`background-color:var(${color});`}>
   <slot />
 </div>
 

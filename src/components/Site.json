@@ -15,15 +15,15 @@
     },
     {
       "id": 2,
-      "title": "Laudo de Cobertura Vegetal",
+      "title": "Diagnóstico Ambiental Preliminar",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "link": "/laudo-de-cobertura-vegetal",
+      "link": "/diagnostico-ambiental-preliminar",
       "img": "/assets/home/laudo_home-600x307.jpg",
       "bannerImg": "/assets/laudo/2.jpg",
       "bannerImg2": "https://picsum.photos/1000/1000?random=1",
       "icon": "/assets/forest.png",
       "color": "--second-color",
-      "content": "../content/LaudoContent.astro",
+      "content": "../content/DiagnosticoAmbientalContent.astro",
       "reversed": true,
       "imgs": [{ "path": "../../public/assets/laudo/" }]
     },
@@ -81,5 +81,17 @@
       "content": "../content/ProjetosSocioambientaisContent.astro",
       "imgs": [{ "path": "../../public/assets/socioambiental/" }]
     }
-  ]
+  ],
+  "contact": {
+    "emails": ["comercial@civilsolo.com.br"],
+    "phones": [{ "link": "+5511972033539", "text": "(11) 4521-3500" }],
+    "whatsapp": [{ "link": "5511972033539", "text": "(11) 97203-3539" }],
+    "address": [
+      {
+        "street": "Rua Fortunato Mori, 280",
+        "place": "Bairro Vianelo, Jundiaí-SP",
+        "cep": "CEP: 13207-150"
+      }
+    ]
+  }
 }

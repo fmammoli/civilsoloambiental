@@ -4,7 +4,12 @@
   max-width: 900px;
 }
 .accent {
+  font-weight: bold;
   color: var(--first-color);
+}
+.accent--red {
+  font-weight: bold;
+  color: var(--logo-red) !important;
 }
 .content h1 {
   margin-block: 1em;
@@ -24,7 +29,8 @@
   font-weight: var(--content-h3-weight);
 }
 .content ul {
-  padding-inline-start: 20px;
+  /* padding-inline-start: 20px; */
+  list-style: url(/assets/logo_leaf_icon.svg);
 }
 .content p,
 .content ul {
@@ -41,6 +47,7 @@ p {
   color: var(--content-text-color);
 }
 .content li {
+  padding-left: 0.4em;
   margin-bottom: 1em;
   line-height: 1.5em;
   font-weight: var(--content-text-weight);
@@ -67,4 +74,10 @@ p {
 }
 .card__container {
   margin-block: 4rem 3rem;
+}
+.wrapper {
+  margin-block: 3rem;
+}
+.wrapper--last {
+  margin-bottom: 1rem;
 }

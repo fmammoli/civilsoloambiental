@@ -1,0 +1,71 @@
+---
+import styles from "../styles/serviceContent.css";
+
+import ImgBox from "../components/ImgBox/ImgBox.astro";
+import ImgBoxText from "../components/ImgBox/ImgBoxText.astro";
+
+const { imgText } = Astro.props;
+---
+
+<section>
+  <article class="content">
+    <div class="wrapper first__wraper">
+      <h1>DIAGNÓSTICO AMBIENTAL PRELIMINAR</h1>
+      <p>
+        O Diagnóstico Ambiental Preliminar é um estudo prévio feito para
+        identificar possíveis restrições ambientais presentes numa área de
+        interesse para apoiar a viabilidade de compra do imóvel. Caso o imóvel
+        já tenha sido adquirido pelo interessado, o diagnóstico ambiental
+        auxiliará na definição das áreas com potencial de uso construtivo, que
+        prescindirá de um planejamento de corte de vegetação em conformidade com
+        a legislação ambiental.
+      </p>
+      <p>
+        Este diagnóstico é feito com base em vistorias de campo para
+        identificação da vegetação, do relevo, da declividade e da hidrografia
+        para avaliação dos atributos ambientais, incluindo as Áreas de
+        Preservação Permanente (APP).
+      </p>
+    </div>
+    <div class="wrapper">
+      <ImgBox img={imgText[1]} offset="2">
+        <ImgBoxText
+          >Além da vistoria de campo a <span class="accent"
+            >Civilsolo Ambiental</span
+          > utiliza imagens aéreas (de satélites e/ou drone) e softwares de informações
+          geográficas oficiais para delimitação, quantificação e identificação dos
+          estágios de desenvolvimento da vegetação (inicial, médio e avançado), com
+          objetivo de categorizar os fragmentos florestais em classes de prioridade
+          para conservação (colocar o texto ao lado da foto)
+        </ImgBoxText>
+      </ImgBox>
+    </div>
+    <p>
+      Após o diagnóstico, é apresentada ao cliente uma proposta de uso e
+      ocupação da área em conformidade com a legislação ambiental, incluindo
+      indicações de supressão de vegetação, preservação e compensação ambiental
+      (colocar texto ao lado da foto)
+    </p>
+  </article>
+  <article class="full__background">
+    <div class="content"><img src={imgText[1]} alt="" /></div>
+  </article>
+  <article class="content">
+    <p>
+      Entenda as limitações ambientais e as possibilidades de ocupação de seu
+      terreno com a <span class="accent">Civilsolo Ambiental</span>! Entre em
+      contato para esclarecer suas dúvidas e fazer um orçamento sem compromisso!
+    </p>
+  </article>
+</section>
+
+<style>
+  .full__background {
+    background-color: #ffa100;
+    padding-block: 2rem;
+  }
+  .img__container img {
+    width: 100%;
+    height: auto;
+  }
+</style>
