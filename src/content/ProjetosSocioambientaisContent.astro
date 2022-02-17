@@ -1,126 +1,123 @@
 ---
 import styles from "../styles/serviceContent.css";
 
-import img1 from "/assets/socioambiental/1.jpg";
-import img2 from "/assets/socioambiental/2.jpg";
-import img4 from "/assets/socioambiental/4.jpg";
-import img5 from "/assets/socioambiental/5.jpg";
+import AccentPanel from "../components/AccentPanel/AccentPanel.astro";
+import AccentPanelTitle from "../components/AccentPanel/AccentPanelTitle.astro";
+import AccentPanelContent from "../components/AccentPanel/AccentPanelContent.astro";
+
+import ImgBox from "../components/ImgBox/ImgBox.astro";
+import ImgBoxText from "../components/ImgBox/ImgBoxText.astro";
+
+import CollapsableSection from "../components/CollapsableSection/CollapsableSection.astro";
+import CollapsableItem from "../components/CollapsableSection/CollapsableItem.astro";
+import SummaryItem from "../components/CollapsableSection/SummaryItem.astro";
+
+import Card from "../components/Card.astro";
+
+const { imgText } = Astro.props;
 ---
 
-<div class="c4 content">
-  <h1 class="c1 c11" id="h.mppx3lk84lze">
-    <span class="c8">PROJETOS SOCIOAMBIENTAIS</span>
-  </h1>
-  <p class="c1">
-    <span class="c7">A </span><span class="c5">Civilsolo Ambiental</span><span
-      class="c2"
-      >&nbsp;elabora, executa, avalia e monitora diferentes projetos
-      socioambientais envolvendo comunidades tradicionais (ind&iacute;genas,
-      cai&ccedil;aras, ribeirinhas, quilombolas, comunidades rurais), por meio
-      de diversos roteiros metodol&oacute;gicos que incluem m&eacute;todos e
-      t&eacute;cnicas participativas, combinadas com uso de imagens de
-      sat&eacute;lite e fotografias a&eacute;reas, levantamentos de campo,
-      entrevistas, oficinas, indicadores de sustentabilidade, dentre outros.
-    </span>
-  </p>
-  <p class="c1 c6"><span class="c2"></span></p>
-  <p class="c1 c6"><span class="c2"></span></p>
-  <p class="c1">
-    <div class="gallery__wrapper">
-      <div class="item" style={`background-image: url(${img1});`}></div>
-      <div class="item" style={`background-image: url(${img2});`}></div>
+<section>
+  <article class="content">
+    <div class="wrapper">
+      <h1>PROJETOS SOCIOAMBIENTAIS</h1>
+      <p>
+        A <span class="accent">Civilsolo Ambiental</span> elabora, executa e avalia
+        diferentes projetos socioambientais envolvendo comunidades tradicionais (indígenas,
+        caiçaras, ribeirinhas, quilombolas, comunidades rurais) por meio de roteiros
+        metodológicos técnicas participativas, combinadas com uso de imagens de satélite
+        e fotografias aéreas, levantamentos de campo, entrevistas, oficinas, indicadores
+        de sustentabilidade, dentre outros.
+      </p>
     </div>
-  </p>
-  <p class="c1 c6"><span class="c2"></span></p>
-  <p class="c1">
-    <span class="c7">Abaixo seguem alguns servi&ccedil;os que a </span><span
-      class="c5">Civilsolo Ambiental</span
-    ><span class="c2">&nbsp;oferece:</span>
-  </p>
-  <ul class="c12 lst-kix_ald0gemk2qwu-0 start">
-    <li class="c0 li-bullet-0">
-      <span class="c2"
-        >Elabora&ccedil;&atilde;o de planos de gest&atilde;o para assegurar
-        ordenamento territorial e ambiental de &aacute;reas protegidas e
-        ecossistemas florestais;
-      </span>
-    </li>
-    <li class="c0 li-bullet-0">
-      <span class="c2"
-        >Implanta&ccedil;&atilde;o de viveiros e pr&aacute;ticas agroflorestais;</span
-      >
-    </li>
-    <li class="c0 li-bullet-0">
-      <span class="c2"
-        >Realiza&ccedil;&atilde;o de palestras, cursos e treinamentos sobre
-        temas ambientais de interesse;</span
-      >
-    </li>
-    <li class="c0 li-bullet-0">
-      <span class="c2"
-        >Elabora&ccedil;&atilde;o de cartilhas e guias com temas
-        socioambientais;</span
-      >
-    </li>
-    <li class="c0 li-bullet-0">
-      <span class="c2"
-        >Desenvolvimento de diagn&oacute;sticos, mapeamentos e planejamentos e
-        sistemas de monitoramento e avalia&ccedil;&atilde;o por meio de
-        m&eacute;todos participativos;</span
-      >
-    </li>
-    <li class="c0 li-bullet-0">
-      <span class="c7"
-        >Fortalecimento e integra&ccedil;&atilde;o institucional</span
-      ><span class="c2"
-        >&nbsp;das organiza&ccedil;&otilde;es e comunidades tradicionais.
-      </span>
-    </li>
-  </ul>
-  <p class="c9">
-    <span class="c2"
-      >A implementa&ccedil;&atilde;o de Projetos Socioambientais visa melhorar
-      os conhecimentos e habilidades das comunidades tradicionais e rurais no
-      manejo de recursos florestais, agroflorestais e outros sistemas locais de
-      uso e apropria&ccedil;&atilde;o dos recursos naturais com &ecirc;nfase na
-      recupera&ccedil;&atilde;o de &aacute;reas degradadas e
-      prote&ccedil;&atilde;o de &aacute;reas de floresta. Os resultados
-      esperados no m&eacute;dio e longo prazos s&atilde;o o fortalecimento
-      institucional das popula&ccedil;&otilde;es locais para garantir o direito
-      de uso dos recursos, o aumento de oportunidades de renda,
-      conserva&ccedil;&atilde;o ambiental &nbsp;e valoriza&ccedil;&atilde;o da
-      cultura e &nbsp;modo de vida tradicional, em sintonia com o ideal do
-      desenvolvimento sustent&aacute;vel.
-    </span>
-  </p>
-  <p class="c3"><span class="c2"></span></p>
-  <p class="c1">
-    <div class="gallery__wrapper">
-      <div class="item" style={`background-image: url(${img4});`}></div>
-      <div class="item" style={`background-image: url(${img5});`}></div>
+
+    <div class="card__container">
+      <ImgBox img={imgText[0]} offset="2">
+        <ImgBoxText>
+          A implementação de Projetos Socioambientais visa melhorar os
+          conhecimentos e habilidades das comunidades no manejo de recursos
+          florestais e agroflorestais com ênfase na recuperação de áreas
+          degradadas e proteção de áreas de floresta e demais ecossistemas
+          naturais.
+        </ImgBoxText>
+      </ImgBox>
     </div>
-  </p>
-  <p class="c1"></p>
-  <p class="c1 c6"><span class="c2"></span></p>
-</div>
+
+    <div class="wrapper">
+      <AccentPanel>
+        <AccentPanelTitle>Resultados:</AccentPanelTitle>
+        <AccentPanelContent
+          ><p class="white">
+            Os resultados esperados no médio e longo prazos são o fortalecimento
+            institucional das populações locais para garantir o direito de uso
+            dos recursos, o aumento de oportunidades de renda, conservação
+            ambiental e valorização da cultura e modo de vida tradicional, em
+            sintonia com o ideal do desenvolvimento sustentável.
+          </p></AccentPanelContent
+        >
+      </AccentPanel>
+    </div>
+  </article>
+  <article class="full__background">
+    <div class="content">
+      <div class="img__wrapper">
+        <img src={imgText[1]} alt="" class="img" />
+      </div>
+    </div>
+  </article>
+  <article class="content">
+    <div class="wrapper">
+      <p>
+        Abaixo seguem alguns serviços que a <span class="accent"
+          >Civilsolo Ambiental</span
+        > oferece:
+      </p>
+
+      <ul>
+        <li>
+          Elaboração de planos de gestão para assegurar ordenamento territorial
+          e ambiental de áreas protegidas e ecossistemas florestais;
+        </li>
+        <li>Implantação de viveiros e práticas agroflorestais;</li>
+        <li>
+          Realização de palestras, cursos e treinamentos sobre temas ambientais
+          de interesse;
+        </li>
+        <li>Elaboração de cartilhas e guias com temas socioambientais;</li>
+        <li>
+          Desenvolvimento de diagnósticos, mapeamentos e planejamentos e
+          sistemas de monitoramento e avaliação por meio de métodos
+          participativos;
+        </li>
+        <li>
+          Fortalecimento e integração institucional das organizações e
+          comunidades tradicionais.
+        </li>
+      </ul>
+    </div>
+
+    <div class="wrapper">
+      <Card
+        >Entenda as possibilidades de iniciativas e projetos socioambientais com
+        a <span class="accent">Civilsolo Ambiental</span>! Entre em contato para
+        esclarecer suas dúvidas e fazer um orçamento sem compromisso!
+      </Card>
+    </div>
+  </article>
+</section>
 
 <style>
-  .gallery__wrapper {
+  .full__background {
+    padding-block: 2rem;
+    background-color: #ffecb5;
+  }
+  .img {
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+  }
+  .img__wrapper {
     display: flex;
-    justify-content: space-evenly;
-  }
-  .item {
-      background-position: center;
-      background-size: cover;
-      aspect-ratio: 1;
-      width: 30vw;
-      margin-inline: 0.5rem;
-  }
-  .gallery__wrapper img{
-      width: 100%;
-      height: auto;
-      max-width: 350px;
-      max-height: 350px;
-      object-fit: cover;
+    justify-content: center;
   }
 </style>

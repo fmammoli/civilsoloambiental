@@ -30,6 +30,8 @@ const imgGallery = [
   img10,
   img11,
 ];
+
+const imgs = [img1, img2, img5];
 ---
 
 <ServiceLayout
@@ -39,5 +41,5 @@ const imgGallery = [
   color={data.color}
   {imgGallery}
 >
-  <ProjetosSocioambientaisContent />
+  <ProjetosSocioambientaisContent imgText={imgs} />
 </ServiceLayout>
