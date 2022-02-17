@@ -10,10 +10,14 @@ import img5 from "/assets/compensacao/5.jpg";
 import img6 from "/assets/compensacao/6.jpg";
 import img7 from "/assets/compensacao/7.jpg";
 
+import imgText1 from "/assets/compensacao/image1.png";
+import imgText2 from "/assets/compensacao/image2.jpg";
+
 import CompensacaoAmbientalContent from "../content/CompensacaoAmbientalContent.astro";
 
 const data = Site.items.find((item) => item.id === 4);
 const imgGallery = [img1, img2, img3, img4, img5, img6, img7];
+const imgs = [imgText1, imgText2];
 ---
 
 <ServiceLayout
@@ -23,5 +27,5 @@ const imgGallery = [img1, img2, img3, img4, img5, img6, img7];
   color={data.color}
   {imgGallery}
 >
-  <CompensacaoAmbientalContent />
+  <CompensacaoAmbientalContent imgText={imgs} />
 </ServiceLayout>

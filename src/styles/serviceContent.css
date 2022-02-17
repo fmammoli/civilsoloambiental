@@ -65,3 +65,6 @@ p {
 .bold {
   font-weight: bold;
 }
+.card__container {
+  margin-block: 4rem 3rem;
+}

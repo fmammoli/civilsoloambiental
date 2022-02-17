@@ -2,6 +2,8 @@
 import MainLayout from "../Layouts/MainLayout.astro";
 import ImgGallery from "../components/ImgGallery.astro";
 
+import WhatsappFloatingBtn from "../components/WhatsappFloatingBtn.astro";
+
 const { title, desc, bannerImg, color, imgGallery } = Astro.props;
 
 const activeNavOption = "Serviços";
@@ -33,6 +35,7 @@ const activeNavOption = "Serviços";
     <div class="gallery__background">
       <ImgGallery imgs={imgGallery} />
     </div>
+    <WhatsappFloatingBtn />
   </main>
 </MainLayout>
 
