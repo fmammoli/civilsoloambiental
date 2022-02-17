@@ -1,228 +1,252 @@
 ---
 import styles from "../styles/serviceContent.css";
 
-import img1 from "/assets/adequacao/2.jpg";
+import AccentPanel from "../components/AccentPanel/AccentPanel.astro";
+import AccentPanelTitle from "../components/AccentPanel/AccentPanelTitle.astro";
+import AccentPanelContent from "../components/AccentPanel/AccentPanelContent.astro";
 
-import img3 from "/assets/adequacao/3.jpg";
+import ImgBox from "../components/ImgBox/ImgBox.astro";
+import ImgBoxText from "../components/ImgBox/ImgBoxText.astro";
+
+import CollapsableSection from "../components/CollapsableSection/CollapsableSection.astro";
+import CollapsableItem from "../components/CollapsableSection/CollapsableItem.astro";
+import SummaryItem from "../components/CollapsableSection/SummaryItem.astro";
+
+const { imgText } = Astro.props;
 ---
 
-<div class="c12 c13 content">
-  <h1 class="c3" id="h.7z4ct4tlolwp">
-    <span class="c11"
-      >ADEQUA&Ccedil;&Atilde;O AMBIENTAL DE PROPRIEDADES RURAIS</span
-    >
-  </h1>
-  <p class="c8">
-    <span class="c0"
-      >A Adequa&ccedil;&atilde;o Ambiental, consiste na
-      regulariza&ccedil;&atilde;o ambiental das propriedades rurais que depende,
-      em muitos casos, da recomposi&ccedil;&atilde;o da vegeta&ccedil;&atilde;o
-      nativa pelo propriet&aacute;rio, segundo a legisla&ccedil;&atilde;o
-      ambiental aplic&aacute;vel, incluindo o Novo C&oacute;digo Florestal de
-      2012.
-    </span>
-  </p>
-  <p class="c1"><span class="c0"></span></p>
-  <p class="c8">
-    <span class="c0"
-      >Para que as obriga&ccedil;&otilde;es legais sejam consideradas cumpridas
-      pelos &oacute;rg&atilde;os licenciadores, no caso do Estado de S&atilde;o
-      Paulo, a CETESB, &eacute; necess&aacute;rio que todas as etapas do
-      processo de recomposi&ccedil;&atilde;o, desde o Cadastro Ambiental Rural
-      (CAR), passando pela elabora&ccedil;&atilde;o do projeto de
-      revegeta&ccedil;&atilde;o at&eacute; o monitoramento &nbsp;dos indicadores
-      ecol&oacute;gicos, sejam realizadas adequadamente e compat&iacute;veis com
-      alta produtividade agropecu&aacute;ria da propriedade.</span
-    >
-  </p>
-  <p class="c1"><span class="c0"></span></p>
-  <p class="c8">
-    <span class="c0"
-      >Para que o processo de recomposi&ccedil;&atilde;o seja considerado legal
-      pelo &oacute;rg&atilde;o licenciador &eacute; necess&aacute;rio que o
-      propriet&aacute;rio tenha feito o Cadastro Ambiental Rural (CAR).
-      Ap&oacute;s isso, o propriet&aacute;rio poder&aacute; optar por fazer a
-      ades&atilde;o ao Programa de Regulariza&ccedil;&atilde;o Ambiental (PRA),
-      cujo prazo &eacute; at&eacute; dezembro de 2022, para identificar se
-      existem passivos ambientais de recomposi&ccedil;&atilde;o de
-      vegeta&ccedil;&atilde;o nativa nas &Aacute;reas de
-      Preserva&ccedil;&atilde;o Permanente (nascentes, beiras de rios, topos de
-      morro, etc) e na Reserva Legal (&aacute;rea destinada a
-      preserva&ccedil;&atilde;o de vegeta&ccedil;&atilde;o nativa equivalente a
-      20% do terreno) nos termos do Novo C&oacute;digo Florestal.
-    </span>
-  </p>
-  <p class="c1"><span class="c0"></span></p>
-  <p class="c8">
-    <figure class="c3 img__container">
-      <img alt="" src={img1} title="" />
-    </figure>
-  </p>
-  <p class="c1"><span class="c0"></span></p>
-  <p class="c8">
-    <span class="c0"
-      >Para solucionar esses passivos ambientais, o propriet&aacute;rio do
-      imovel rural que aderiu ao PRA dever&aacute; apresentar o Projeto de
-      Recomposi&ccedil;&atilde;o de &Aacute;reas Degradadas &nbsp;e Alteradas
-      &nbsp;(PRADA), que &eacute; um instrumento de planejamento das
-      a&ccedil;&otilde;es incluindo metodologias de plantio, cronograma de
-      execu&ccedil;&atilde;o, e insumos necess&aacute;rios para a
-      recomposi&ccedil;&atilde;o vegetal, a partir das informa&ccedil;&otilde;es
-      constantes no CAR. Mediante a execu&ccedil;&atilde;o das etapas &nbsp;do
-      PRADA, que tem um prazo estendido de at&eacute; 20 anos para ser cumprido,
-      &nbsp;e de um Termo de Compromisso (TCPRA) firmado entre CETESB e
-      propriet&aacute;rio, o im&oacute;vel ser&aacute; homologado como
-      regularizado ambientalmente junto aos &oacute;rg&atilde;os competentes.
-    </span>
-  </p>
-  <p class="c8">
-    <span class="c0"
-      >Para im&oacute;veis sem ades&atilde;o ao Programa de
-      Regulariza&ccedil;&atilde;o Ambiental (PRA), devem ser elaborados o
-      Projeto de Adequa&ccedil;&atilde;o Ambiental (PAA) e o Termo de
-      Compromisso (TCA), al&eacute;m de relat&oacute;rios peri&oacute;dicos de
-      monitoramento e conclus&atilde;o das a&ccedil;&otilde;es de
-      adequa&ccedil;&atilde;o.
-    </span>
-  </p>
-  <p class="c1"><span class="c0"></span></p>
-  <p class="c8">
-    <span class="c9">A </span><span class="c2">Civilsolo Ambiental</span><span
-      class="c0"
-      >&nbsp;fornece todos os servi&ccedil;os relacionados aos processos de
-      Adequa&ccedil;&atilde;o Ambiental com ou sem ades&atilde;o ao PRA, sendo
-      eles:
-    </span>
-  </p>
-  <p class="c1"><span class="c0"></span></p>
-  <ul class="c6 lst-kix_b8uihdycgb82-0 start">
-    <li class="c7 li-bullet-0">
-      <span class="c0"
-        >Inscri&ccedil;&atilde;o do im&oacute;vel no Cadastro Ambiental Rural
-        (CAR), se for de interesse;
-      </span>
-    </li>
-    <li class="c7 li-bullet-0">
-      <span class="c9"
-        >Elabora&ccedil;&atilde;o de relat&oacute;rios e inclus&atilde;o de
-        todos os documentos e informa&ccedil;&otilde;es do im&oacute;vel rural e
-        do propriet&aacute;rio no Sistema Informatizado (Sicar-SP) para efeito
-        legal e probat&oacute;rio junto &agrave; CETESB,
-      </span><span class="c9 c10">se tiver inscrito no CAR</span><span
-        class="c0">;</span
-      >
-    </li>
-    <li class="c7 li-bullet-0">
-      <span class="c0"
-        >Diagn&oacute;sticos e levantamentos das &aacute;reas a serem
-        recompostas (hist&oacute;rico de uso pret&eacute;rito e atual da
-        &aacute;rea; condi&ccedil;&otilde;es de conserva&ccedil;&atilde;o e/ou
-        degrada&ccedil;&atilde;o do solo; fatores de perturba&ccedil;&atilde;o;
-        potencial de regenera&ccedil;&atilde;o natural etc);</span
-      >
-    </li>
-    <li class="c7 li-bullet-0">
-      <span class="c0"
-        >Indica&ccedil;&atilde;o e execu&ccedil;&atilde;o das estrat&eacute;gias
-        de recomposi&ccedil;&atilde;o da vegeta&ccedil;&atilde;o nativa,
-        incluindo condu&ccedil;&atilde;o da regenera&ccedil;&atilde;o natural
-        das esp&eacute;cies nativas; plantio de esp&eacute;cies nativas; plantio
-        de esp&eacute;cies nativas conjugado com a condu&ccedil;&atilde;o da
-        regenera&ccedil;&atilde;o natural e plantio intercalado de
-        esp&eacute;cies nativas e ex&oacute;ticas;</span
-      >
-    </li>
-    <li class="c7 li-bullet-0">
-      <span class="c0"
-        >Acompanhamento e manuten&ccedil;&atilde;o da recomposi&ccedil;&atilde;o
-        da vegeta&ccedil;&atilde;o nativa, incluindo (plantios, controle de
-        esp&eacute;cies invasoras, tratos culturais, etc);</span
-      >
-    </li>
-    <li class="c7 li-bullet-0">
-      <span class="c0"
-        >Monitoramento da recomposi&ccedil;&atilde;o vegetal, incluindo
-        defini&ccedil;&atilde;o e acompanhamento de indicadores
-        ecol&oacute;gicos de cobertura do solo com vegeta&ccedil;&atilde;o
-        nativa, n&uacute;mero e densidade de indiv&iacute;duos regenerantes,
-        acompanhamento dos fatores de perturba&ccedil;&atilde;o, etc;</span
-      >
-    </li>
-    <li class="c7 li-bullet-0">
-      <span class="c9"
-        >Explora&ccedil;&atilde;o Sustent&aacute;vel em APPs e RL submetidas
-        &agrave; recomposi&ccedil;&atilde;o com implanta&ccedil;&atilde;o de
-        Sistemas Agroflorestais (SAFs), se for eleg&iacute;vel para tanto e se
-        houver interesse por parte do propriet&aacute;rio .</span
-      >
-    </li>
-  </ul>
-  <p class="c1"><span class="c0"></span></p>
-  <p class="c8">
-    <span class="c5 bold"
-      >&Eacute; importante destacar que, conforme estabelece o artigo 2&deg; do
-      Decreto Estadual n&deg; 64.842 de 2020, a ades&atilde;o ao PRA
-      poder&aacute; ser realizada at&eacute; 31 de dezembro de 2022!!</span
-    >
-  </p>
-  <p class="c1"><span class="c5"></span></p>
-  <p class="c8">
-    <figure class="c3 img__container">
-      <img alt="" src={img3} title="" />
-    </figure>
-  </p>
-  <p class="c1"><span class="c0"></span></p>
-  <p class="c8">
-    <span class="c0"
-      >Seguem os principais benef&iacute;cios a serem obtidos com a
-      ades&atilde;o e cumprimento do PRA:</span
-    >
-  </p>
-  <p class="c1"><span class="c0"></span></p>
-  <ul class="c6 lst-kix_spkfkq3aiaqb-0 start">
-    <li class="c4 li-bullet-1">
-      <span class="c0"
-        >A propriedade rural poder&aacute; ter menos que 20% da Reserva Legal
-        (RL), se eleg&iacute;vel para tanto.
-      </span>
-    </li>
-    <li class="c4 li-bullet-1">
-      <span class="c0"
-        >O propriet&aacute;rio poder&aacute; manter o uso rural consolidado
-        (&aacute;rea com usos agropecu&aacute;rios e de infraestrutura) &nbsp;em
-        parte das &Aacute;reas de Preserva&ccedil;&atilde;o Permanente (APPs);</span
-      >
-    </li>
-    <li class="c4 li-bullet-1">
-      <span class="c0"
-        >O propriet&aacute;rio poder&aacute; ter a suspens&atilde;o de multas
-        (por supress&atilde;o de vegeta&ccedil;&atilde;o em APPs, RLs e
-        &aacute;rea de uso restrito) impostas por infra&ccedil;&otilde;es
-        cometidas antes de 22/07/2008;</span
-      >
-    </li>
-    <li class="c4 li-bullet-2">
-      <span class="c0"
-        >Possibilidade de revis&atilde;o dos compromissos ambientais assumidos
-        para efeito da adequa&ccedil;&atilde;o ambiental;</span
-      >
-    </li>
-    <li class="c4 li-bullet-1">
-      <span class="c0"
-        >Prazo para recupera&ccedil;&atilde;o de passivos ambientais
-        (recomposi&ccedil;&atilde;o das APPs e RL) de at&eacute; 20 anos,
-        iniciando prioritariamente pelas APPs;</span
-      >
-    </li>
-    <li class="c4 li-bullet-1">
-      <span class="c0"
-        >Possibilidade de que a exig&ecirc;ncia de recomposi&ccedil;&atilde;o
-        das APPs do im&oacute;vel rural n&atilde;o ultrapasse 10% da &aacute;rea
-        total do im&oacute;vel (para im&oacute;veis com &aacute;rea de
-        at&eacute; 2 m&oacute;dulos fiscais) e 20% da &aacute;rea total do
-        im&oacute;vel (para im&oacute;veis com &aacute;rea at&eacute; 4
-        m&oacute;dulos fiscais).</span
-      >
-    </li>
-  </ul>
-</div>
+<section>
+  <article class="content">
+    <div class="wrapper">
+      <h1>ADEQUAÇÃO AMBIENTAL DE PROPRIEDADES RURAIS</h1>
+      <p>
+        A Adequação Ambiental consiste na regularização ambiental das
+        propriedades rurais. Depende, em muitos casos, da recomposição da
+        vegetação nativa pelo proprietário, segundo a legislação ambiental
+        aplicável, incluindo o Novo Código Florestal de 2012.
+      </p>
+    </div>
+  </article>
+  <article class="full__background">
+    <div class="content center">
+      <img src={imgText[0]} alt="" class="img" />
+    </div>
+  </article>
+  <article class="content">
+    <div class="wrapper">
+      <p>
+        Para que as obrigações legais sejam consideradas cumpridas pelos órgãos
+        ambientais, no caso do Estado de São Paulo, a CETESB, é necessário que
+        todas as etapas do processo de recomposição, desde o Cadastro Ambiental
+        Rural (CAR), passando pela elaboração do projeto de revegetação até o
+        monitoramento dos indicadores ecológicos, sejam realizadas
+        adequadamente.
+      </p>
+    </div>
+
+    <div class="card__container">
+      <ImgBox img={imgText[2]} offset="2">
+        <ImgBoxText
+          >Após realizar o CAR, o proprietário poderá optar por fazer a adesão
+          ao Programa de Regularização Ambiental (PRA), cujo prazo é até
+          dezembro de 2022, para identificar se existem passivos ambientais de
+          recomposição de vegetação nativa nas Áreas de Preservação Permanente
+          (nascentes, beiras de rios, topos de morro, etc) e na Reserva Legal
+          (área destinada a preservação de vegetação nativa equivalente a 20% do
+          terreno) nos termos do Novo Código Florestal.
+        </ImgBoxText>
+      </ImgBox>
+    </div>
+
+    <div class="wrapper">
+      <AccentPanel>
+        <AccentPanelTitle>
+          Os principais benefícios a serem obtidos com a adesão e cumprimento do
+          PRA:
+        </AccentPanelTitle>
+        <AccentPanelContent>
+          <ul class="white bulletpoints">
+            <li>
+              A propriedade rural poderá ter menos que 20% da Reserva Legal
+              (RL), se elegível para tanto.
+            </li>
+            <li>
+              O proprietário poderá manter o uso rural consolidado (área com
+              usos agropecuários e de infraestrutura) em parte das Áreas de
+              Preservação Permanente (APPs);
+            </li>
+            <li>
+              O proprietário poderá ter a suspensão de multas (por supressão de
+              vegetação em APPs, RLs e área de uso restrito) impostas por
+              infrações cometidas antes de 22/07/2008;
+            </li>
+            <li>
+              Prazo para recuperação de passivos ambientais (recomposição das
+              APPs e RL) de até 20 anos, iniciando prioritariamente pelas APPs;
+            </li>
+            <li>
+              Possibilidade de que a exigência de recomposição das APPs do
+              imóvel rural não ultrapasse 10% da área total do imóvel (para
+              imóveis com área de até 2
+            </li>
+          </ul>
+        </AccentPanelContent>
+      </AccentPanel>
+    </div>
+    <div class="wrapper">
+      <p>
+        Os principais benefícios a serem obtidos com a adesão e cumprimento do
+        PRA:
+      </p>
+      <ul>
+        <li>
+          A propriedade rural poderá ter menos que 20% da Reserva Legal (RL), se
+          elegível para tanto.
+        </li>
+        <li>
+          O proprietário poderá manter o uso rural consolidado (área com usos
+          agropecuários e de infraestrutura) em parte das Áreas de Preservação
+          Permanente (APPs);
+        </li>
+        <li>
+          O proprietário poderá ter a suspensão de multas (por supressão de
+          vegetação em APPs, RLs e área de uso restrito) impostas por infrações
+          cometidas antes de 22/07/2008;
+        </li>
+        <li>
+          Prazo para recuperação de passivos ambientais (recomposição das APPs e
+          RL) de até 20 anos, iniciando prioritariamente pelas APPs;
+        </li>
+        <li>
+          Possibilidade de que a exigência de recomposição das APPs do imóvel
+          rural não ultrapasse 10% da área total do imóvel (para imóveis com
+          área de até 2
+        </li>
+      </ul>
+    </div>
+
+    <div class="card__container">
+      <ImgBox img={imgText[1]} offset="2">
+        <ImgBoxText>
+          Para solucionar esses passivos ambientais, o proprietário do imóvel
+          rural que aderir ao PRA deverá apresentar o Projeto de Recomposição de
+          Áreas Degradadas e Alteradas (PRADA), que é um conjunto de ações para
+          realizar o plantio e insumos necessários para a recomposição vegetal,
+          a partir das informações constantes no CAR.
+        </ImgBoxText>
+      </ImgBox>
+    </div>
+
+    <div class="wrapper">
+      <AccentPanel>
+        <AccentPanelContent>
+          <p class="white">
+            Com a execução das etapas do PRADA, que tem um prazo estendido de
+            até 20 anos para ser cumprido, o imóvel será homologado como
+            regularizado ambientalmente junto aos órgãos competentes.
+          </p>
+        </AccentPanelContent>
+      </AccentPanel>
+    </div>
+
+    <div class="wrapper">
+      <p>
+        Para imóveis sem adesão ao Programa de Regularização Ambiental (PRA),
+        devem ser elaborados o Projeto de Adequação Ambiental (PAA) e o Termo de
+        Compromisso (TCA), além de relatórios periódicos de monitoramento e
+        conclusão das ações de adequação.
+      </p>
+    </div>
+    <div class="wrapper">
+      <AccentPanel>
+        <AccentPanelTitle>O prazo para adesão ao PRA:</AccentPanelTitle>
+        <AccentPanelContent>
+          <p class="white">
+            É importante destacar que, conforme estabelece o artigo 2° do
+            Decreto Estadual n° 64.842 de 2020, a adesão ao PRA poderá ser
+            realizada até 31 de dezembro de 2022!!
+          </p>
+        </AccentPanelContent>
+      </AccentPanel>
+    </div>
+
+    <div class="wrapper">
+      <CollapsableSection>
+        <SummaryItem
+          >Entenda as limitações e possibilidades de adequação Ambiental de sua
+          propriedade com a <span class="accent">Civilsolo Ambiental</span>!
+          Entre em contato para esclarecer suas dúvidas e fazer um orçamento sem
+          compromisso!
+        </SummaryItem>
+        <CollapsableItem>
+          <p>
+            A Civilsolo Ambiental fornece todos os serviços relacionados aos
+            processos de Adequação Ambiental com ou sem adesão ao PRA, sendo
+            eles:
+          </p>
+          <ul>
+            <li>
+              Inscrição do imóvel no Cadastro Ambiental Rural (CAR), se for de
+              interesse;
+            </li>
+            <li>
+              Elaboração de relatórios e inclusão de todos os documentos e
+              informações do imóvel rural e do proprietário no Sistema
+              Informatizado (Sicar-SP) para efeito legal e probatório junto à
+              CETESB, se tiver inscrito no CAR;
+            </li>
+            <li>
+              Diagnósticos e levantamentos das áreas a serem recompostas
+              (histórico de uso pretérito e atual da área; condições de
+              conservação e/ou degradação do solo; fatores de perturbação;
+              potencial de regeneração natural etc);
+            </li>
+            <li>
+              Indicação e execução das estratégias de recomposição da vegetação
+              nativa, incluindo condução da regeneração natural das espécies
+              nativas; plantio de espécies nativas; plantio de espécies nativas
+              conjugado com a condução da regeneração natural e plantio
+              intercalado de espécies nativas e exóticas;
+            </li>
+            <li>
+              Acompanhamento e manutenção da recomposição da vegetação nativa,
+              incluindo (plantios, controle de espécies invasoras, tratos
+              culturais, etc);
+            </li>
+            <li>
+              Monitoramento da recomposição vegetal, incluindo definição e
+              acompanhamento de indicadores ecológicos de cobertura do solo com
+              vegetação nativa, número e densidade de indivíduos regenerantes,
+              acompanhamento dos fatores de perturbação, etc;
+            </li>
+            <li>
+              Exploração Sustentável em APPs e RL submetidas à recomposição com
+              implantação de Sistemas Agroflorestais (SAFs), se for elegível
+              para tanto e se houver interesse por parte do proprietário .
+            </li>
+          </ul>
+        </CollapsableItem>
+      </CollapsableSection>
+    </div>
+  </article>
+</section>
+
+<style>
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+  .full__background {
+    padding-block: 2rem;
+    background-color: #bca1b2;
+  }
+  .img {
+    align-self: flex-start;
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+  }
+  .bulletpoints {
+    list-style: disc;
+  }
+</style>

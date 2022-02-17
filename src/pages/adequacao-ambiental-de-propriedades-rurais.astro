@@ -15,25 +15,13 @@ import img10 from "/assets/adequacao/10.jpg";
 import img11 from "/assets/adequacao/11.jpg";
 import img12 from "/assets/adequacao/12.jpg";
 import img13 from "/assets/adequacao/13.jpg";
+import img14 from "/assets/adequacao/image1.jpg";
 
 import AdequacaoRuralContent from "../content/AdequacaoRuralContent.astro";
 
 const data = Site.items.find((item) => item.id === 5);
-const imgGallery = [
-  img1,
-  img2,
-  img3,
-  img4,
-  img5,
-  img6,
-  img7,
-  img8,
-  img9,
-  img10,
-  img11,
-  img12,
-  img13,
-];
+const imgGallery = [img11, img8, img6];
+const imgs = [img1, img3, img14];
 ---
 
 <ServiceLayout
@@ -43,5 +31,5 @@ const imgGallery = [
   color={data.color}
   {imgGallery}
 >
-  <AdequacaoRuralContent />
+  <AdequacaoRuralContent imgText={imgs} />
 </ServiceLayout>
