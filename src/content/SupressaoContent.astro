@@ -1,143 +1,195 @@
 ---
 import styles from "../styles/serviceContent.css";
 
-import img4 from "/assets/supressao/4.jpg";
+import AccentPanel from "../components/AccentPanel/AccentPanel.astro";
+import AccentPanelTitle from "../components/AccentPanel/AccentPanelTitle.astro";
+import AccentPanelContent from "../components/AccentPanel/AccentPanelContent.astro";
 
-import img3 from "/assets/supressao/3.jpg";
+import ImgBox from "../components/ImgBox/ImgBox.astro";
+import ImgBoxText from "../components/ImgBox/ImgBoxText.astro";
+
+import CollapsableSection from "../components/CollapsableSection/CollapsableSection.astro";
+import CollapsableItem from "../components/CollapsableSection/CollapsableItem.astro";
+import SummaryItem from "../components/CollapsableSection/SummaryItem.astro";
+
+import Card from "../components/Card.astro";
+
+const { imgText } = Astro.props;
 ---
 
-<div class="c10 content">
-  <h1 class="c15" id="h.w4c10b8tmmpw">
-    <span class="c7"
-      >AUTORIZA&Ccedil;&Atilde;O PARA SUPRESS&Atilde;O DE
-      VEGETA&Ccedil;&Atilde;O NATIVA</span
-    >
-  </h1>
-  <p class="c4">
-    <span class="c0"
-      >Todo tipo de atividade que envolva o corte da vegeta&ccedil;&atilde;o
-      nativa de um terreno necessita obrigatoriamente de
-      Autoriza&ccedil;&atilde;o para Supress&atilde;o de
-      Vegeta&ccedil;&atilde;o, que &eacute; um documento oficial que certifica
-      um planejamento de corte coerente com a legisla&ccedil;&atilde;o vigente,
-      emitida pelos &oacute;rg&atilde;os ambientais competentes, como a
-      prefeitura municipal, a CETESB e o IBAMA.
-    </span>
-  </p>
-  <p class="c4">
-    <span class="c1"
-      >Importante ressaltar que n&atilde;o &eacute; permitida a
-      remo&ccedil;&atilde;o de qualquer tipo de vegeta&ccedil;&atilde;o, em
-      qualquer est&aacute;gio de desenvolvimento, sem a devida
-      autoriza&ccedil;&atilde;o para o corte. Para tanto, deve ser feito um
-      estudo de viabilidade ambiental da proposta pretendida, por meio da
-      apresenta&ccedil;&atilde;o de um
-    </span><span class="c0">Laudo de Cobertura Vegetal. </span>
-  </p>
-  <p class="c4">
-    <figure class="c3 img__container">
-      <img alt="" src={img4} title="" />
-    </figure>
-  </p>
-  <p class="c4">
-    <span class="c1">O Laudo</span><span class="c0"
-      >&nbsp;inclui a caracteriza&ccedil;&atilde;o da vegeta&ccedil;&atilde;o
-      presente na &aacute;rea, a an&aacute;lise da legisla&ccedil;&atilde;o
-      ambiental para cada tipo de bioma (mata atl&acirc;ntica, cerrado, etc), a
-      identifica&ccedil;&atilde;o do est&aacute;gio sucessional da
-      vegeta&ccedil;&atilde;o e a verifica&ccedil;&atilde;o da exist&ecirc;ncia
-      de &Aacute;rea de Preserva&ccedil;&atilde;o Permanente (APP) na
-      &aacute;rea em quest&atilde;o.
-    </span>
-  </p>
-  <p class="c4">
-    <span class="c0 c14"
-      >Mesmo um simples bosqueamento (retirada da vegeta&ccedil;&atilde;o do
-      sub-bosque da floresta) ou a explora&ccedil;&atilde;o florestal sob regime
-      de manejo sustent&aacute;vel para retirada seletiva de exemplares
-      comerciais (palmito, cip&oacute;s, esp&eacute;cies ornamentais,
-      esp&eacute;cies medicinais, toras de madeira, etc) n&atilde;o podem ser
-      realizados sem o amparo da autoriza&ccedil;&atilde;o para
-      supress&atilde;o.</span
-    >
-  </p>
-  <p class="c4">
-    <figure class="c3 img__container">
-      <img alt="" src={img3} title="" />
-    </figure>
-  </p>
-  <p class="c11">
-    <span class="c1">A </span><span class="c12 c1">Civilsolo Ambiental</span
-    ><span class="c0"
-      >&nbsp;fornece todos os servi&ccedil;os necess&aacute;rios para
-      obten&ccedil;&atilde;o da autoriza&ccedil;&atilde;o de supress&atilde;o de
-      corte de vegeta&ccedil;&atilde;o, sendo eles:</span
-    >
-  </p>
-  <ul class="c13 lst-kix_gk4mn3fnwytq-0 start">
-    <li class="c3 li-bullet-0">
-      <span class="c0"
-        >Inser&ccedil;&atilde;o de informa&ccedil;&otilde;es e
-        documenta&ccedil;&otilde;es (dados do propriet&aacute;rio,
-        matr&iacute;cula do im&oacute;vel, certid&atilde;o de uso do solo, IPTU
-        ou ITR etc) no Portal de Licenciamento da CETESB para supress&atilde;o
-        de fragmentos florestais e nas Plataformas Municipais para
-        supress&atilde;o de &aacute;rvores isoladas, desde que se encontrem
-        &nbsp;fora de &Aacute;reas de Prote&ccedil;&atilde;o Permanente (APPs);</span
+<section>
+  <article class="content">
+    <div class="wrapper">
+      <h1>AUTORIZAÇÃO PARA SUPRESSÃO DE VEGETAÇÃO NATIVA</h1>
+      <p>
+        Todo tipo de atividade que envolva o corte da vegetação de um terreno
+        (residencial, comercial, loteamento, indústria etc) necessita
+        obrigatoriamente de uma <span class="accent"
+          >Autorização para Supressão de Vegetação</span
+        >. Esta autorização é um documento que certifica um planejamento de
+        corte coerente com a legislação ambiental vigente, sendo emitida pelos
+        órgãos ambientais competentes como as prefeituras municipais e a CETESB.
+      </p>
+    </div>
+
+    <div class="wrapper">
+      <AccentPanel>
+        <AccentPanelTitle>Você sabia?</AccentPanelTitle>
+        <AccentPanelContent>
+          <p class="white">
+            A remoção de qualquer tipo de vegetação sem a devida autorização é
+            passível de multas e embargos!
+          </p>
+        </AccentPanelContent>
+      </AccentPanel>
+    </div>
+
+    <div class="card__container">
+      <ImgBox img={imgText[0]} offset="2">
+        <ImgBoxText>
+          No caso de <span class="accent">corte de árvores isoladas</span>, o
+          procedimento para conseguir a autorização é mais simples. Deve ser
+          feito junto a prefeitura municipal, com apresentação um laudo técnico
+          que especifica as características exigidas de cada árvore, como a
+          identificação da espécie, diâmetro na altura do peito (DAP), volume de
+          madeira, condições fitossanitárias e a localização georreferenciada de
+          cada indivíduo arbóreo.
+        </ImgBoxText>
+      </ImgBox>
+    </div>
+
+    <div class="card__container">
+      <ImgBox img={imgText[2]} reverse offset="2">
+        <ImgBoxText>
+          Já para o corte de fragmentos florestais, em atividades de maior
+          porte, como loteamentos e condomínios, a autorização é emitida pela
+          CETESB e exige um procedimento mais detalhado. Recomenda-se a
+          realização de um <span
+            ><a href="/diagnostico-ambiental-preliminar" class="link"
+              >Diagnóstico Ambiental Preliminar</a
+            ></span
+          > para estudo das possibilidades de corte da vegetação e de viabilização
+          do empreendimento.
+        </ImgBoxText>
+      </ImgBox>
+    </div>
+
+    <div class="wrapper">
+      <p>
+        A porcentagem de área permitida para o corte depende do estágio de
+        desenvolvimento da vegetação (inicial, médio ou avançado) e/ou da
+        presença de Áreas de Preservação Permanente (APPs); informações que
+        serão levantadas e avaliadas criteriosamente no Diagnóstico Ambiental.
+      </p>
+    </div>
+    <div class="wrapper">
+      <p>
+        Após o Diagnóstico, a <span class="accent"
+          >Civilsolo Ambiental
+        </span>elaborará um <span>
+          <a href="/laudo-de-cobertura-vegetal" class="link">
+            Laudo de Cobertura Vegetal
+          </a>
+        </span> , anexando outros documentos obrigatórios, para a obtenção da autorização
+        de corte da vegetação a ser emitida pela CETESB. Os Laudos de Cobertura Vegetal
+        são feitos com base em vistorias de campo e uso de imagens aéreas, para caracterização
+        criteriosa da vegetação presente. São utilizados softwares de informações
+        geográficas oficiais para realização dos cálculos necessários para dimensionamento
+        das áreas de vegetação, bem como a produção dos mapas exigidos pela CETESB.
+      </p>
+    </div>
+
+    <div class="card__container">
+      <ImgBox img={imgText[2]} offset="2">
+        <ImgBoxText>
+          É importante lembrar que mesmo um simples bosqueamento (retirada da
+          vegetação do sub-bosque da floresta) ou a exploração florestal sob
+          regime de manejo sustentável para retirada seletiva de exemplares
+          comerciais (palmito, cipós, espécies ornamentais, espécies medicinais,
+          toras de madeira, etc) não podem ser realizados sem a devida
+          autorização para supressão de vegetação.
+        </ImgBoxText>
+      </ImgBox>
+    </div>
+
+    <div class="wrapper">
+      <CollapsableSection>
+        <SummaryItem>
+          Evite problemas e faça um planejamento criterioso para obter a
+          autorização de supressão de vegetação em seu terreno com a <span
+            class="accent">Civilsolo Ambiental</span
+          >! Entre em contato para esclarecer suas dúvidas!
+        </SummaryItem>
+        <CollapsableItem>
+          <p>
+            A <span class="accent">Civilsolo Ambiental</span> fornece todos os serviços
+            necessários para obtenção da autorização de supressão de corte de vegetação,
+            tanto para árvores isoladas, quanto para fragmentos florestais, sendo
+            eles:
+          </p>
+          <ul>
+            <li>
+              Inserção de informações e documentações (dados do proprietário,
+              matrícula do imóvel, certidão de uso do solo, IPTU ou ITR etc) no
+              Portal de Licenciamento da CETESB para supressão de fragmentos
+              florestais e nas Plataformas Municipais para supressão de árvores
+              isoladas, desde que se encontrem fora de Áreas de Proteção
+              Permanente (APPs);
+            </li>
+            <li>
+              Diagnóstico Ambiental Preliminar: estudos sobre as possibilidades
+              de supressão da vegetação, conforme a legislação ambiental
+              aplicada;
+            </li>
+            <li>
+              Laudo de Cobertura Vegetal para caracterização expedita indicando
+              o bioma e fisionomia das vegetações existentes, incluindo
+              fragmentos florestais nos diversos estágios sucessionais de
+              desenvolvimento, observando a presença de espécies ameaçadas de
+              extinção;
+            </li>
+            <li>
+              Identificação em planta de todas as árvores nativas e exóticas
+              isoladas, incluindo identificação botânica, altura, DAP, condição
+              fitossanitária, bem como a localização georreferenciada de cada
+              indivíduo arbóreo;
+            </li>
+            <li>
+              Estratégias e técnicas de manejo para a eliminação e minimização
+              do impacto ambiental e medidas de mitigação e compensação
+              ambiental, quando necessárias.
+            </li>
+          </ul>
+        </CollapsableItem>
+      </CollapsableSection>
+    </div>
+
+    <div class="wrapper">
+      <p>
+        A <span class="accent">Civilsolo Ambiental</span> realiza esses serviços
+        com todos os recursos profissionais e tecnológicos disponíveis para proporcionar
+        soluções viáveis aos seus clientes e, assim, evitar multas, embargos e irregularidades
+        junto aos órgãos ambientais competentes. Entre em contato para esclarecer
+        suas dúvidas e fazer um orçamento sem compromisso!
+      </p>
+    </div>
+    <div class="wrapper">
+      <Card>
+        A <span class="accent">Civilsolo Ambiental</span> realiza esses serviços
+        com todos os recursos profissionais e tecnológicos disponíveis para proporcionar
+        soluções viáveis aos seus clientes e, assim, evitar multas, embargos e irregularidades
+        junto aos órgãos ambientais competentes. Entre em contato para esclarecer
+        suas dúvidas e fazer um orçamento sem compromisso!</Card
       >
-    </li>
-    <li class="c3 li-bullet-0">
-      <span class="c0"
-        >Estudos sobre as possibilidades de supress&atilde;o da
-        vegeta&ccedil;&atilde;o, conforme a legisla&ccedil;&atilde;o ambiental
-        aplicada;</span
-      >
-    </li>
-    <li class="c3 li-bullet-0">
-      <span class="c0"
-        >Caracteriza&ccedil;&atilde;o expedita indicando o bioma e fisionomia
-        das vegeta&ccedil;&otilde;es existentes, incluindo fragmentos florestais
-        nos diversos est&aacute;gios sucessionais de desenvolvimento, observando
-        a presen&ccedil;a de esp&eacute;cies amea&ccedil;adas de
-        extin&ccedil;&atilde;o;</span
-      >
-    </li>
-    <li class="c3 li-bullet-0">
-      <span class="c0"
-        >Identifica&ccedil;&atilde;o em planta de todas as &aacute;rvores
-        nativas e ex&oacute;ticas isoladas, incluindo
-        identifica&ccedil;&atilde;o bot&acirc;nica, altura, &nbsp;DAP,
-        condi&ccedil;&atilde;o fitossanit&aacute;ria, bem como a
-        localiza&ccedil;&atilde;o georreferenciada de cada indiv&iacute;duo
-        arb&oacute;reo;</span
-      >
-    </li>
-    <li class="c3 li-bullet-0">
-      <span class="c0"
-        >Estrat&eacute;gias t&eacute;cnicas e de manejo para a
-        elimina&ccedil;&atilde;o e minimiza&ccedil;&atilde;o do impacto
-        ambiental e medidas de mitiga&ccedil;&atilde;o e
-        compensa&ccedil;&atilde;o ambiental, quando necess&aacute;rias;</span
-      >
-    </li>
-    <li class="c3 li-bullet-0">
-      <span class="c0"
-        >Elabora&ccedil;&atilde;o de laudo t&eacute;cnico, incluindo
-        relat&oacute;rio fotogr&aacute;fico com sua indica&ccedil;&atilde;o na
-        planta ambiental georreferenciada.</span
-      >
-    </li>
-  </ul>
-  <p class="c4">
-    <span class="c1">A </span><span class="c1 c12">Civilsolo Ambiental</span
-    ><span class="c0"
-      >&nbsp;realiza esses servi&ccedil;os com todos os recursos profissionais e
-      tecnol&oacute;gicos dispon&iacute;veis para proporcionar
-      solu&ccedil;&otilde;es vi&aacute;veis aos seus clientes e, assim, evitar
-      multas e irregularidades em todo o processo de licenciamento ambiental.
-    </span>
-  </p>
-  <p class="c8"><span class="c5"></span></p>
-  <p class="c9"><span class="c6"></span></p>
-  <p class="c2"><span class="c5"></span></p>
-</div>
+    </div>
+  </article>
+</section>
+
+<style>
+  .link {
+    font-weight: bold;
+  }
+  .link:hover {
+    color: var(--sixth-color);
+  }
+</style>

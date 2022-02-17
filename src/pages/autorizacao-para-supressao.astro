@@ -4,13 +4,20 @@ import Site from "../components/Site.json";
 
 import img1 from "/assets/supressao/1.jpg";
 import img2 from "/assets/supressao/2.jpg";
-import img3 from "/assets/supressao/3.jpg";
+
 import img4 from "/assets/supressao/4.jpg";
+
+import imgText1 from "/assets/supressao/image1.jpg";
+import imgText2 from "/assets/supressao/image2.jpg";
+import imgText3 from "/assets/supressao/image4.jpg";
+import img3 from "/assets/supressao/3.jpg";
 
 import SupressaoContent from "../content/SupressaoContent.astro";
 
 const data = Site.items.find((item) => item.id === 3);
 const imgGallery = [img1, img2, img3, img4];
+
+const imgs = [imgText1, imgText2, imgText3, img3];
 ---
 
 <ServiceLayout
@@ -20,5 +27,5 @@ const imgGallery = [img1, img2, img3, img4];
   color={data.color}
   {imgGallery}
 >
-  <SupressaoContent />
+  <SupressaoContent imgText={imgs} />
 </ServiceLayout>

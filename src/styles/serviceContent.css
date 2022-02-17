@@ -55,8 +55,7 @@ p {
 .signature--right {
   text-align: right;
 }
-.content .img__container {
-  margin-top: 2rem;
+.img__container {
   display: flex;
   justify-content: center;
 }
@@ -65,10 +64,9 @@ p {
   align-self: flex-start;
   width: 100%;
   height: auto;
-  object-fit: fill;
   max-height: 400px;
-  width: fit-content;
 }
+
 .bold {
   font-weight: bold;
 }
