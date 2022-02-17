@@ -3,9 +3,8 @@
 
 <div class="card__container">
   <div class="card">
-    <h2>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
+    <h2 class="card__text">
+      <slot />
     </h2>
     <a href="/contato" class="card__btn"
       ><span>Peça já o seu orçamento!</span></a
@@ -15,7 +14,6 @@
 
 <style>
   .card__container {
-    padding: 1rem;
     max-width: 850px;
     margin: 0 auto;
   }
@@ -32,10 +30,12 @@
     font-weight: 500;
     font-size: clamp(1.1rem, 1rem + 1.25vw, 1.25rem);
   }
-  .card h2 {
+  .card .card__text {
+    margin: 0;
     width: 60%;
     color: gray;
     text-align: start;
+    line-height: 1.4em;
   }
 
   .card__btn {
@@ -64,8 +64,9 @@
     .card {
       flex-direction: column;
       align-items: center;
+      padding: 1.4rem;
     }
-    .card h2 {
+    .card .card__text {
       width: 100%;
     }
     .card__btn {

@@ -4,6 +4,8 @@ import styles from "../styles/serviceContent.css";
 import ImgBox from "../components/ImgBox/ImgBox.astro";
 import ImgBoxText from "../components/ImgBox/ImgBoxText.astro";
 
+import Card from "../components/Card.astro";
+
 const { imgText } = Astro.props;
 ---
 
@@ -27,7 +29,7 @@ const { imgText } = Astro.props;
         Preservação Permanente (APP).
       </p>
     </div>
-    <div class="wrapper">
+    <div class="card__container">
       <ImgBox img={imgText[1]} offset="2">
         <ImgBoxText
           >Além da vistoria de campo a <span class="accent"
@@ -40,32 +42,67 @@ const { imgText } = Astro.props;
         </ImgBoxText>
       </ImgBox>
     </div>
-    <p>
-      Após o diagnóstico, é apresentada ao cliente uma proposta de uso e
-      ocupação da área em conformidade com a legislação ambiental, incluindo
-      indicações de supressão de vegetação, preservação e compensação ambiental
-      (colocar texto ao lado da foto)
-    </p>
+
+    <div class="card__container">
+      <ImgBox img={imgText[0]} reverse offset="2">
+        <ImgBoxText>
+          Após o diagnóstico, é apresentada ao cliente uma proposta de uso e
+          ocupação da área em conformidade com a legislação ambiental, incluindo
+          indicações de supressão de vegetação, preservação e compensação
+          ambiental</ImgBoxText
+        >
+      </ImgBox>
+      <p></p>
+    </div>
   </article>
-  <article class="full__background">
-    <div class="content"><img src={imgText[1]} alt="" /></div>
-  </article>
+
   <article class="content">
-    <p>
-      Entenda as limitações ambientais e as possibilidades de ocupação de seu
-      terreno com a <span class="accent">Civilsolo Ambiental</span>! Entre em
-      contato para esclarecer suas dúvidas e fazer um orçamento sem compromisso!
-    </p>
+    <div class="wrapper">
+      <p>
+        É importante lembrar que nenhuma remoção de vegetação pode ser feita sem
+        a devida <span
+          ><a class="link" href="/autorizacao-para-supressao"
+            >Autorização para Supressão de Vegetação</a
+          ></span
+        > dos órgãos ambientais competentes.
+      </p>
+    </div>
+    <div class="wrapper">
+      <p>
+        Entenda as limitações ambientais e as possibilidades de ocupação de seu
+        terreno com a <span class="accent">Civilsolo Ambiental</span>! Entre em
+        contato para esclarecer suas dúvidas e fazer um orçamento sem
+        compromisso!
+      </p>
+    </div>
+    <div class="wrapper">
+      <Card>
+        Entenda as limitações ambientais e as possibilidades de ocupação de seu
+        terreno com a <span class="accent">Civilsolo Ambiental</span>! Entre em
+        contato para esclarecer suas dúvidas e fazer um orçamento sem
+        compromisso!
+      </Card>
+      <p></p>
+    </div>
   </article>
 </section>
 
 <style>
+  .card__container {
+    margin-block: 7rem 4rem;
+  }
   .full__background {
-    background-color: #ffa100;
+    background-color: #ffe4b6;
     padding-block: 2rem;
   }
   .img__container img {
     width: 100%;
     height: auto;
+  }
+  .link {
+    font-weight: bold;
+  }
+  .link:hover {
+    color: var(--sixth-color);
   }
 </style>

@@ -73,11 +73,16 @@ p {
   font-weight: bold;
 }
 .card__container {
-  margin-block: 4rem 3rem;
+  margin-block: 7rem 4rem;
 }
 .wrapper {
   margin-block: 3rem;
 }
 .wrapper--last {
   margin-bottom: 1rem;
+}
+@media (max-width: 600px) {
+  .card__container {
+    margin-block: 2rem;
+  }
 }
