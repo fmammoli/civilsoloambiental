@@ -3,13 +3,16 @@ const { img, offset = 1, reverse } = Astro.props;
 ---
 
 <div class={`card ${reverse ? "flex__reverse" : ""}`}>
-  <img
-    src={img}
-    alt=""
-    class={`card__img ${
-      reverse ? "img__offset--right-" + offset : "img__offset--left-" + offset
-    } `}
-  />
+  <div class="img__item">
+    <img
+      src={img}
+      alt=""
+      class={`card__img ${
+        reverse ? "img__offset--right-" + offset : "img__offset--left-" + offset
+      } `}
+    />
+  </div>
+
   <div class="card__divider"></div>
   <slot />
 </div>
@@ -22,14 +25,18 @@ const { img, offset = 1, reverse } = Astro.props;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 
     position: relative;
 
     background-color: #656565;
   }
+  .img__item {
+    width: 50%;
+  }
   .card__img {
     justify-self: flex-start;
-    width: 50%;
+    width: 100%;
     height: auto;
   }
   .img__offset--right-1 {
@@ -44,27 +51,14 @@ const { img, offset = 1, reverse } = Astro.props;
   .img__offset--left-2 {
     transform: translate3d(-1rem, -3rem, 0);
   }
-  .card__text {
-    width: 50%;
-    padding: 1rem;
-    color: white;
-    margin-block: 1rem;
-  }
+
   .card__divider {
     width: 2px;
     height: 100px;
     border-radius: 10px;
     background-color: var(--first-color);
   }
-  .card__text::before {
-    position: absolute;
-    width: 2px;
-    height: 40%;
-    border-radius: 10px;
-    background-color: var(--first-color);
-    top: 30%;
-    right: 50%;
-  }
+
   .flex__reverse {
     flex-direction: row-reverse;
   }
