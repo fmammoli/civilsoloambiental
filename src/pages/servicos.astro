@@ -2,11 +2,11 @@
 // Component Imports
 
 import MainLayout from "../Layouts/MainLayout.astro";
+import WhatsappFloatingBtn from "../components/WhatsappFloatingBtn.astro";
 import Site from "../components/Site.json";
+
 import DividerTitle from "../components/DividerTitle.astro";
 import Divider from "../components/Divider.astro";
-
-import WhatsappFloatingBtn from "../components/WhatsappFloatingBtn.astro";
 
 const data = Site.items;
 
@@ -38,8 +38,8 @@ const activeNavOption = "Serviços";
       ))}
     </ul>
   </main>
+  <WhatsappFloatingBtn />
   <Divider />
-  <WhatsappFloatingBtn whats={Site.contact.whatsapp[0].link} />
 </MainLayout>
 
 <style>
