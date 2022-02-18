@@ -4,6 +4,8 @@ import ImgGallery from "../components/ImgGallery.astro";
 
 import WhatsappFloatingBtn from "../components/WhatsappFloatingBtn.astro";
 
+import Site from "../components/Site.json";
+
 const { title, desc, bannerImg, color, imgGallery } = Astro.props;
 
 const activeNavOption = "Serviços";
@@ -35,7 +37,7 @@ const activeNavOption = "Serviços";
     <div class="gallery__background">
       <ImgGallery imgs={imgGallery} />
     </div>
-    <WhatsappFloatingBtn whats="5511972033539" />
+    <WhatsappFloatingBtn whats={Site.contact.whatsapp[0].link} />
   </main>
 </MainLayout>
 

@@ -5,13 +5,8 @@ import MainLayout from "../Layouts/MainLayout.astro";
 import EmpresaContent from "../content/EmpresaContent.astro";
 import DividerTitle from "../components/DividerTitle.astro";
 import Divider from "../components/Divider.astro";
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+import WhatsappFloatingBtn from "../components/WhatsappFloatingBtn.astro";
+import Site from "../components/Site.json";
 
 const activeNavOption = "Empresa";
 ---
@@ -21,6 +16,7 @@ const activeNavOption = "Empresa";
     <DividerTitle title={"Quem somos?"} color={"--empresa-color"} />
     <EmpresaContent />
     <Divider />
+    <WhatsappFloatingBtn whats={Site.contact.whatsapp[0].link} />
   </main>
 </MainLayout>
 
