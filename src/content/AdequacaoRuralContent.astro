@@ -12,6 +12,8 @@ import CollapsableSection from "../components/CollapsableSection/CollapsableSect
 import CollapsableItem from "../components/CollapsableSection/CollapsableItem.astro";
 import SummaryItem from "../components/CollapsableSection/SummaryItem.astro";
 
+import Card from "../components/Card.astro";
+
 const { imgText } = Astro.props;
 ---
 
@@ -227,6 +229,13 @@ const { imgText } = Astro.props;
           </ul>
         </CollapsableItem>
       </CollapsableSection>
+    </div>
+    <div class="wrapper">
+      <Card
+        >Entenda as limitações e possibilidades de adequação Ambiental de sua
+        propriedade com a <span class="accent">Civilsolo Ambiental</span>! Entre
+        em contato para esclarecer suas dúvidas e fazer um orçamento sem
+        compromisso!</Card>
     </div>
   </article>
 </section>

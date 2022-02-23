@@ -45,6 +45,10 @@
   --accent-panel-divider-3: var(--logo-olivegreen);
   --accent-panel-text-3: #white;
 
+  --accent-panel-background-4: #ffff9a;
+  --accent-panel-title-4: var(--logo-red);
+  --accent-panel-divider-4: var(--logo-red);
+
   --collapsable-section-background: #ffee8c;
   --collapsable-section-summary: black;
   --collapsable-section-divider: #e4dea6;
@@ -60,6 +64,8 @@
   --collapsable-section-button-background-1: var(--logo-red);
   --collapsable-section-button-text-1: #white;
 
+  --imgbox-background: #757575;
+
   --logo-green: #93bc8a;
   --logo-red: #75001d;
   --logo-olivegreen: #4b5c0e;
@@ -74,7 +80,7 @@
 
   --divider-color: var(--seventh-color);
 
-  --footer-background-color: #737373;
+  --footer-background-color: #979797;
 
   --footer-color: white;
   --footer-text-color: white;

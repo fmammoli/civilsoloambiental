@@ -12,6 +12,8 @@ import CollapsableSection from "../components/CollapsableSection/CollapsableSect
 import CollapsableItem from "../components/CollapsableSection/CollapsableItem.astro";
 import SummaryItem from "../components/CollapsableSection/SummaryItem.astro";
 
+import Card from "../components/Card.astro";
+
 const { imgText } = Astro.props;
 ---
 
@@ -119,6 +121,23 @@ const { imgText } = Astro.props;
         >
         <AccentPanelContent color="--accent-panel-text-3">
           <p class="white">
+            Estudos apontam que para cada 1 dólar investido na investigação, são
+            economizados 10 dólares na remediação, pois uma boa caracterização
+            do meio físico permite a localização e concentração da massa dos
+            contaminantes e, consequentemente, permite a escolha mais adequada
+            das técnicas e procedimentos de remediação.
+          </p>
+        </AccentPanelContent>
+      </AccentPanel>
+    </div>
+
+    <div class="wrapper">
+      <AccentPanel background="--accent-panel-background-4">
+        <AccentPanelTitle color="--accent-panel-title-4"
+          >Você sabia?</AccentPanelTitle
+        >
+        <AccentPanelContent color="--accent-panel-text-4">
+          <p class="black">
             Estudos apontam que para cada 1 dólar investido na investigação, são
             economizados 10 dólares na remediação, pois uma boa caracterização
             do meio físico permite a localização e concentração da massa dos
@@ -356,6 +375,14 @@ const { imgText } = Astro.props;
           </CollapsableItem>
         </CollapsableSection>
       </div>
+    </div>
+    <div class="wrapper">
+      <Card>
+        Entenda os problemas ambientais relacionados às contaminações e as
+        possibilidades de ocupação de seu terreno com a <span class="accent"
+          >Civilsolo Ambiental</span
+        >! Entre em contato para esclarecer suas dúvidas!
+      </Card>
     </div>
   </article>
 </section>

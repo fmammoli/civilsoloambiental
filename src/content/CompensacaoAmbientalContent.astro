@@ -12,6 +12,7 @@ import CollapsableSection from "../components/CollapsableSection/CollapsableSect
 import CollapsableItem from "../components/CollapsableSection/CollapsableItem.astro";
 import SummaryItem from "../components/CollapsableSection/SummaryItem.astro";
 
+import Card from "../components/Card.astro";
 const { imgText } = Astro.props;
 ---
 
@@ -34,8 +35,9 @@ const { imgText } = Astro.props;
         <AccentPanelContent>
           <p class="white">
             A compensação pode ser realizada no próprio imóvel ou em imóvel de
-            terceiros. Para efeito de cálculo de área e localização, são
-            considerados os diferentes estágios sucessionais da vegetação a ser
+            terceiros. Para efeito de cálculo da quantidade e localização da
+            área, são considerados o número de exemplares arbóreos cujo corte
+            foi autorizado; diferentes estágios sucessionais da vegetação a ser
             suprimida (inicial, médio e avançado) e mapa de áreas prioritárias
             para restauração da vegetação nativa do Estado de São Paulo.
           </p>
@@ -126,6 +128,14 @@ const { imgText } = Astro.props;
           </p>
         </CollapsableItem>
       </CollapsableSection>
+    </div>
+    <div class="wrapper">
+      <Card>
+        Entenda as possibilidades de compensar os danos ocorridos ou previstos
+        em seu terreno com a <span class="accent">Civilsolo Ambiental</span>!
+        Entre em contato para esclarecer suas dúvidas e fazer um orçamento sem
+        compromisso!
+      </Card>
     </div>
   </article>
 </section>
