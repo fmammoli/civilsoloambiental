@@ -1,6 +1,8 @@
 ---
 import NavBtn from "./NavBtn.astro";
 
+import Site from "../Site.json";
+
 let menuItems = [
   { title: "Home", link: "/", active: false },
   { title: "Empresa", link: "/empresa", active: false },
@@ -19,16 +21,63 @@ menuItems.forEach(function (item) {
 
 <nav class="nav">
   <ul id="primary__navigation" data-visible="false" class="primary__navigation">
-    {menuItems.map((item, index) => (
-      <li key={index}>
-        <NavBtn title={item.title} link={item.link} active={item.active} />
-      </li>
-    ))}
+    <li>
+      <NavBtn
+        title={menuItems[0].title}
+        link={menuItems[0].link}
+        active={menuItems[0].active}
+      />
+    </li>
+    <li>
+      <NavBtn
+        title={menuItems[1].title}
+        link={menuItems[1].link}
+        active={menuItems[1].active}
+      />
+    </li>
+    <li class="dropdown__container">
+      <NavBtn
+        title={menuItems[2].title}
+        link={menuItems[2].link}
+        active={menuItems[2].active}
+        haspopup={true}
+      />
+      <ul class="dropdown">
+        {Site.items.map((item, i) => (
+          <li>
+            <a href={item.link} class="sub__menu__item">
+              <img src={item.icon} alt="" class="link__icon" />
+              <p class="link__text">{item.title}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </li>
+    <li>
+      <NavBtn
+        title={menuItems[3].title}
+        link={menuItems[3].link}
+        active={menuItems[3].active}
+      />
+    </li>
   </ul>
 </nav>
+<script>
+  // Persist Ripple when dropdown menu is open
+  const servicosBtn = document.querySelector(".dropdown__container>a");
+  const dropdown = document.querySelector(".dropdown");
+  dropdown.addEventListener("mouseover", (e) => {
+    console.log("lalalall");
+    servicosBtn.classList.add("ripple--hovered");
+  });
+  dropdown.addEventListener("mouseleave", (e) => {
+    console.log("lalalall");
+    servicosBtn.classList.remove("ripple--hovered");
+  });
+</script>
 
 <style>
-  ul {
+  .primary__navigation {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -41,6 +90,76 @@ menuItems.forEach(function (item) {
   li {
     margin-inline: 0.5rem;
   }
+  .dropdown__container li:focus-within :global(.nav__link) {
+    border-color: var(--first-color) !important;
+  }
+  .dropdown {
+    opacity: 0;
+
+    list-style: none;
+
+    position: absolute;
+
+    padding: 0;
+    background-color: var(--dropdown-background);
+
+    max-width: 20rem;
+    transform: translate3d(0, -4px, 0);
+    z-index: -1;
+    transition: all 0.4s ease-out;
+
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.24), 0 3px 6px rgba(0, 0, 0, 0.12);
+  }
+  .dropdown li {
+    margin: 0;
+    border-bottom: 1px solid #d4d4d4;
+  }
+  .dropdown li:last-child {
+    border-bottom: none;
+  }
+  .primary__navigation li:hover > .dropdown,
+  .primary__navigation li:focus-within > .dropdown,
+  .primary__navigation li .dropdown:hover,
+  .primary__navigation li .dropdown:focus {
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(0, -4px, 0);
+    z-index: 100;
+  }
+
+  .sub__menu__item {
+    display: flex;
+    align-items: center;
+
+    text-decoration-color: transparent;
+
+    padding: 1rem;
+  }
+  .separator {
+    width: 90%;
+    height: 1px;
+    margin: 0 auto;
+    background-color: grey;
+  }
+  img {
+    align-self: flex-start;
+    width: 2rem;
+    aspect-ratio: 1;
+  }
+  .link__text {
+    padding-left: 1rem;
+  }
+  .sub__menu__item:hover {
+    background-color: var(--first-color);
+  }
+
+  .sub__menu__item:hover > img {
+    filter: invert(100%);
+  }
+  .sub__menu__item:hover > .link__text {
+    color: white;
+  }
+
   @media (max-width: 600px) {
     .primary__navigation {
       position: fixed;
@@ -67,6 +186,9 @@ menuItems.forEach(function (item) {
     li {
       margin: 0 auto;
       text-align: center;
+    }
+    .dropdown {
+      display: none;
     }
   }
 </style>

@@ -3,7 +3,7 @@
   --first-color-dark: #448843;
   --second-color: #ffa100;
   --third-color: #c93c00;
-  --fourth-color: #237ad6;
+  --fourth-color: #563f3f;
   --fifth-color: #845b75;
   --sixth-color: #f7c121;
   --seventh-color: #a8dda7;
@@ -24,6 +24,8 @@
   --content-h3-weight: 500;
 
   --content-text-color: #505050;
+
+  --dropdown-background: #ebebeb;
 
   --accent-panel-background: #85c46b;
   --accent-panel-title: #03572f;

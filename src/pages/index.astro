@@ -9,7 +9,7 @@ import Card from "../components/Card.astro";
 const activeNavOption = "Home";
 ---
 
-<MainLayout actioveNav={activeNavOption}>
+<MainLayout activeNav={activeNavOption}>
   <main>
     <Services />
   </main>
@@ -24,7 +24,7 @@ const activeNavOption = "Home";
 
 <style>
   main {
-    margin-top: 1rem;
+    padding-top: 1rem;
   }
   .full__background {
     padding-block: 2rem 0;
