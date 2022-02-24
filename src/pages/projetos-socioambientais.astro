@@ -2,36 +2,19 @@
 import ServiceLayout from "../Layouts/ServiceLayout.astro";
 import Site from "../components/Site.json";
 
-import img1 from "/assets/socioambiental/1.jpg";
-import img2 from "/assets/socioambiental/2.jpg";
-import img3 from "/assets/socioambiental/3.jpg";
-import img4 from "/assets/socioambiental/4.jpg";
-import img5 from "/assets/socioambiental/5.jpg";
-import img6 from "/assets/socioambiental/6.jpg";
-import img7 from "/assets/socioambiental/7.jpg";
-import img8 from "/assets/socioambiental/8.jpg";
-import img9 from "/assets/socioambiental/9.jpg";
-import img10 from "/assets/socioambiental/10.jpg";
-import img11 from "/assets/socioambiental/11.jpg";
+import GalleryImg1 from "/assets/socioambiental/1.jpg";
+import GalleryImg2 from "/assets/socioambiental/2.jpg";
+import GalleryImg3 from "/assets/socioambiental/3.jpg";
+
+import imgText1 from "/assets/socioambiental/box1.jpg";
+import imgText2 from "/assets/socioambiental/box2.jpg";
 
 import ProjetosSocioambientaisContent from "../content/ProjetosSocioambientaisContent.astro";
 
 const data = Site.items.find((item) => item.id === 6);
-const imgGallery = [
-  img1,
-  img2,
-  img3,
-  img4,
-  img5,
-  img6,
-  img7,
-  img8,
-  img9,
-  img10,
-  img11,
-];
+const imgGallery = [GalleryImg1, GalleryImg2, GalleryImg3];
 
-const imgs = [img1, img2, img5];
+const imgs = [imgText1, imgText2];
 ---
 
 <ServiceLayout

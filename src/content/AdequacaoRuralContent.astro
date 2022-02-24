@@ -8,6 +8,8 @@ import AccentPanelContent from "../components/AccentPanel/AccentPanelContent.ast
 import ImgBox from "../components/ImgBox/ImgBox.astro";
 import ImgBoxText from "../components/ImgBox/ImgBoxText.astro";
 
+import LargeImg from "../components/LargeImg.astro";
+
 import CollapsableSection from "../components/CollapsableSection/CollapsableSection.astro";
 import CollapsableItem from "../components/CollapsableSection/CollapsableItem.astro";
 import SummaryItem from "../components/CollapsableSection/SummaryItem.astro";
@@ -29,9 +31,9 @@ const { imgText } = Astro.props;
       </p>
     </div>
   </article>
-  <article class="full__background">
-    <div class="content center">
-      <img src={imgText[0]} alt="" class="img" />
+  <article>
+    <div class="content">
+      <LargeImg img={imgText[0]} />
     </div>
   </article>
   <article class="content">
@@ -47,7 +49,7 @@ const { imgText } = Astro.props;
     </div>
 
     <div class="card__container">
-      <ImgBox img={imgText[2]} offset="2">
+      <ImgBox img={imgText[1]} offset="2">
         <ImgBoxText
           >Após realizar o CAR, o proprietário poderá optar por fazer a adesão
           ao Programa de Regularização Ambiental (PRA), cujo prazo é até
@@ -60,41 +62,6 @@ const { imgText } = Astro.props;
       </ImgBox>
     </div>
 
-    <div class="wrapper">
-      <AccentPanel>
-        <AccentPanelTitle>
-          Os principais benefícios a serem obtidos com a adesão e cumprimento do
-          PRA:
-        </AccentPanelTitle>
-        <AccentPanelContent>
-          <ul class="white bulletpoints">
-            <li>
-              A propriedade rural poderá ter menos que 20% da Reserva Legal
-              (RL), se elegível para tanto.
-            </li>
-            <li>
-              O proprietário poderá manter o uso rural consolidado (área com
-              usos agropecuários e de infraestrutura) em parte das Áreas de
-              Preservação Permanente (APPs);
-            </li>
-            <li>
-              O proprietário poderá ter a suspensão de multas (por supressão de
-              vegetação em APPs, RLs e área de uso restrito) impostas por
-              infrações cometidas antes de 22/07/2008;
-            </li>
-            <li>
-              Prazo para recuperação de passivos ambientais (recomposição das
-              APPs e RL) de até 20 anos, iniciando prioritariamente pelas APPs;
-            </li>
-            <li>
-              Possibilidade de que a exigência de recomposição das APPs do
-              imóvel rural não ultrapasse 10% da área total do imóvel (para
-              imóveis com área de até 2
-            </li>
-          </ul>
-        </AccentPanelContent>
-      </AccentPanel>
-    </div>
     <div class="wrapper">
       <p>
         Os principais benefícios a serem obtidos com a adesão e cumprimento do
@@ -128,7 +95,7 @@ const { imgText } = Astro.props;
     </div>
 
     <div class="card__container">
-      <ImgBox img={imgText[1]} offset="2">
+      <ImgBox img={imgText[2]} offset="2">
         <ImgBoxText>
           Para solucionar esses passivos ambientais, o proprietário do imóvel
           rural que aderir ao PRA deverá apresentar o Projeto de Recomposição de
@@ -174,12 +141,6 @@ const { imgText } = Astro.props;
 
     <div class="wrapper">
       <CollapsableSection>
-        <SummaryItem
-          >Entenda as limitações e possibilidades de adequação Ambiental de sua
-          propriedade com a <span class="accent">Civilsolo Ambiental</span>!
-          Entre em contato para esclarecer suas dúvidas e fazer um orçamento sem
-          compromisso!
-        </SummaryItem>
         <CollapsableItem>
           <p>
             A Civilsolo Ambiental fornece todos os serviços relacionados aos
@@ -235,7 +196,8 @@ const { imgText } = Astro.props;
         >Entenda as limitações e possibilidades de adequação Ambiental de sua
         propriedade com a <span class="accent">Civilsolo Ambiental</span>! Entre
         em contato para esclarecer suas dúvidas e fazer um orçamento sem
-        compromisso!</Card>
+        compromisso!</Card
+      >
     </div>
   </article>
 </section>

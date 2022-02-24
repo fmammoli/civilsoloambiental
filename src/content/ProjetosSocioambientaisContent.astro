@@ -8,11 +8,8 @@ import AccentPanelContent from "../components/AccentPanel/AccentPanelContent.ast
 import ImgBox from "../components/ImgBox/ImgBox.astro";
 import ImgBoxText from "../components/ImgBox/ImgBoxText.astro";
 
-import CollapsableSection from "../components/CollapsableSection/CollapsableSection.astro";
-import CollapsableItem from "../components/CollapsableSection/CollapsableItem.astro";
-import SummaryItem from "../components/CollapsableSection/SummaryItem.astro";
-
 import Card from "../components/Card.astro";
+import LargeImg from "../components/LargeImg.astro";
 
 const { imgText } = Astro.props;
 ---
@@ -45,7 +42,7 @@ const { imgText } = Astro.props;
 
     <div class="wrapper">
       <AccentPanel>
-        <AccentPanelTitle>Resultados:</AccentPanelTitle>
+        <AccentPanelTitle>Resultados Esperados:</AccentPanelTitle>
         <AccentPanelContent
           ><p class="white">
             Os resultados esperados no médio e longo prazos são o fortalecimento
@@ -58,11 +55,9 @@ const { imgText } = Astro.props;
       </AccentPanel>
     </div>
   </article>
-  <article class="full__background">
+  <article>
     <div class="content">
-      <div class="img__wrapper">
-        <img src={imgText[1]} alt="" class="img" />
-      </div>
+      <LargeImg img={imgText[1]} />
     </div>
   </article>
   <article class="content">

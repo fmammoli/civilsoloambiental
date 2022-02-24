@@ -2,26 +2,21 @@
 import ServiceLayout from "../Layouts/ServiceLayout.astro";
 import Site from "../components/Site.json";
 
-import img1 from "/assets/adequacao/1.jpg";
-import img2 from "/assets/adequacao/2.jpg";
-import img3 from "/assets/adequacao/3.jpg";
-import img4 from "/assets/adequacao/4.jpg";
-import img5 from "/assets/adequacao/5.jpg";
-import img6 from "/assets/adequacao/6.jpg";
-import img7 from "/assets/adequacao/7.jpg";
-import img8 from "/assets/adequacao/8.jpg";
-import img9 from "/assets/adequacao/9.jpg";
-import img10 from "/assets/adequacao/10.jpg";
-import img11 from "/assets/adequacao/11.jpg";
-import img12 from "/assets/adequacao/12.jpg";
-import img13 from "/assets/adequacao/13.jpg";
-import img14 from "/assets/adequacao/image1.jpg";
+import GalleryImg1 from "/assets/adequacao/1.jpg";
+import GalleryImg2 from "/assets/adequacao/2.jpg";
+import GalleryImg3 from "/assets/adequacao/3.jpg";
+
+import imgText1 from "/assets/adequacao/box1.jpg";
+import imgText2 from "/assets/adequacao/box2.jpg";
+import imgText3 from "/assets/adequacao/box3.jpg";
 
 import AdequacaoRuralContent from "../content/AdequacaoRuralContent.astro";
 
 const data = Site.items.find((item) => item.id === 5);
-const imgGallery = [img11, img8, img6];
-const imgs = [img1, img3, img14];
+
+const imgGallery = [GalleryImg1, GalleryImg2, GalleryImg3];
+
+const imgs = [imgText1, imgText2, imgText3];
 ---
 
 <ServiceLayout

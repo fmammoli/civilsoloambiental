@@ -18,11 +18,12 @@ const activeNavOption = "Contato";
     <section class="full__background">
       <div class="container">
         <div class="panel contact__form__container">
-          <form action="" class="contact__form">
+          <form id="formElement" class="contact__form">
             <h2 class="panel__title">Entre em contato:</h2>
             <div class="input__container">
               <label class="label" for="name">Nome:</label>
               <input
+                name="name"
                 class="input__text"
                 type="text"
                 id="name"
@@ -35,6 +36,7 @@ const activeNavOption = "Contato";
                 class="input__text"
                 type="email"
                 id="email"
+                name="email"
                 placeholder="seu@email.com.br"
               />
             </div>
@@ -44,6 +46,7 @@ const activeNavOption = "Contato";
                 class="input__text"
                 type="tel"
                 id="phone"
+                name="tel"
                 placeholder="(XX) X XXXX-XXXX"
               />
             </div>
@@ -52,6 +55,7 @@ const activeNavOption = "Contato";
               <textarea
                 class="input__text text__area"
                 id="message"
+                name="message"
                 resize="none"
                 type="text"
                 placeholder="Escreva aqui sua mensagem..."></textarea>
@@ -118,7 +122,7 @@ const activeNavOption = "Contato";
                 <p><a href="mailto:">email2@ambiental.com.br</a></p>
               </div>
             </li>
-            <li class="contact__item row">
+            <li class="contact__item row" id="ab">
               <div class="svg__container">
                 <svg
                   aria-hidden="true"
@@ -207,18 +211,79 @@ const activeNavOption = "Contato";
     </section>
     <Divider />
   </main>
+  <section class="overlay">
+    <div class="modal__container">
+      <div class="modal">
+        <p class="modal__text trigger">Mensagem enviada!</p>
+        <svg
+          version="1.1"
+          id="tick"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 37 37"
+          style="enable-background:new 0 0 37 37;"
+          xml:space="preserve"
+        >
+          <path
+            class="circ path"
+            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
+            d="
+	M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"
+          ></path>
+          <polyline
+            class="tick path"
+            style="fill:none;stroke:#000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
+            points="
+	11.6,20 15.9,24.2 26.4,13.8 "></polyline>
+        </svg>
+      </div>
+    </div>
+  </section>
 </MainLayout>
 <script>
-  const form = document.querySelector(".contact__form");
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-  });
+  const formElement = document.querySelector("#formElement");
+  const submitBtn = document.querySelector(".submit");
+  const overlay = document.querySelector(".overlay");
+  const modal = document.querySelector(".modal");
+  const trigger = document.querySelector(".trigger");
+  formElement.addEventListener("submit", onSubmit);
+
+  async function onSubmit(e) {
+    e.preventDefault();
+    const formData = new FormData(formElement);
+    formData.append("service_id", "service_cma2qch");
+    formData.append("template_id", "template_a1nyz3t");
+    formData.append("user_id", "user_Vl2zrsz4TLXCvwi8yGChH");
+
+    try {
+      overlay.style.visibility = "visible";
+      overlay.style.opacity = 1;
+      modal.transform = "translate3d(0, 2rem, 0)";
+      console.log(submitBtn);
+      trigger.classList.add("drawn");
+      setTimeout(() => {
+        overlay.style.visibility = "hidden";
+        overlay.style.opacity = 0;
+        trigger.classList.remove("drawn");
+      }, 2000);
+      // let response = await fetch(
+      //   "https://api.emailjs.com/api/v1.0/email/send-form",
+      //   {
+      //     method: "POST",
+      //     body: formData,
+      //   }
+      // );
+    } catch (error) {
+      console.log(error);
+    }
+  }
 </script>
 
 <style>
   .main {
     margin-top: 1rem;
-    margin-bottom: 1rem;
   }
   .full__background {
     width: 100%;
@@ -236,6 +301,7 @@ const activeNavOption = "Contato";
     justify-content: space-evenly;
   }
   .panel {
+    width: 40%;
     padding: 2rem;
     margin-block: 3rem;
     background-color: #5757574a;
@@ -243,7 +309,7 @@ const activeNavOption = "Contato";
     border-radius: 6px;
   }
   .panel__title {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: bold;
     color: var(--sixth-color);
     margin-bottom: 0.5em;
@@ -305,10 +371,65 @@ const activeNavOption = "Contato";
     height: 28px;
     aspect-ratio: 1;
   }
-  svg path {
+  .svg__container svg path {
     fill: white;
   }
 
+  .overlay {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease-in-out;
+  }
+  .modal__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .modal {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+    max-width: 400px;
+    transition: all 0.4 ease-in-out;
+
+    display: flex;
+    align-items: center;
+  }
+  .modal__text {
+    color: black;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+  .modal svg {
+    height: 40px;
+    aspect-ratio: 1;
+  }
+  .modal svg .path {
+    stroke: var(--first-color) !important;
+  }
+  .circ {
+    opacity: 0;
+    stroke-dasharray: 130;
+    stroke-dashoffset: 130;
+    transition: all 1s 0.4s;
+  }
+  .tick {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    transition: stroke-dashoffset 1s 1s ease-out;
+  }
+  .drawn + svg .path {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
   @media (max-width: 820px) {
     .container {
       width: 100%;
@@ -328,6 +449,7 @@ const activeNavOption = "Contato";
     }
     .panel {
       margin-block: 1rem;
+      width: 100%;
     }
   }
 </style>
