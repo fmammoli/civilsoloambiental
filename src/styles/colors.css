@@ -17,6 +17,7 @@
   --content-h3-color: var(--first-color);
   --content-accent-color: var(--first-color);
   --content-overlay-color: rgba(153, 153, 153, 0.5);
+  --content-overlay-color: rgba(47, 47, 47, 0.6);
 
   --content-text-weight: 400;
   --content-h1-weight: 600;

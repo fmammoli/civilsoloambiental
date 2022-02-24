@@ -3,7 +3,8 @@
     {
       "id": 1,
       "title": "Investigação de Áreas Contaminadas",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "desc": "A <span class=\"accent\">Civilsolo Ambiental</span> realiza estudos de campo  e levantamentos documentais para  investigar a presença e a quantidade de contaminantes no meio físico subterrâneo (água e solo). Tem como objetivo principal encontrar soluções ambientais para apoiar decisões de empreendedores e interessados sobre aquisição de terrenos, implantação e ampliação de atividades industriais e comerciais, tendo em vista a obtenção e renovação de licenças ambientais junto aos órgãos competentes em áreas suspeitas ou contaminadas.",
+      "shortDesc": "A <span class=\"accent\">Civilsolo Ambiental</span> realiza estudos de campo  e levantamentos documentais para  investigar a presença e a quantidade de contaminantes no meio físico subterrâneo (água e solo).",
       "link": "/areas-contaminadas",
       "img": "/assets/home/areas_contaminadas_home-600x307.jpg",
       "bannerImg": "/assets/areasContaminadas/banner.jpg",
@@ -15,7 +16,8 @@
     {
       "id": 2,
       "title": "Diagnóstico Ambiental Preliminar",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "desc": "A <span class=\"accent\">Civilsolo Ambiental</span> realiza estudos prévios que  identificam e quantificam a presença, tipo e localização de vegetação nativa na área de interesse para verificar possíveis restrições ambientais e potencial construtivo com base na legislação ambiental. Tem como objetivo principal encontrar soluções ambientais  para apoiar as decisões de empreendedores e interessados na aquisição de terrenos e/ou na construção, antes de iniciar um processo de licenciamento ambiental junto aos órgãos ambientais competentes, como prefeituras e CETESB.",
+      "shortDesc": "A <span class=\"accent\">Civilsolo Ambiental</span> realiza estudos prévios que  identificam e quantificam a presença, tipo e localização de vegetação nativa na área de interesse para verificar possíveis restrições ambientais e potencial construtivo com base na legislação ambiental.",
       "link": "/diagnostico-ambiental-preliminar",
       "img": "/assets/home/diagnostico_home-600x307.jpg",
       "bannerImg": "/assets/diagnostico/banner.jpg",
@@ -28,7 +30,8 @@
     {
       "id": 3,
       "title": "Autorização para Supressão de Vegetação Nativa",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "desc": "A <span class=\"accent\">Civilsolo Ambiental</span> reúne e elabora todos os documentos necessários, incluindo laudos de vegetação nativa, para que o empreendedor ou interessado  consiga, a partir de soluções ambientais, as autorizações de corte de vegetação,  tanto de árvores isoladas quanto de fragmentos florestais, junto aos órgãos ambientais competentes, como a prefeitura municipal ou a CETESB.",
+      "shortDesc": "A <span class=\"accent\">Civilsolo Ambiental</span>  reúne e elabora todos os documentos necessários, incluindo laudos de vegetação nativa, para que o empreendedor ou interessado  consiga, a partir de soluções ambientais, as autorizações de corte de vegetação,  tanto de árvores isoladas quanto de fragmentos florestais, junto aos órgãos ambientais competentes, como a prefeitura municipal ou a CETESB.",
       "link": "/autorizacao-para-supressao",
       "img": "/assets/home/supressao_home-600x307.jpg",
       "bannerImg": "/assets/supressao/banner.jpg",
@@ -40,7 +43,8 @@
     {
       "id": 4,
       "title": "Compensação Ambiental e Plantio de Mudas Nativas",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "desc": "A <span class=\"accent\">Civilsolo Ambiental</span> fornece todo apoio técnico e soluções ambientais ao empreendedor ou interessado para realizar a compensação ambiental  de empreendimentos e/ou atividades que geram impactos ao meio ambiente, como a remoção de vegetação ou a existência de passivos ambientais. São ações determinadas legalmente que incluem a recuperação ambiental e restauração ecológica por meio de plantio de mudas nativas ou proteção de áreas vegetadas no próprio terreno impactado ou em áreas de terceiros.",
+      "shortDesc": "A <span class=\"accent\">Civilsolo Ambiental</span> fornece todo apoio técnico e soluções ambientais ao empreendedor ou interessado para realizar a compensação ambiental  de empreendimentos e/ou atividades que geram impactos ao meio ambiente, como a remoção de vegetação ou a existência de passivos ambientais.",
       "link": "/compensacao-ambiental-e-plantio-de-mudas-nativas",
       "img": "/assets/home/compensacao_home-600x307.jpg",
       "bannerImg": "/assets/compensacao/banner.jpg",
@@ -53,7 +57,8 @@
     {
       "id": 5,
       "title": "Adequação Ambiental de Propriedades Rurais",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "desc": "A <span class=\"accent\">Civilsolo Ambiental</span> executa um conjunto de ações e soluções ambientais necessárias para que o proprietário consiga a regularização ambiental da sua propriedade rural. São ações que começam pelo Cadastro Ambiental Rural (CAR) na plataforma oficial da CETESB até a execução de plantios para recomposição de vegetação em Áreas de Preservação Permanente (APPs) e Reserva Legal, incluindo a elaboração de relatórios e laudos exigidos pelos órgãos ambientais competentes.",
+      "shortDesc": "A <span class=\"accent\">Civilsolo Ambiental</span> executa um conjunto de ações e soluções ambientais necessárias para que o proprietário consiga a regularização ambiental da sua propriedade rural.",
       "link": "/adequacao-ambiental-de-propriedades-rurais",
       "img": "/assets/home/adequacao_home-600x307.jpg",
       "bannerImg": "/assets/adequacao/banner.jpg",
@@ -65,7 +70,8 @@
     {
       "id": 6,
       "title": "Projetos Socioambientais",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "desc": "A <span class=\"accent\">Civilsolo Ambiental</span> executa e acompanha diferentes projetos e iniciativas coletivas envolvendo populações tradicionais e comunidades rurais. Tem como objetivo encontrar soluções ambientais e sociais para fortalecer a organização local, garantir o direito de uso dos recursos naturais, melhorar o manejo de sistemas florestais e agroflorestais, além de criar oportunidades de geração de renda e de valorização da identidade cultural dessas populações.",
+      "shortDesc": "A <span class=\"accent\">Civilsolo Ambiental</span> executa e acompanha diferentes projetos e iniciativas coletivas envolvendo populações tradicionais e comunidades rurais.",
       "link": "/projetos-socioambientais",
       "img": "/assets/home/projetos_home-600x307.jpg",
       "bannerImg": "/assets/socioambiental/banner.jpg",
