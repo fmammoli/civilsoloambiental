@@ -1,0 +1,36 @@
+---
+const { img } = Astro.props;
+---
+
+<div class="large__container">
+  <img src={img} alt="" class="img" />
+  <div class="divider"></div>
+</div>
+
+<style>
+  .large__container {
+    background-color: var(--imgbox-background);
+    max-width: 700px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 2rem 1rem 2rem;
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    border-radius: 8px;
+  }
+  .divider {
+    height: 2px;
+    width: 20%;
+    margin-top: 1rem;
+    border-radius: 100px;
+    background-color: var(--first-color);
+  }
+</style>

@@ -2,19 +2,19 @@
 import ServiceLayout from "../Layouts/ServiceLayout.astro";
 import Site from "../components/Site.json";
 
-import img1 from "/assets/areasContaminadas/1.jpg";
-import img5 from "/assets/areasContaminadas/image5.jpg";
-import img6 from "/assets/areasContaminadas/6.jpg";
+import GalleryImg1 from "/assets/areasContaminadas/1.jpg";
+import GalleryImg2 from "/assets/areasContaminadas/2.jpg";
+import GalleryImg3 from "/assets/areasContaminadas/3.jpg";
 
-import imgText1 from "/assets/areasContaminadas/image1.jpg";
-import imgText2 from "/assets/areasContaminadas/banner.jpg";
-import imgText3 from "/assets/areasContaminadas/image3.jpg";
-import imgText4 from "/assets/areasContaminadas/image4.jpg";
+import imgText1 from "/assets/areasContaminadas/box1.jpg";
+import imgText2 from "/assets/areasContaminadas/box2.jpg";
+import imgText3 from "/assets/areasContaminadas/box3.jpg";
+import imgText4 from "/assets/areasContaminadas/box4.jpg";
 
 import AreasContaminadasContent from "../content/AreasContaminadasContent.astro";
 
 const data = Site.items.find((item) => item.id === 1);
-const imgGallery = [img1, img6, img5];
+const imgGallery = [GalleryImg1, GalleryImg2, GalleryImg3];
 
 const imgs = [imgText1, imgText2, imgText3, imgText4];
 ---

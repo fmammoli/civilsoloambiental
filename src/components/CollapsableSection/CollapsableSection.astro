@@ -84,7 +84,7 @@ const {
     display: flex;
     flex-direction: column;
     border: 1px solid #ccc;
-    border-radius: 8px 8px;
+    border-radius: 0px 0px 8px 8px;
   }
   .section {
     overflow: hidden;
@@ -109,8 +109,8 @@ const {
     font-size: 1rem;
     padding-block: 1rem;
     margin: 0 auto;
-    border-radius: 0px 0px 10px 10px;
-    border: 0px;
+    border-radius: 0px 0px 8px 8px;
+    border: 2px solid var(--collapsable-section-background);
     cursor: pointer;
     transition: all 0.25s ease-in;
   }
@@ -118,6 +118,7 @@ const {
   .btn__toggle--collapse:focus {
     color: white;
     background-color: var(--collapsable-section-button-hover);
+    border-color: var(--collapsable-section-button-hover);
     /* box-shadow: inset 0 0 0 2em var(--logo-red); */
   }
 </style>

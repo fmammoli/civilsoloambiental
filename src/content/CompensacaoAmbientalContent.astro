@@ -8,6 +8,8 @@ import AccentPanelContent from "../components/AccentPanel/AccentPanelContent.ast
 import ImgBox from "../components/ImgBox/ImgBox.astro";
 import ImgBoxText from "../components/ImgBox/ImgBoxText.astro";
 
+import LargeImg from "../components/LargeImg.astro";
+
 import CollapsableSection from "../components/CollapsableSection/CollapsableSection.astro";
 import CollapsableItem from "../components/CollapsableSection/CollapsableItem.astro";
 import SummaryItem from "../components/CollapsableSection/SummaryItem.astro";
@@ -27,7 +29,7 @@ const { imgText } = Astro.props;
       empreendedor cumpra sua obrigação de diminuir o dano ambiental causado ao
       meio ambiente quando associado à supressão de vegetação nativa, ao corte
       de árvores isoladas e/ou às intervenções em Áreas de Preservação
-      Permanente, em áreas rurais e urbanas.
+      Permanente (APPs), em áreas rurais e urbanas.
     </p>
     <div class="wrapper">
       <AccentPanel>
@@ -46,7 +48,7 @@ const { imgText } = Astro.props;
     </div>
 
     <div class="card__container">
-      <ImgBox img={imgText[1]} offset="2">
+      <ImgBox img={imgText[0]} offset="2">
         <ImgBoxText>
           As ações compensatórias podem ser feitas por meio do <span
             class="bold">Plantios de Mudas Nativas</span
@@ -56,9 +58,11 @@ const { imgText } = Astro.props;
       </ImgBox>
     </div>
   </article>
-  <article class="full__background">
+  <article>
     <div class="content">
-      <img src={imgText[0]} alt="" />
+      <div class="wrapper">
+        <LargeImg img={imgText[1]} offset="2" />
+      </div>
     </div>
   </article>
   <article class="content">
@@ -97,13 +101,6 @@ const { imgText } = Astro.props;
     </div>
     <div class="wrapper">
       <CollapsableSection>
-        <SummaryItem
-          >Entenda as possibilidades de compensar os danos ocorridos ou
-          previstos em seu terreno com a <span class="accent"
-            >Civilsolo Ambiental</span
-          >! Entre em contato para esclarecer suas dúvidas e fazer um orçamento
-          sem compromisso!
-        </SummaryItem>
         <CollapsableItem>
           <p>
             Quando a compensação se tratar de preservação de área remanescente

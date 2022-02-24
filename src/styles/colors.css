@@ -32,32 +32,13 @@
   --accent-panel-divider: #03572f;
   --accent-panel-text: #white;
 
-  --accent-panel-background-1: var(--logo-red);
-  --accent-panel-title-1: white;
-  --accent-panel-divider-1: #03572f;
-  --accent-panel-text-1: #white;
-
-  --accent-panel-background-2: #f99984;
-  --accent-panel-title-2: var(--logo-red);
-  --accent-panel-divider-2: #03572f;
-  --accent-panel-text-2: #white;
-
-  --accent-panel-background-3: var(--logo-olivegreen);
-  --accent-panel-title-3: var(--logo-green);
-  --accent-panel-divider-3: var(--logo-olivegreen);
-  --accent-panel-text-3: #white;
-
-  --accent-panel-background-4: #ffff9a;
-  --accent-panel-title-4: var(--logo-red);
-  --accent-panel-divider-4: var(--logo-red);
-
-  --collapsable-section-background: #ffee8c;
-  --collapsable-section-summary: black;
+  --collapsable-section-background: var(--first-color);
+  --collapsable-section-summary: white;
   --collapsable-section-divider: #e4dea6;
   --collapsable-section-button-background: var(
     --collapsable-section-background
   );
-  --collapsable-section-button-hover: #ffdd44;
+  --collapsable-section-button-hover: var(--first-color-dark);
   --collapsable-section-button-text: var(--collapsable-section-summary);
 
   --collapsable-section-background-1: var(--logo-red);

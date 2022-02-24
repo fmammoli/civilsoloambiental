@@ -24,12 +24,7 @@ const activeNavOption = "Serviços";
         <p>
           {desc}
         </p>
-        <a
-          class="btn"
-          href="#section-content"
-          style={`background-color: var(${color});border-color: var(${color});`}
-          ><p>Veja mais</p></a
-        >
+        <a class="btn" href="#section-content"><p>Veja mais</p></a>
       </div>
     </div>
     <section id="section-content"></section>
@@ -107,6 +102,8 @@ const activeNavOption = "Serviços";
 
     font-size: 1rem;
     transition: 0.25s;
+    background-color: var(--first-color);
+    border-color: var(--first-color);
   }
   .btn p {
     margin: 0;
