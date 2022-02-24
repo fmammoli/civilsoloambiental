@@ -38,7 +38,7 @@ menuItems.forEach(function (item) {
     <li class="dropdown__container">
       <NavBtn
         title={menuItems[2].title}
-        link={menuItems[2].link}
+        link="#"
         active={menuItems[2].active}
         haspopup={true}
       />
@@ -52,6 +52,13 @@ menuItems.forEach(function (item) {
           </li>
         ))}
       </ul>
+    </li>
+    <li class="no__dropdown">
+      <NavBtn
+        title={menuItems[2].title}
+        link={menuItems[2].link}
+        active={menuItems[2].active}
+      />
     </li>
     <li>
       <NavBtn
@@ -90,6 +97,10 @@ menuItems.forEach(function (item) {
   li {
     margin-inline: 0.5rem;
   }
+  .no__dropdown {
+    display: none;
+  }
+
   .dropdown__container li:focus-within :global(.nav__link) {
     border-color: var(--first-color) !important;
   }
@@ -187,8 +198,12 @@ menuItems.forEach(function (item) {
       margin: 0 auto;
       text-align: center;
     }
+    .dropdown__container,
     .dropdown {
       display: none;
+    }
+    .no__dropdown {
+      display: block;
     }
   }
 </style>

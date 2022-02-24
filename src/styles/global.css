@@ -30,6 +30,15 @@ img {
   background: #f9fafb;
   color: #111827;
 } */
+.accent {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--first-color);
+}
+.accent--red {
+  font-weight: bold;
+  color: var(--logo-red) !important;
+}
 .white {
   color: white;
 }

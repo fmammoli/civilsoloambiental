@@ -3,14 +3,7 @@
   margin: 0 auto;
   max-width: 900px;
 }
-.accent {
-  font-weight: bold;
-  color: var(--first-color);
-}
-.accent--red {
-  font-weight: bold;
-  color: var(--logo-red) !important;
-}
+
 .content h1 {
   margin-block: 1em;
   color: var(--content-h1-color);
