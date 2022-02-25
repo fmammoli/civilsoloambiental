@@ -19,12 +19,15 @@
   --content-overlay-color: rgba(153, 153, 153, 0.5);
   --content-overlay-color: rgba(47, 47, 47, 0.6);
 
+  --section-background: #e5edd1;
+
   --content-text-weight: 400;
   --content-h1-weight: 600;
   --content-h2-weight: 500;
   --content-h3-weight: 500;
 
   --content-text-color: #505050;
+  --content-text-color: grey;
 
   --dropdown-background: #ebebeb;
 
@@ -33,9 +36,9 @@
   --accent-panel-divider: #03572f;
   --accent-panel-text: #white;
 
-  --collapsable-section-background: var(--first-color);
+  --collapsable-section-background: var(--first-color-dark);
   --collapsable-section-summary: white;
-  --collapsable-section-divider: #e4dea6;
+  --collapsable-section-divider: var(--first-color-dark);
   --collapsable-section-button-background: var(
     --collapsable-section-background
   );
