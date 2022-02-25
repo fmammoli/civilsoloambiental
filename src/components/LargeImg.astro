@@ -2,22 +2,20 @@
 const { img } = Astro.props;
 ---
 
-<div class="large__container">
+<div class="large__container shadow__depth-3">
   <img src={img} alt="" class="img" />
-  <div class="divider"></div>
 </div>
 
 <style>
   .large__container {
-    background-color: var(--imgbox-background);
     max-width: 700px;
     margin: 0 auto;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 2rem 2rem 1rem 2rem;
+
+    border-radius: 8px;
   }
 
   .img {

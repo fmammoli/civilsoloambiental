@@ -86,6 +86,14 @@
     "emails": ["comercial@civilsolo.com.br"],
     "phones": [{ "link": "+5511972033539", "text": "(11) 4521-3500" }],
     "whatsapp": [{ "link": "5511972033539", "text": "(11) 97203-3539" }],
+    "instagram": {
+      "link": "https://www.instagram.com/civilsoloambiental/",
+      "text": "@civilsoloambiental"
+    },
+    "facebook": {
+      "link": "https://www.facebook.com/civilsoloambiental/",
+      "text": "fb/civilsoloambiental"
+    },
     "address": [
       {
         "street": "Rua Fortunato Mori, 280",

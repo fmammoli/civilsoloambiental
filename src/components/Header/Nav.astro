@@ -17,6 +17,8 @@ menuItems.forEach(function (item) {
     item.active = true;
   }
 });
+
+// Img for icon inside dropdownmenu <img src={item.icon} alt="" class="link__icon" />
 ---
 
 <nav class="nav">
@@ -46,7 +48,6 @@ menuItems.forEach(function (item) {
         {Site.items.map((item, i) => (
           <li>
             <a href={item.link} class="sub__menu__item">
-              <img src={item.icon} alt="" class="link__icon" />
               <p class="link__text">{item.title}</p>
             </a>
           </li>
@@ -158,7 +159,7 @@ menuItems.forEach(function (item) {
     aspect-ratio: 1;
   }
   .link__text {
-    padding-left: 1rem;
+    /* padding-left: 1rem; */
   }
   .sub__menu__item:hover {
     background-color: var(--first-color);
