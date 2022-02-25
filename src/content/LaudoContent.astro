@@ -3,6 +3,7 @@ import styles from "../styles/serviceContent.css";
 import DividerTitle from "../components/DividerTitle.astro";
 
 import Card from "../components/Card.astro";
+import LargeImg from "../components/LargeImg.astro";
 
 const { imgText } = Astro.props;
 ---
@@ -16,7 +17,7 @@ const { imgText } = Astro.props;
 
     <div class="wrapper row">
       <div class="img__container">
-        <img src={imgText[0]} alt="" />
+        <LargeImg img={imgText[0]} />
       </div>
       <div class="item text__item">
         <p>
@@ -36,53 +37,57 @@ const { imgText } = Astro.props;
         </p>
       </div>
     </div>
-    <div class="wrapper">
-      <p>
-        A <span class="accent">Civilsolo Ambiental</span> realiza as seguintes atividades
-        para elaborar Laudos de Cobertura Vegetal, incluindo diagnósticos e ações
-        propositivas:
-      </p>
-      <ul>
-        <li>
-          Levantamento de possíveis termos de compromisso firmados com órgãos
-          ambientais competentes e com o judiciário, bem como autos de infração
-          incidentes na área objeto de interesse;
-        </li>
-        <li>
-          Levantamentos detalhados em campo e por meio de mapas e imagens
-          (satélite e/ou de drone) para identificação do bioma, caracterização
-          do uso atual e pretérito da propriedade, identificação das espécies
-          vegetais presentes, dos fragmentos florestais e seus respectivos
-          estágios sucessionais (iniciais, médios ou avançados);
-        </li>
-        <li>
-          Identificação, caracterização, tipo de uso e ocupação existentes em
-          Áreas de Preservação Permanente (APPs) e suas condições físicas e
-          ambientais, dentro e fora dos limites da propriedade que possam gerar
-          compromissos ambientais;
-        </li>
-        <li>
-          Identificação e delimitação de áreas especialmente protegidas, como
-          áreas verdes, reservas legais, unidades de conservação e zonas de
-          amortecimento, áreas de proteção de mananciais, incidentes na
-          propriedade e/ou no entorno, para efeito de cumprimento de legislação
-          ambiental específica;
-        </li>
-        <li>
-          Identificação e caracterização de árvores nativas isoladas, com a
-          mensuração de atributos ambientais, como o diâmetro de altura do peito
-          (DAP), altura e condições fitossanitárias;
-        </li>
-        <li>
-          Elaboração da Planta Ambiental da situação atual e pretendida
-          georreferenciada, com todas as informações planilhadas e
-          sistematizadas sobre uso e ocupação atual e tributos ambientais da
-          propriedade (diagnóstico), área proposta de intervenção/supressão e
-          medidas de compensação ambiental, conforme legislação ambiental
-          pertinente.
-        </li>
-      </ul>
-    </div>
+  </article>
+</section>
+<section class="full__background">
+  <div class="content wrapper">
+    <p>
+      A <span class="accent">Civilsolo Ambiental</span> realiza as seguintes atividades
+      para elaborar Laudos de Cobertura Vegetal, incluindo diagnósticos e ações propositivas:
+    </p>
+    <ul>
+      <li>
+        Levantamento de possíveis termos de compromisso firmados com órgãos
+        ambientais competentes e com o judiciário, bem como autos de infração
+        incidentes na área objeto de interesse;
+      </li>
+      <li>
+        Levantamentos detalhados em campo e por meio de mapas e imagens
+        (satélite e/ou de drone) para identificação do bioma, caracterização do
+        uso atual e pretérito da propriedade, identificação das espécies
+        vegetais presentes, dos fragmentos florestais e seus respectivos
+        estágios sucessionais (iniciais, médios ou avançados);
+      </li>
+      <li>
+        Identificação, caracterização, tipo de uso e ocupação existentes em
+        Áreas de Preservação Permanente (APPs) e suas condições físicas e
+        ambientais, dentro e fora dos limites da propriedade que possam gerar
+        compromissos ambientais;
+      </li>
+      <li>
+        Identificação e delimitação de áreas especialmente protegidas, como
+        áreas verdes, reservas legais, unidades de conservação e zonas de
+        amortecimento, áreas de proteção de mananciais, incidentes na
+        propriedade e/ou no entorno, para efeito de cumprimento de legislação
+        ambiental específica;
+      </li>
+      <li>
+        Identificação e caracterização de árvores nativas isoladas, com a
+        mensuração de atributos ambientais, como o diâmetro de altura do peito
+        (DAP), altura e condições fitossanitárias;
+      </li>
+      <li>
+        Elaboração da Planta Ambiental da situação atual e pretendida
+        georreferenciada, com todas as informações planilhadas e sistematizadas
+        sobre uso e ocupação atual e tributos ambientais da propriedade
+        (diagnóstico), área proposta de intervenção/supressão e medidas de
+        compensação ambiental, conforme legislação ambiental pertinente.
+      </li>
+    </ul>
+  </div>
+</section>
+<section>
+  <article class="content">
     <div class="wrapper">
       <Card
         >A <span class="accent">Civilsolo Ambiental</span> possui profissionais experientes
@@ -113,6 +118,10 @@ const { imgText } = Astro.props;
   .float--right {
     float: right;
     display: flow-root;
+  }
+  .full__background {
+    background-color: var(--section-background);
+    padding-block: 1rem;
   }
   @media (max-width: 600px) {
     .row {
