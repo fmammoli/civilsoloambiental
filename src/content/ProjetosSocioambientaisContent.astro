@@ -57,7 +57,10 @@ const { imgText } = Astro.props;
   </article>
   <article>
     <div class="content">
-      <LargeImg img={imgText[1]} />
+      <div class="row">
+        <div class="item"><LargeImg img={imgText[1]} /></div>
+        <div class="item"><LargeImg img={imgText[2]} /></div>
+      </div>
     </div>
   </article>
   <article class="content">
@@ -92,10 +95,12 @@ const { imgText } = Astro.props;
     </div>
 
     <div class="wrapper">
-      <Card
-        >Entenda as possibilidades de iniciativas e projetos socioambientais com
-        a <span class="accent">Civilsolo Ambiental</span>! Entre em contato para
-        esclarecer suas dúvidas e fazer um orçamento sem compromisso!
+      <Card>
+        Entenda as oportunidades que iniciativas e projetos socioambientais
+        podem alcançar com apoio técnico da <span class="accent"
+          >Civilsolo Ambiental</span
+        >! Entre em contato para esclarecer suas dúvidas e fazer um orçamento
+        sem compromisso!
       </Card>
     </div>
   </article>
@@ -114,5 +119,11 @@ const { imgText } = Astro.props;
   .img__wrapper {
     display: flex;
     justify-content: center;
+  }
+  .row {
+    display: flex;
+  }
+  .item {
+    padding: 1rem;
   }
 </style>

@@ -61,7 +61,10 @@ const { imgText } = Astro.props;
   <article>
     <div class="content">
       <div class="wrapper">
-        <LargeImg img={imgText[1]} offset="2" />
+        <div class="row">
+          <div class="item"><LargeImg img={imgText[1]} /></div>
+          <div class="item"><LargeImg img={imgText[2]} /></div>
+        </div>
       </div>
     </div>
   </article>
@@ -141,5 +144,17 @@ const { imgText } = Astro.props;
   .full__background {
     padding-block: 2rem;
     background-color: #237ad687;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  .item {
+    padding: 1rem;
+  }
+  @media (max-width: 600px) {
+    .row {
+      flex-direction: column;
+    }
   }
 </style>
