@@ -2,12 +2,12 @@
 const { img, offset = 1, reverse } = Astro.props;
 ---
 
-<div class={`card ${reverse ? "flex__reverse" : ""}`}>
+<div class={`card ${reverse ? "flex__reverse" : ""} `}>
   <div class="img__item">
     <img
       src={img}
       alt=""
-      class={`card__img ${
+      class={`card__img drop-area-box ${
         reverse ? "img__offset--right-" + offset : "img__offset--left-" + offset
       } `}
     />
@@ -18,6 +18,9 @@ const { img, offset = 1, reverse } = Astro.props;
 </div>
 
 <style>
+  .highlight {
+    border: 8px dashed yellow;
+  }
   .card__container {
     margin-block: 4rem 3rem;
   }

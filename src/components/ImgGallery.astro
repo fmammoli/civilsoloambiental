@@ -22,9 +22,8 @@ const { imgs, clickable } = Astro.props;
   <div class="gallery__wrapper">
     {imgs.map((img) => (
       <a
-        href="javascript:void(0)"
         onClick="openModal(this)"
-        class="gallery__item"
+        class="gallery__item drop-area-box"
         data-img={img}
         style={`background-image: url(${img});`}
       ></a>
@@ -37,15 +36,7 @@ const { imgs, clickable } = Astro.props;
   <img src="" alt="" class="modal__content" id="img01" />
   <!-- <div class="" id="caption"></div> -->
 </div>
-<script>
-  // Get the modal
-  // var modal = document.getElementById("modal");
-
-  // // Get the image and insert it inside the modal - use its "alt" text as a caption
-  // var img = document.getElementById("gallery__item");
-  // var modalImg = document.getElementById("img01");
-  // var captionText = document.getElementById("caption");
-
+<script hoist>
   function openModal(galleryItem) {
     body.style.overflow = "hidden";
 
@@ -57,23 +48,26 @@ const { imgs, clickable } = Astro.props;
     let captionText = document.getElementById("caption");
 
     modal.style.display = "block";
-    //   modalImg.src = gallery__item.dataset.img;
 
     modalImg.src = galleryItem.dataset.img;
-    // captionText.innerHTML = this.alt;
   }
 
-  // Get the <span> element that closes the modal
-  let span = document.getElementsByClassName("close")[0];
+  document.addEventListener("DOMContentLoaded", () => {
+    // Get the <span> element that closes the modal
+    let span = document.getElementsByClassName("close")[0];
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function () {
-    body.style.overflow = "auto";
-    modal.style.display = "none";
-  };
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      body.style.overflow = "auto";
+      modal.style.display = "none";
+    };
+  });
 </script>
 
 <style>
+  .highlight {
+    border: 8px dashed yellow;
+  }
   .container {
     width: 80%;
     max-width: 900px;

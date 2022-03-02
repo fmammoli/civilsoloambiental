@@ -59,6 +59,65 @@ const { activeNav } = Astro.props;
     </footer>
   </body>
 </html>
+<script hoist>
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropAreaBoxes = document.querySelectorAll(".drop-area-box");
+
+    ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
+      [...dropAreaBoxes].forEach((element) => {
+        element.addEventListener(eventName, preventDefaults, false);
+      });
+    });
+
+    function preventDefaults(e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    ["dragenter", "dragover"].forEach((eventName) => {
+      [...dropAreaBoxes].forEach((element) => {
+        element.addEventListener(eventName, highlight, false);
+      });
+    });
+
+    ["dragleave", "drop"].forEach((eventName) => {
+      [...dropAreaBoxes].forEach((element) => {
+        element.addEventListener(eventName, unhighlight, false);
+      });
+    });
+
+    function highlight(e) {
+      e.target.classList.add("highlight");
+    }
+
+    function unhighlight(e) {
+      e.target.classList.remove("highlight");
+    }
+
+    [...dropAreaBoxes].forEach((element) => {
+      element.addEventListener("drop", handleDrop, false);
+    });
+
+    function handleDrop(e) {
+      let dt = e.dataTransfer;
+      let files = dt.files;
+      previewFile(files[0], e.target);
+    }
+    function handleFiles(files) {}
+
+    function previewFile(file, target) {
+      let reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onloadend = function () {
+        if (target.nodeName === "IMG") {
+          target.src = reader.result;
+        } else {
+          target.dataset.img = reader.result;
+          target.style = `background-image: url(${reader.result})`;
+        }
+      };
+    }
+  });
+</script>
 
 <style>
   .full__background {
