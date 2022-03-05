@@ -22,9 +22,9 @@ const { imgText } = Astro.props;
         A <span class="accent">Civilsolo Ambiental</span> elabora, executa e avalia
         diferentes projetos socioambientais envolvendo comunidades tradicionais (indígenas,
         caiçaras, ribeirinhas, quilombolas, comunidades rurais) por meio de roteiros
-        metodológicos técnicas participativas, combinadas com uso de imagens de satélite
-        e fotografias aéreas, levantamentos de campo, entrevistas, oficinas, indicadores
-        de sustentabilidade, dentre outros.
+        metodológicos e técnicas participativas, combinadas com uso de imagens de
+        satélite e fotografias aéreas, levantamentos de campo, entrevistas, oficinas,
+        indicadores de sustentabilidade, dentre outros.
       </p>
     </div>
 
@@ -57,12 +57,16 @@ const { imgText } = Astro.props;
   </article>
   <article>
     <div class="content">
-      <div class="row">
-        <div class="item"><LargeImg img={imgText[1]} /></div>
-        <div class="item"><LargeImg img={imgText[2]} /></div>
+      <div class="wrapper">
+        <div class="row">
+          <div class="item"><LargeImg img={imgText[1]} /></div>
+          <div class="item"><LargeImg img={imgText[2]} /></div>
+        </div>
       </div>
     </div>
   </article>
+</section>
+<section class="full__background">
   <article class="content">
     <div class="wrapper">
       <p>
@@ -108,8 +112,8 @@ const { imgText } = Astro.props;
 
 <style>
   .full__background {
-    padding-block: 2rem;
-    background-color: #ffecb5;
+    padding-block: 1rem;
+    background-color: #e5edd1;
   }
   .img {
     width: 100%;
