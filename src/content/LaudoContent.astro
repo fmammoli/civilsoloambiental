@@ -106,15 +106,14 @@ const { imgText } = Astro.props;
     justify-content: space-between;
   }
   .img__container {
-    margin-left: 2rem;
-    justify-self: center;
+    width: 40%;
+    height: 100%;
   }
   .text__item {
     width: 60%;
+    padding-right: 3rem;
   }
-  .img__container img {
-    max-height: 360px;
-  }
+
   .float--right {
     float: right;
     display: flow-root;
@@ -129,6 +128,8 @@ const { imgText } = Astro.props;
       align-items: center;
     }
     .img__container {
+      width: 100%;
+
       margin-bottom: 2rem;
     }
     .text__item {
