@@ -20,12 +20,14 @@ const activeNavOption = "Serviços";
         style={`background-image: url(${bannerImg})`}
       >
       </div>
-      <div class="grid__item-2 title__container with__overlay">
-        <h1 class="title">{title}</h1>
-        <p>
-          {desc}
-        </p>
-        <a class="btn" href="#section-content"><p>Veja mais</p></a>
+      <div class="grid__item-2 flex__center">
+        <div class="title__container with__overlay">
+          <h1 class="title">{title}</h1>
+          <p>
+            {desc}
+          </p>
+          <a class="btn" href="#section-content"><p>Veja mais</p></a>
+        </div>
       </div>
     </div>
     <section id="section-content"></section>
@@ -56,15 +58,24 @@ const activeNavOption = "Serviços";
   .grid__item-2 {
     grid-area: 1 / 2 / 3 / 3;
   }
+  .grid__item-2 {
+    padding-block: 1rem;
+  }
   .img__container {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 90vh;
-    max-height: 1080px;
+    min-height: 90vh;
+
+    max-height: 100%;
   }
   .img {
     height: auto;
+  }
+  .flex__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .title__container {
     width: 90%;
