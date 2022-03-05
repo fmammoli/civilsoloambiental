@@ -57,6 +57,7 @@ const { whats } = Astro.props;
   }
 
   .whatsapp__btn::after {
+    visibility: hidden;
     content: "Entre em contato!";
     position: absolute;
     color: white;
@@ -79,6 +80,7 @@ const { whats } = Astro.props;
   }
   .whatsapp__btn:hover::after,
   .whatsapp__btn:focus::after {
+    visibility: visible;
     opacity: 1;
     transform: translate3d(-20px, 0, 0);
   }
