@@ -63,7 +63,11 @@ const { imgText } = Astro.props;
         </ImgBoxText>
       </ImgBox>
     </div>
+  </article>
+</section>
 
+<section class="full__background">
+  <article class="content">
     <div class="wrapper">
       <p>
         Os principais benefícios a serem obtidos com a adesão e cumprimento do
@@ -91,7 +95,8 @@ const { imgText } = Astro.props;
         <li>
           Possibilidade de que a exigência de recomposição das APPs do imóvel
           rural não ultrapasse 10% da área total do imóvel (para imóveis com
-          área de até 2
+          área de até 2 módulos fiscais) e 20% da área total do imóvel (para
+          imóveis com área até 4 módulos fiscais).
         </li>
       </ul>
     </div>
@@ -124,8 +129,8 @@ const { imgText } = Astro.props;
       <p>
         Para imóveis sem adesão ao Programa de Regularização Ambiental (PRA),
         devem ser elaborados o Projeto de Adequação Ambiental (PAA) e o Termo de
-        Compromisso (TCA), além de relatórios periódicos de monitoramento e
-        conclusão das ações de adequação.
+        Compromisso Ambiental (TCA), além de relatórios periódicos de
+        monitoramento e conclusão das ações de adequação ambiental.
       </p>
     </div>
     <div class="wrapper">
@@ -150,10 +155,7 @@ const { imgText } = Astro.props;
             eles:
           </p>
           <ul>
-            <li>
-              Inscrição do imóvel no Cadastro Ambiental Rural (CAR), se for de
-              interesse;
-            </li>
+            <li>Inscrição do imóvel no Cadastro Ambiental Rural (CAR);</li>
             <li>
               Elaboração de relatórios e inclusão de todos os documentos e
               informações do imóvel rural e do proprietário no Sistema
@@ -195,7 +197,7 @@ const { imgText } = Astro.props;
     </div>
     <div class="wrapper">
       <Card
-        >Entenda as limitações e possibilidades de adequação Ambiental de sua
+        >Entenda as limitações e possibilidades de adequação ambiental de sua
         propriedade com a <span class="accent">Civilsolo Ambiental</span>! Entre
         em contato para esclarecer suas dúvidas e fazer um orçamento sem
         compromisso!</Card
@@ -217,8 +219,8 @@ const { imgText } = Astro.props;
     max-width: 600px;
   }
   .full__background {
-    padding-block: 2rem;
-    background-color: #bca1b2;
+    padding-block: 1rem;
+    background-color: #e5edd1;
   }
 
   .bulletpoints {
