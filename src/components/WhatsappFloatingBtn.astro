@@ -39,6 +39,7 @@ const { whats } = Astro.props;
     display: flex;
     align-items: center;
   }
+
   .whatsapp__btn {
     background-color: var(--whatsapp-green);
     border-radius: 20px;
@@ -101,9 +102,10 @@ const { whats } = Astro.props;
       box-shadow: 0 0 0 0 black;
     }
   }
+
   @media (max-width: 600px) {
     .floatin__btn__container {
-      display: none;
+      display: none !important;
     }
   }
 </style>
