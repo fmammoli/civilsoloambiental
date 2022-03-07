@@ -101,14 +101,18 @@ const services = {
       <li class="footer__item footer__item--four">
         <FooterContact />
       </li>
-      <li class="footer__item footer__item--five">
-        <CivilsoloLogo />
-      </li>
     </ul>
+    <div class="footer__item wrapper">
+      <CivilsoloLogo />
+    </div>
   </div>
 </div>
 
 <style>
+  .footer {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
   .logos__container {
     display: flex;
     flex-direction: column;
@@ -142,6 +146,9 @@ const services = {
   }
   .footer__item--four {
     grid-area: 1 / 4 / 5 / 5;
+  }
+  .wrapper {
+    padding-top: 2rem;
   }
   .footer__grid {
     font-size: 15px;
