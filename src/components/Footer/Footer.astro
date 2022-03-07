@@ -90,7 +90,6 @@ const services = {
         <div class="logos__container">
           <FooterLogo />
           <SocialMediaContact />
-          <CivilsoloLogo />
         </div>
       </li>
       <li class="footer__item footer__item--two">
@@ -101,6 +100,9 @@ const services = {
       </li>
       <li class="footer__item footer__item--four">
         <FooterContact />
+      </li>
+      <li class="footer__item footer__item--five">
+        <CivilsoloLogo />
       </li>
     </ul>
   </div>
@@ -141,12 +143,27 @@ const services = {
   .footer__item--four {
     grid-area: 1 / 4 / 5 / 5;
   }
+  .footer__grid {
+    font-size: 15px;
+  }
   @media (max-width: 800px) {
+    .logos__container {
+      align-items: center;
+    }
+    .footer__item {
+      width: 100%;
+    }
+    .footer__item--one {
+      grid-area: 1 / 1 / 5 / 3;
+    }
     .footer__item--three {
       grid-area: 1 / 3 / 5 / 5;
     }
     .footer__item--four {
-      grid-area: 5 / 1 / 5 / 5;
+      grid-area: 5 / 1 / 5 / 3;
+    }
+    .footer__item--two {
+      grid-area: 5 / 3 / 5 / 5;
     }
   }
   @media (max-width: 600px) {
