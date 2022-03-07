@@ -19,7 +19,7 @@ const { activeNav } = Astro.props;
 <script>
   let primaryNav = document.querySelector(".primary__navigation");
   let navToggle = document.querySelector(".mobile__nav--toggle");
-  let body = document.querySelector("body");
+
   navToggle.addEventListener("click", () => {
     const visibility = primaryNav.getAttribute("data-visible");
 
@@ -27,12 +27,12 @@ const { activeNav } = Astro.props;
       navToggle.classList.toggle("opened");
       primaryNav.setAttribute("data-visible", "true");
       navToggle.setAttribute("aria-expanded", true);
-      body.style.overflowY = "hidden";
+      // body.style.overflowY = "hidden";
     } else if (visibility == "true") {
       navToggle.classList.toggle("opened");
       primaryNav.setAttribute("data-visible", "false");
       navToggle.setAttribute("aria-expanded", false);
-      body.style.overflowY = "";
+      // body.style.overflowY = "";
     }
   });
 </script>
@@ -65,7 +65,7 @@ const { activeNav } = Astro.props;
     }
     .on__top__container {
       position: relative;
-      width: 100%;
+
       background-color: white;
       z-index: 9999;
 
@@ -73,6 +73,11 @@ const { activeNav } = Astro.props;
     }
     .hero__logo {
       align-self: center;
+      width: 100%;
+    }
+    .nav-toggle-btn {
+      align-self: flex-end;
+      padding-right: 1rem;
     }
   }
 </style>

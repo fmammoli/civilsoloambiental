@@ -1,6 +1,7 @@
 ---
 import NavBtn from "./NavBtn.astro";
-
+import CollapsableMenuItem from "./CollapsableMenuItem.astro";
+import CollapsableMenuItemSection from "./CollapsableMenuItemSection.astro";
 import Site from "../Site.json";
 
 let menuItems = [
@@ -54,12 +55,23 @@ menuItems.forEach(function (item) {
         ))}
       </ul>
     </li>
-    <li class="no__dropdown">
-      <NavBtn
-        title={menuItems[2].title}
-        link={menuItems[2].link}
-        active={menuItems[2].active}
-      />
+    <li class="mobile__dropdown">
+      <CollapsableMenuItem>
+        <CollapsableMenuItemSection
+          btnTitle={menuItems[2].title}
+          btnActive={menuItems[2].active}
+        >
+          <ul class="sub__menu__container">
+            {Site.items.map((item, i) => (
+              <li>
+                <a href={item.link} class="sub__menu__item">
+                  <p class="link__text">{item.title}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </CollapsableMenuItemSection>
+      </CollapsableMenuItem>
     </li>
     <li>
       <NavBtn
@@ -160,6 +172,7 @@ menuItems.forEach(function (item) {
   }
   .link__text {
     /* padding-left: 1rem; */
+    color: white;
   }
   .sub__menu__item:hover {
     background-color: var(--first-color);
@@ -174,7 +187,8 @@ menuItems.forEach(function (item) {
 
   @media (max-width: 600px) {
     .primary__navigation {
-      position: fixed;
+      position: absolute;
+      height: 120vh;
       z-index: 1000;
       inset: 0 0 0 0;
 
@@ -205,6 +219,19 @@ menuItems.forEach(function (item) {
     }
     .no__dropdown {
       display: block;
+    }
+    .sub__menu__container {
+      list-style: disc;
+      color: white;
+    }
+    .sub__menu__item {
+      text-align: start;
+      color: white;
+    }
+    .sub__menu__item:hover {
+      background-color: inherit;
+      text-decoration: solid;
+      text-decoration-color: white;
     }
   }
 </style>

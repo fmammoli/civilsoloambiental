@@ -1,0 +1,75 @@
+---
+const { title, link, active = false } = Astro.props;
+---
+
+<a
+  href={link}
+  data-active={active ? "true" : "false"}
+  class="nav__link ripple--bottom-top nav__link--collapsable"
+>
+  <span class="collapsable__icon">&#5125;</span>
+  <span class="text">{title}</span>
+</a>
+
+<script>
+  document
+    .querySelector(".nav__link--collapsable")
+    .addEventListener("click", (e) => {
+      e.preventDefault();
+      const icon = document.querySelector(".collapsable__icon");
+      icon.classList.toggle("active");
+    });
+</script>
+
+<style>
+  .active {
+    transform: rotate(90deg);
+  }
+  .nav__link {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+
+    text-align: center;
+
+    color: black;
+
+    padding: 1rem 0 1rem 0;
+
+    border-bottom: 3px solid #fff;
+  }
+
+  @media (max-width: 600px) {
+    .nav__link {
+      border-bottom-color: var(--menu-color);
+      color: white;
+      text-align: start;
+      width: 6em;
+      padding: 1rem 0 0.5rem 0;
+      font-size: 1.6rem;
+    }
+    .collapsable__icon {
+      display: inline-block;
+      position: absolute;
+
+      color: white;
+      font-size: 1.4rem;
+      transition: 0.4s all ease-in-out;
+      z-index: 1;
+      left: 0;
+    }
+    .ripple--bottom-top {
+      background: var(--menu-color);
+    }
+
+    .nav__link[data-active="true"] .text {
+      border-bottom: 3px solid #fff;
+    }
+
+    .nav__link {
+      text-align: center;
+    }
+  }
+</style>

@@ -2,13 +2,15 @@
 const { title, link, active = false } = Astro.props;
 ---
 
-<a
-  href={link}
-  data-active={active ? "true" : "false"}
-  class="nav__link ripple--bottom-top"
->
-  {title}
-</a>
+<div>
+  <a
+    href={link}
+    data-active={active ? "true" : "false"}
+    class="nav__link ripple--bottom-top"
+  >
+    {title}
+  </a>
+</div>
 
 <style>
   .nav__link {

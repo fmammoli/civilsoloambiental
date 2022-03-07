@@ -1,20 +1,22 @@
 ---
+import CollapsableMenuBtn from "./CollapsableMenuBtn.astro";
 const {
   background = "--collapsable-section-background",
   divider = "--collapsable-section-divider",
 } = Astro.props;
+const { btnTitle, btnActive } = Astro.props;
 ---
 
-<div class="collapse__container">
+<div class="btn__toggle--collapse" id="btn__toggle__menu--collapse">
+  <CollapsableMenuBtn title={btnTitle} active={btnActive} />
+</div>
+<div class="collapse__container--menu">
   <slot />
-  <button id="btn__toggle--collapse" class="btn__toggle--collapse"
-    >Ver mais</button
-  >
 </div>
 <script>
   // This is the important part!
 
-  function collapseSection(element) {
+  function collapseMenuSection(element) {
     // get the height of the element's inner content, regardless of its actual size
     let sectionHeight = element.scrollHeight;
 
@@ -40,7 +42,7 @@ const {
     element.setAttribute("data-collapsed", "true");
   }
 
-  function expandSection(element) {
+  function expandMenuSection(element) {
     // get the height of the element's inner content, regardless of its actual size
     let sectionHeight = element.scrollHeight;
 
@@ -61,64 +63,46 @@ const {
   }
 
   document
-    .querySelector("#btn__toggle--collapse")
+    .querySelector("#btn__toggle__menu--collapse")
     .addEventListener("click", function (e) {
-      let section = document.querySelector("#section__collapsible");
+      let section = document.querySelector(".collapse__container--menu");
+      console.log(section);
       let isCollapsed = section.getAttribute("data-collapsed") === "true";
 
       if (isCollapsed) {
-        expandSection(section);
+        expandMenuSection(section);
         section.setAttribute("data-collapsed", "false");
-        e.target.innerText = "Ver menos";
       } else {
-        collapseSection(section);
-        e.target.innerText = "Ver mais";
+        collapseMenuSection(section);
+
         e.target.blur();
       }
     });
-  collapseSection(document.querySelector("#section__collapsible"));
+  collapseMenuSection(document.querySelector(".collapse__container--menu"));
 </script>
 
 <style>
-  .collapse__container {
+  .collapse__container--menu {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
-    border-radius: 0px 0px 8px 8px;
-  }
-  .section {
-    overflow: hidden;
     transition: height 0.6s ease-in;
-    height: auto;
-    background-color: var(--collapsable-section-background);
-    padding: 1rem;
-    border-bottom: 1px solid var(--collapsable-section-divider);
   }
 
-  .section.collapsible {
-    border: 0px;
-    padding-block: 0px;
-    background-color: white;
-  }
   .btn__toggle--collapse {
     position: relative;
     justify-self: center;
-    background-color: var(--collapsable-section-background);
+
     color: var(--collapsable-section-button-text);
     width: 100%;
     font-size: 1rem;
     padding-block: 1rem;
     margin: 0 auto;
-    border-radius: 0px 0px 8px 8px;
-    border: 2px solid var(--collapsable-section-background);
     cursor: pointer;
     transition: all 0.25s ease-in;
   }
   .btn__toggle--collapse:hover,
   .btn__toggle--collapse:focus {
     color: white;
-    background-color: var(--collapsable-section-button-hover);
-    border-color: var(--collapsable-section-button-hover);
     /* box-shadow: inset 0 0 0 2em var(--logo-red); */
   }
 </style>
