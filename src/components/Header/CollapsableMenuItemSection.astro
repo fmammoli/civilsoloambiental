@@ -66,7 +66,7 @@ const { btnTitle, btnActive } = Astro.props;
     .querySelector("#btn__toggle__menu--collapse")
     .addEventListener("click", function (e) {
       let section = document.querySelector(".collapse__container--menu");
-      console.log(section);
+
       let isCollapsed = section.getAttribute("data-collapsed") === "true";
 
       if (isCollapsed) {

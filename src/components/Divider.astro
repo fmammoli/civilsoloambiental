@@ -37,7 +37,6 @@
   const observer = new IntersectionObserver(function (entries, observer) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        console.log("intersectin");
         path.classList.add("animate__line");
       } else {
         path.classList.remove("animate__line");

@@ -51,6 +51,10 @@ const activeNavOption = "Contato";
                 type="text"
                 placeholder="Escreva aqui sua mensagem..."></textarea>
             </div>
+
+            <input type="text" name="_secondName" style="display:none" />
+            <input type="hidden" name="_template" value="box" />
+
             <div class="input__container">
               <button class="submit" type="submit">Enviar</button>
             </div>
@@ -240,31 +244,41 @@ const activeNavOption = "Contato";
   const trigger = document.querySelector(".trigger");
   formElement.addEventListener("submit", onSubmit);
 
+  function validateForm(form) {
+    let honeypot = form["_secondName"].value;
+
+    if (honeypot == "" || honeypot == null) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   async function onSubmit(e) {
     e.preventDefault();
+    if (validateForm(formElement)) {
+    }
     const formData = new FormData(formElement);
-    formData.append("service_id", "service_cma2qch");
-    formData.append("template_id", "template_a1nyz3t");
-    formData.append("user_id", "user_Vl2zrsz4TLXCvwi8yGChH");
+    formData.append("_subject", `Novo contato de ${formElement.name.value}.`);
 
     try {
       overlay.style.visibility = "visible";
       overlay.style.opacity = 1;
       modal.transform = "translate3d(0, 2rem, 0)";
-      console.log(submitBtn);
+
       trigger.classList.add("drawn");
+      let response = await fetch(
+        "https://formsubmit.co/ajax/contato@civilsoloambiental.com.br",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
       setTimeout(() => {
         overlay.style.visibility = "hidden";
         overlay.style.opacity = 0;
         trigger.classList.remove("drawn");
-      }, 2000);
-      // let response = await fetch(
-      //   "https://api.emailjs.com/api/v1.0/email/send-form",
-      //   {
-      //     method: "POST",
-      //     body: formData,
-      //   }
-      // );
+      }, 1800);
     } catch (error) {
       console.log(error);
     }

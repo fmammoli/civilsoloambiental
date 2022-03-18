@@ -87,12 +87,10 @@ menuItems.forEach(function (item) {
   const servicosBtn = document.querySelector(".dropdown__container>a");
   const dropdown = document.querySelector(".dropdown");
   dropdown.addEventListener("mouseover", (e) => {
-    console.log("lalalall");
-    servicosBtn.classList.add("ripple--hovered");
+    servicosBtn?.classList.add("ripple--hovered");
   });
   dropdown.addEventListener("mouseleave", (e) => {
-    console.log("lalalall");
-    servicosBtn.classList.remove("ripple--hovered");
+    servicosBtn?.classList.remove("ripple--hovered");
   });
 </script>
 
